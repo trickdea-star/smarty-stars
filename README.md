@@ -50,6 +50,26 @@ Find the lists near the top of the `<script>` in `index.html` and add one line:
 **Never change the `id` of an item that already exists**, because saved unlocks use it.
 A new character can mix any parts the others already use (`head`, `ears`, `nose`, `horns`, `antenna`, `eyes`, and so on).
 
+## The narrator voice
+
+Everything the game says is a recorded clip in `voice/`, made with Kokoro, a free natural-sounding voice that runs
+on this PC. `narrator.js` plays the clips. Anything that has no recording falls back to the device's own voice.
+
+Every sentence is recorded once and the app strings them together. So when you add something that talks
+(a new game, a new picture, word, toy or avatar item), re-record:
+
+```bash
+python tools/voice_lines.py
+```
+
+```bash
+C:\Users\DeatrickJohnson\Projects\math-bridge-academy\.venv-tts\Scripts\python.exe C:\Users\DeatrickJohnson\.claude\skills\natural-voice\record.py --lines tools\voice_lines.txt --out voice
+```
+
+Then bump `VOICE_BUILD` in `index.html`. Only new lines get recorded.
+New pictures, words, toys and items are picked up automatically. A brand-new *kind* of sentence needs its wording
+added to `tools/voice_lines.py` first. Keep changing parts (numbers, names) in their own short sentence.
+
 ## Adding your own zombie drawings
 
 1. Draw one zombie per sheet of white paper: whole body, facing forward, dark outline, colored in.

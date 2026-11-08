@@ -23,21 +23,26 @@ const INK = '#2B1B3D';
 const FONT = '"Baloo 2", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif';
 
 /* ---------- THE ZOMBIES ----------
-   To add a kid's drawing: cut it out to a see-through PNG in assets/zombies/, then add a line:
-     {name:'Mr. Stinky', kind:'runner', art:'assets/zombies/mr-stinky.png'},
-   kind: 'walker' = normal, 'runner' = fast (shows up from round 2),
+   To add a kid's drawing: cut it out with tools/cutout_drawing.py into assets/zombies/, then add a line:
+     {name:'Mr. Stinky', kind:'runner', art:'assets/zombies/mr-stinky.webp'},
+   kind: 'walker' = normal, 'crawler' = slow and low to the ground, 'runner' = fast (shows up from round 2),
          'boss' = big and slow, takes 2 splats (shows up from round 3).
+   weight (optional) = how often it shows up compared with the others; the kids' own zombies show up most.
    art that starts with '@' is one of the built-in cartoon zombies drawn further down. */
 const ZOMBIES = [
-  {name:'Gloop',   kind:'walker', art:'@walker'},
-  {name:'Zippy',   kind:'runner', art:'@runner'},
-  {name:'Big Moe', kind:'boss',   art:'@boss'}
+  {name:'Creepy Crawler', kind:'crawler', art:'assets/zombies/crawler.webp?v=1', weight:7},   // drawn by DJ's kid
+  {name:'Bone Hand',      kind:'walker',  art:'assets/zombies/arm-up.webp?v=1',  weight:7},   // drawn by DJ's kid
+  {name:'Gloop',          kind:'walker',  art:'@walker'},
+  {name:'Zippy',          kind:'runner',  art:'@runner'},
+  {name:'Big Moe',        kind:'boss',    art:'@boss'}
 ];
 const KINDS = {
-  walker: {speed:1.0,  size:1.0,  hits:1, fromRound:1, weight:6},
-  runner: {speed:1.65, size:0.9,  hits:1, fromRound:2, weight:3},
-  boss:   {speed:0.62, size:1.28, hits:2, fromRound:3, weight:2}
+  walker:  {speed:1.0,  size:1.0,  hits:1, fromRound:1, weight:4},
+  crawler: {speed:0.8,  size:1.2,  hits:1, fromRound:1, weight:4},
+  runner:  {speed:1.65, size:0.9,  hits:1, fromRound:2, weight:3},
+  boss:    {speed:0.62, size:1.28, hits:2, fromRound:3, weight:2}
 };
+const weightOf = z => z.weight || KINDS[z.kind].weight;
 
 /* ---------- Questions ----------
    Each zombie carries one: sign = what it holds, show = what the banner shows, say = what the voice says. */
@@ -485,8 +490,8 @@ function makeScene(){
       let pool = this.roster.filter(z => KINDS[z.kind].fromRound <= round);
       if (this.bossThisRound || this.zombies.some(z => z.alive && z.kind === 'boss')) pool = pool.filter(z => z.kind !== 'boss');
       if (!pool.length) pool = this.roster.slice(0, 1);
-      let w = pool.reduce((a, z) => a + KINDS[z.kind].weight, 0) * Math.random(), def = pool[0];
-      for (const z of pool){ w -= KINDS[z.kind].weight; if (w <= 0){ def = z; break; } }
+      let w = pool.reduce((a, z) => a + weightOf(z), 0) * Math.random(), def = pool[0];
+      for (const z of pool){ w -= weightOf(z); if (w <= 0){ def = z; break; } }
       if (def.kind === 'boss') this.bossThisRound = true;
       const lanes = [-.85, -.42, 0, .42, .85], used = this.zombies.filter(z => z.alive).map(z => z.lane);
       const free = lanes.filter(l => used.indexOf(l) < 0);
@@ -511,7 +516,9 @@ function makeScene(){
       return z;
     }
     sizeZombie(z){
-      const bodyH = this.zh * z.K.size, signW = this.zh * .62, signH = this.zh * .3;
+      const signW = this.zh * .62, signH = this.zh * .3, aspect = z.body.width / z.body.height;
+      // fit the drawing in a box: as tall as the kind says, but a wide one (like the crawler) is limited by width
+      const bodyH = Math.min(this.zh * z.K.size, this.zh * z.K.size * 1.1 / aspect);
       z.body.setScale(bodyH / z.body.height);
       z.bodyH = bodyH; z.bodyW = bodyH * z.body.width / z.body.height; z.signH = signH;
       z.shadow.setDisplaySize(z.bodyW * .9, z.bodyW * .2);
@@ -782,7 +789,7 @@ function mount(main){
 function unmount(){
   token = null; onSceneReady = null;
   stopGame();
-  try { window.speechSynthesis && speechSynthesis.cancel(); } catch(e){}
+  SS.hush();
 }
 
 SS.addGame({

@@ -218,6 +218,7 @@ h1,h2,h3{margin:0;line-height:1.1}
 </head>
 <body>
 <div id="app"></div>
+<script src="narrator.js?v=1"></script>
 <script>
 (function(){
 'use strict';
@@ -468,11 +469,19 @@ function save(){
   try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){}
 }
 
-/* ---------- Speech, feedback ---------- */
+/* ---------- Speech, feedback ----------
+   Everything is spoken by narrator.js, which plays recorded clips from voice/ (a natural voice made with
+   Kokoro) and falls back to the device voice for anything not recorded.
+   A NEW SPOKEN LINE NEEDS RECORDING: add it to tools/voice_lines.py, re-run it and the recorder
+   (see README), and bump VOICE_BUILD. Each sentence is looked up on its own, so keep dynamic parts
+   (numbers, names) in their own short sentence. */
+const VOICE_BUILD = '1';
+if (window.Narrator) Narrator.load('voice/index.json?v=' + VOICE_BUILD);
 function say(text){
-  if (S.sound === false) return;
-  try { const ss = window.speechSynthesis; if (!ss) return; ss.cancel(); const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = .92; u.pitch = 1.15; ss.speak(u); } catch(e){}
+  if (S.sound === false || !window.Narrator) return;
+  Narrator.say(text);
 }
+function hush(){ if (window.Narrator) Narrator.stop(); }
 function toast(text){
   document.querySelectorAll('.toast').forEach(t => t.remove());
   const t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role','status'); t.textContent = text;
@@ -658,8 +667,8 @@ function pickItem(type, id){
     }, 'Unlock!');
   } else {
     const need = it.cost - stars;
-    const t = `Earn ${need} more ⭐ in the games to unlock ${it.name}!`;
-    toast(t); say(t.replace('⭐','stars'));
+    toast(`Earn ${need} more ⭐ in the games to unlock ${it.name}!`);
+    say(`You need ${need} more ${need === 1 ? 'star' : 'stars'}. Play the games to unlock ${it.name}!`);
   }
 }
 
@@ -767,7 +776,9 @@ function cbNew(){
     tray = shuffle([types[0], types[1], types[2]]);
   }
   G = {game:'count', order, tray, plate:[], cust:pick(CUSTOMERS), stage:'serve', done:false};
-  G.prompt = 'Can I have ' + order.map(o => o.n + ' ' + (o.n===1?o.t.one:o.t.many)).join(' and ') + ', please?';
+  const amt = o => o.n + ' ' + (o.n===1 ? o.t.one : o.t.many);
+  // spoken in short sentences so each one can be a recorded clip
+  G.prompt = order.length === 1 ? `Can I have ${amt(order[0])}, please?` : `Can I have ${amt(order[0])}? And ${amt(order[1])}, please!`;
   showRound();
 }
 function renderCount(){
@@ -923,7 +934,7 @@ function stNew(){
   else { price = rint(15,99); coins = [1,5,10,25]; }
   const item = pick(SHOP);
   G = {game:'store', item, price, coins, counter:[], done:false};
-  G.prompt = `The ${item[0]} costs ${price} ${price===1?'cent':'cents'}. Tap the coins to pay.`;
+  G.prompt = `Ooh, ${/^[aeiou]/.test(item[0]) ? 'an' : 'a'} ${item[0]}! It costs ${price} ${price===1?'cent':'cents'}. Tap the coins to pay.`;
   showRound();
 }
 function coinHTML(v, act, i){
@@ -946,11 +957,14 @@ function stPay(){
   const sum = G.counter.reduce((a,b) => a + b, 0);
   if (sum === G.price){
     G.done = true; addStar();
-    const c = cheer(`That’s exactly ${G.price} cents!`); setMsg(`${c} The ${G.item[0]} is yours!`, true);
+    const c = cheer(`That’s exactly ${G.price} ${G.price === 1 ? 'cent' : 'cents'}!`); setMsg(`${c} The ${G.item[0]} is yours!`, true);
     nextRound(1800);
   } else {
+    const cents = n => n + (n === 1 ? ' cent' : ' cents');
     const t = sum < G.price ? `You gave ${sum}¢. You need ${G.price - sum}¢ more.` : `You gave ${sum}¢. That’s too much! Take some coins back.`;
-    setMsg(t); say(t.replace(/¢/g,' cents')); replay($('.counter'),'shake');
+    setMsg(t);
+    say(sum < G.price ? `You gave ${cents(sum)}. You need ${cents(G.price - sum)} more.` : 'That’s too much! Take some coins back.');
+    replay($('.counter'),'shake');
   }
 }
 addGame({
@@ -966,7 +980,7 @@ addGame({
 /* ---------- Actions ---------- */
 function readName(obj){ const el = $('#nm'); if (el) obj.name = el.value.trim(); }
 const ACT = {
-  choosePlayer: d => { cur = d.id; go('home'); const p = P(); if (p) say('Hi ' + p.name + '!'); },
+  choosePlayer: d => { cur = d.id; go('home'); if (P()) say('Hi, superstar! Pick a game.'); },
   newPlayer: () => { NEW = {name:'', age:null}; EDITMODE = false; go('create'); setTimeout(() => { const el = $('#nm'); if (el) el.focus(); }, 50); },
   editPlayers: () => { EDITMODE = !EDITMODE; go('who'); },
   editPlayer: d => { const p = S.players.find(x => x.id === d.id); if (!p) return; EDP = {id:p.id, name:p.name, age:p.age, stars:p.stars}; go('editp'); },
@@ -988,19 +1002,19 @@ const ACT = {
     }, 'Delete');
   },
   who: () => go('who'),
-  home: () => { try { window.speechSynthesis && speechSynthesis.cancel(); } catch(e){} G = null; go('home'); },
+  home: () => { hush(); G = null; go('home'); },
   look: () => startLook('edit'),
   tab: d => { ED.tab = d.t; render(); },
   pick: d => pickItem(d.type, d.id),
   lookDone: () => {
     if (ED.mode === 'create'){
       const p = {id:uid(), name:NEW.name, age:NEW.age, stars:0, unlocked:[], avatar:Object.assign({}, ED.av)};
-      S.players.push(p); cur = p.id; save(); go('home'); say('Welcome, ' + p.name + '! Pick a game to start earning stars.');
+      S.players.push(p); cur = p.id; save(); go('home'); say('Welcome, superstar! Pick a game to start earning stars.');
     } else { P().avatar = Object.assign({}, ED.av); save(); go('home'); }
   },
   sound: () => {
     S.sound = S.sound === false; save();
-    if (S.sound === false){ try { speechSynthesis.cancel(); } catch(e){} }
+    if (S.sound === false) hush();
     const b = $('#soundBtn'); if (b) b.textContent = SCREEN === 'home' ? (S.sound ? '🔊 Sound on' : '🔇 Sound off') : (S.sound ? '🔊' : '🔇');
     if (S.sound) say('Sound on!');
   },
@@ -1020,7 +1034,7 @@ app.addEventListener('keydown', e => {
 
 /* ---------- For bigger games that live in their own file (games/*.js) ---------- */
 window.SmartyStars = {
-  addGame, say, addStar, save, pick, rint, shuffle, esc,
+  addGame, say, hush, addStar, save, pick, rint, shuffle, esc,
   player: P,                                   // the current player {name, age, stars, ...}
   soundOn: () => S.sound !== false,
   startRound: round => { G = round; showRound(); }   // same as a game block setting G then calling showRound()
@@ -1030,6 +1044,6 @@ render();
 })();
 </script>
 <!-- Bump ?v= whenever a game file changes, so phones fetch the new copy instead of an old cached one. -->
-<script src="games/zombie-splat.js?v=2" charset="utf-8"></script>
+<script src="games/zombie-splat.js?v=4" charset="utf-8"></script>
 </body>
 </html>

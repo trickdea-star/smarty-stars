@@ -1,0 +1,2140 @@
+# Made by tools/voice_lines.py - do not edit by hand
+Great job!
+You got it!
+Awesome!
+Super!
+Yes! Nice work!
+Wow, so smart!
+Way to go!
+Hi, superstar! Pick a game.
+Welcome, superstar! Pick a game to start earning stars.
+Sound on!
+Yay! You unlocked Alien King!
+Play the games to unlock Alien King!
+Yay! You unlocked Astronaut!
+Play the games to unlock Astronaut!
+Yay! You unlocked Bear!
+Play the games to unlock Bear!
+Yay! You unlocked Big Horns!
+Play the games to unlock Big Horns!
+Yay! You unlocked Blue!
+Play the games to unlock Blue!
+Yay! You unlocked Crown!
+Play the games to unlock Crown!
+Yay! You unlocked Dragon!
+Play the games to unlock Dragon!
+Yay! You unlocked Fancy suit!
+Play the games to unlock Fancy suit!
+Yay! You unlocked Galaxy!
+Play the games to unlock Galaxy!
+Yay! You unlocked Gold!
+Play the games to unlock Gold!
+Yay! You unlocked Headphones!
+Play the games to unlock Headphones!
+Yay! You unlocked Panda!
+Play the games to unlock Panda!
+Yay! You unlocked Party hat!
+Play the games to unlock Party hat!
+Yay! You unlocked Pink!
+Play the games to unlock Pink!
+Yay! You unlocked Pirate!
+Play the games to unlock Pirate!
+Yay! You unlocked Rainbow!
+Play the games to unlock Rainbow!
+Yay! You unlocked Robot!
+Play the games to unlock Robot!
+Yay! You unlocked Slime!
+Play the games to unlock Slime!
+Yay! You unlocked Sparkle dress!
+Play the games to unlock Sparkle dress!
+Yay! You unlocked Sunglasses!
+Play the games to unlock Sunglasses!
+Yay! You unlocked Superhero!
+Play the games to unlock Superhero!
+Yay! You unlocked Three Eyes!
+Play the games to unlock Three Eyes!
+Yay! You unlocked Unicorn!
+Play the games to unlock Unicorn!
+Yay! You unlocked Wizard!
+Play the games to unlock Wizard!
+You need 1 more star.
+You need 2 more stars.
+You need 3 more stars.
+You need 4 more stars.
+You need 5 more stars.
+You need 6 more stars.
+You need 7 more stars.
+You need 8 more stars.
+You need 9 more stars.
+You need 10 more stars.
+You need 11 more stars.
+You need 12 more stars.
+You need 13 more stars.
+You need 14 more stars.
+You need 15 more stars.
+You need 16 more stars.
+You need 17 more stars.
+You need 18 more stars.
+You need 19 more stars.
+You need 20 more stars.
+You need 21 more stars.
+You need 22 more stars.
+You need 23 more stars.
+You need 24 more stars.
+You need 25 more stars.
+You need 26 more stars.
+You need 27 more stars.
+You need 28 more stars.
+You need 29 more stars.
+You need 30 more stars.
+You need 31 more stars.
+You need 32 more stars.
+You need 33 more stars.
+You need 34 more stars.
+You need 35 more stars.
+You need 36 more stars.
+You need 37 more stars.
+You need 38 more stars.
+You need 39 more stars.
+You need 40 more stars.
+You need 41 more stars.
+You need 42 more stars.
+You need 43 more stars.
+You need 44 more stars.
+You need 45 more stars.
+You need 46 more stars.
+You need 47 more stars.
+You need 48 more stars.
+You need 49 more stars.
+You need 50 more stars.
+You need 51 more stars.
+You need 52 more stars.
+You need 53 more stars.
+You need 54 more stars.
+You need 55 more stars.
+You need 56 more stars.
+You need 57 more stars.
+You need 58 more stars.
+You need 59 more stars.
+You need 60 more stars.
+You need 61 more stars.
+You need 62 more stars.
+You need 63 more stars.
+You need 64 more stars.
+You need 65 more stars.
+You need 66 more stars.
+You need 67 more stars.
+You need 68 more stars.
+You need 69 more stars.
+You need 70 more stars.
+You need 71 more stars.
+You need 72 more stars.
+You need 73 more stars.
+You need 74 more stars.
+You need 75 more stars.
+You need 76 more stars.
+You need 77 more stars.
+You need 78 more stars.
+You need 79 more stars.
+You need 80 more stars.
+You need 81 more stars.
+You need 82 more stars.
+You need 83 more stars.
+You need 84 more stars.
+You need 85 more stars.
+You need 86 more stars.
+You need 87 more stars.
+You need 88 more stars.
+You need 89 more stars.
+You need 90 more stars.
+You need 91 more stars.
+You need 92 more stars.
+You need 93 more stars.
+You need 94 more stars.
+You need 95 more stars.
+You need 96 more stars.
+You need 97 more stars.
+You need 98 more stars.
+You need 99 more stars.
+You need 100 more stars.
+You need 101 more stars.
+You need 102 more stars.
+You need 103 more stars.
+You need 104 more stars.
+You need 105 more stars.
+You need 106 more stars.
+You need 107 more stars.
+You need 108 more stars.
+You need 109 more stars.
+You need 110 more stars.
+You need 111 more stars.
+You need 112 more stars.
+You need 113 more stars.
+You need 114 more stars.
+You need 115 more stars.
+You need 116 more stars.
+You need 117 more stars.
+You need 118 more stars.
+You need 119 more stars.
+You need 120 more stars.
+You need 121 more stars.
+You need 122 more stars.
+You need 123 more stars.
+You need 124 more stars.
+You need 125 more stars.
+You need 126 more stars.
+You need 127 more stars.
+You need 128 more stars.
+You need 129 more stars.
+You need 130 more stars.
+You need 131 more stars.
+You need 132 more stars.
+You need 133 more stars.
+You need 134 more stars.
+You need 135 more stars.
+You need 136 more stars.
+You need 137 more stars.
+You need 138 more stars.
+You need 139 more stars.
+You need 140 more stars.
+You need 141 more stars.
+You need 142 more stars.
+You need 143 more stars.
+You need 144 more stars.
+You need 145 more stars.
+You need 146 more stars.
+You need 147 more stars.
+You need 148 more stars.
+You need 149 more stars.
+You need 150 more stars.
+Feed me something that starts with {A}!
+Feed me something that ends with {A}!
+Feed me something that starts with {B}!
+Feed me something that ends with {B}!
+Feed me something that starts with {C}!
+Feed me something that ends with {C}!
+Feed me something that starts with {D}!
+Feed me something that ends with {D}!
+Feed me something that starts with {E}!
+Feed me something that ends with {E}!
+Feed me something that starts with {F}!
+Feed me something that ends with {F}!
+Feed me something that starts with {G}!
+Feed me something that ends with {G}!
+Feed me something that starts with {H}!
+Feed me something that ends with {H}!
+Feed me something that starts with {I}!
+Feed me something that ends with {I}!
+Feed me something that starts with {J}!
+Feed me something that ends with {J}!
+Feed me something that starts with {K}!
+Feed me something that ends with {K}!
+Feed me something that starts with {L}!
+Feed me something that ends with {L}!
+Feed me something that starts with {M}!
+Feed me something that ends with {M}!
+Feed me something that starts with {N}!
+Feed me something that ends with {N}!
+Feed me something that starts with {O}!
+Feed me something that ends with {O}!
+Feed me something that starts with {P}!
+Feed me something that ends with {P}!
+Feed me something that starts with {Q}!
+Feed me something that ends with {Q}!
+Feed me something that starts with {R}!
+Feed me something that ends with {R}!
+Feed me something that starts with {S}!
+Feed me something that ends with {S}!
+Feed me something that starts with {T}!
+Feed me something that ends with {T}!
+Feed me something that starts with {U}!
+Feed me something that ends with {U}!
+Feed me something that starts with {V}!
+Feed me something that ends with {V}!
+Feed me something that starts with {W}!
+Feed me something that ends with {W}!
+Feed me something that starts with {X}!
+Feed me something that ends with {X}!
+Feed me something that starts with {Y}!
+Feed me something that ends with {Y}!
+Feed me something that starts with {Z}!
+Feed me something that ends with {Z}!
+apple starts with {A}!
+apple ends with {E}!
+That's apple.
+ant starts with {A}!
+ant ends with {T}!
+That's ant.
+ball starts with {B}!
+ball ends with {L}!
+That's ball.
+bear starts with {B}!
+bear ends with {R}!
+That's bear.
+bee starts with {B}!
+bee ends with {E}!
+That's bee.
+bus starts with {B}!
+bus ends with {S}!
+That's bus.
+cat starts with {C}!
+cat ends with {T}!
+That's cat.
+cake starts with {C}!
+cake ends with {E}!
+That's cake.
+car starts with {C}!
+car ends with {R}!
+That's car.
+cow starts with {C}!
+cow ends with {W}!
+That's cow.
+dog starts with {D}!
+dog ends with {G}!
+That's dog.
+duck starts with {D}!
+duck ends with {K}!
+That's duck.
+drum starts with {D}!
+drum ends with {M}!
+That's drum.
+egg starts with {E}!
+egg ends with {G}!
+That's egg.
+fish starts with {F}!
+fish ends with {H}!
+That's fish.
+frog starts with {F}!
+frog ends with {G}!
+That's frog.
+fox starts with {F}!
+fox ends with {X}!
+That's fox.
+goat starts with {G}!
+goat ends with {T}!
+That's goat.
+grapes starts with {G}!
+grapes ends with {S}!
+That's grapes.
+hat starts with {H}!
+hat ends with {T}!
+That's hat.
+horse starts with {H}!
+horse ends with {E}!
+That's horse.
+house starts with {H}!
+house ends with {E}!
+That's house.
+ice cream starts with {I}!
+ice cream ends with {M}!
+That's ice cream.
+kite starts with {K}!
+kite ends with {E}!
+That's kite.
+key starts with {K}!
+key ends with {Y}!
+That's key.
+lion starts with {L}!
+lion ends with {N}!
+That's lion.
+leaf starts with {L}!
+leaf ends with {F}!
+That's leaf.
+moon starts with {M}!
+moon ends with {N}!
+That's moon.
+mouse starts with {M}!
+mouse ends with {E}!
+That's mouse.
+nose starts with {N}!
+nose ends with {E}!
+That's nose.
+owl starts with {O}!
+owl ends with {L}!
+That's owl.
+octopus starts with {O}!
+octopus ends with {S}!
+That's octopus.
+pig starts with {P}!
+pig ends with {G}!
+That's pig.
+pizza starts with {P}!
+pizza ends with {A}!
+That's pizza.
+princess starts with {P}!
+princess ends with {S}!
+That's princess.
+bunny starts with {B}!
+bunny ends with {Y}!
+That's bunny.
+rainbow starts with {R}!
+rainbow ends with {W}!
+That's rainbow.
+sun starts with {S}!
+sun ends with {N}!
+That's sun.
+snake starts with {S}!
+snake ends with {E}!
+That's snake.
+star starts with {S}!
+star ends with {R}!
+That's star.
+tree starts with {T}!
+tree ends with {E}!
+That's tree.
+turtle starts with {T}!
+turtle ends with {E}!
+That's turtle.
+tiger starts with {T}!
+tiger ends with {R}!
+That's tiger.
+umbrella starts with {U}!
+umbrella ends with {A}!
+That's umbrella.
+volcano starts with {V}!
+volcano ends with {O}!
+That's volcano.
+violin starts with {V}!
+violin ends with {N}!
+That's violin.
+whale starts with {W}!
+whale ends with {E}!
+That's whale.
+watch starts with {W}!
+watch ends with {H}!
+That's watch.
+box starts with {B}!
+box ends with {X}!
+That's box.
+yo-yo starts with {Y}!
+yo-yo ends with {O}!
+That's yo-yo.
+zebra starts with {Z}!
+zebra ends with {A}!
+That's zebra.
+bell starts with {B}!
+bell ends with {L}!
+That's bell.
+corn starts with {C}!
+corn ends with {N}!
+That's corn.
+ship starts with {S}!
+ship ends with {P}!
+That's ship.
+sock starts with {S}!
+sock ends with {K}!
+That's sock.
+web starts with {W}!
+web ends with {B}!
+That's web.
+chicken starts with {C}!
+chicken ends with {N}!
+That's chicken.
+map starts with {M}!
+map ends with {P}!
+That's map.
+caterpillar starts with {C}!
+caterpillar ends with {R}!
+That's caterpillar.
+train starts with {T}!
+train ends with {N}!
+That's train.
+clock starts with {C}!
+clock ends with {K}!
+That's clock.
+ring starts with {R}!
+ring ends with {G}!
+That's ring.
+rose starts with {R}!
+rose ends with {E}!
+That's rose.
+pear starts with {P}!
+pear ends with {R}!
+That's pear.
+crab starts with {C}!
+crab ends with {B}!
+That's crab.
+milk starts with {M}!
+milk ends with {K}!
+That's milk.
+shark starts with {S}!
+shark ends with {K}!
+That's shark.
+robot starts with {R}!
+robot ends with {T}!
+That's robot.
+banana starts with {B}!
+banana ends with {A}!
+That's banana.
+lemon starts with {L}!
+lemon ends with {N}!
+That's lemon.
+airplane starts with {A}!
+airplane ends with {E}!
+That's airplane.
+juice starts with {J}!
+juice ends with {E}!
+That's juice.
+peanut starts with {P}!
+peanut ends with {T}!
+That's peanut.
+Try again!
+Can I have 1 cupcake, please?
+I asked for 1 cupcake.
+Can I have 2 cupcakes, please?
+I asked for 2 cupcakes.
+Can I have 3 cupcakes, please?
+I asked for 3 cupcakes.
+Can I have 4 cupcakes, please?
+I asked for 4 cupcakes.
+Can I have 5 cupcakes, please?
+I asked for 5 cupcakes.
+Can I have 6 cupcakes, please?
+I asked for 6 cupcakes.
+Can I have 7 cupcakes, please?
+I asked for 7 cupcakes.
+Can I have 8 cupcakes, please?
+I asked for 8 cupcakes.
+Can I have 9 cupcakes, please?
+I asked for 9 cupcakes.
+Can I have 10 cupcakes, please?
+I asked for 10 cupcakes.
+Can I have 1 cupcake?
+And 1 cupcake, please!
+Can I have 2 cupcakes?
+And 2 cupcakes, please!
+Can I have 3 cupcakes?
+And 3 cupcakes, please!
+Can I have 4 cupcakes?
+And 4 cupcakes, please!
+Can I have 5 cupcakes?
+And 5 cupcakes, please!
+Can I have 6 cupcakes?
+And 6 cupcakes, please!
+Can I have 7 cupcakes?
+And 7 cupcakes, please!
+Can I have 8 cupcakes?
+And 8 cupcakes, please!
+Can I have 9 cupcakes?
+And 9 cupcakes, please!
+1 cupcake.
+2 cupcakes.
+3 cupcakes.
+4 cupcakes.
+5 cupcakes.
+6 cupcakes.
+7 cupcakes.
+8 cupcakes.
+9 cupcakes.
+10 cupcakes.
+11 cupcakes.
+12 cupcakes.
+13 cupcakes.
+14 cupcakes.
+15 cupcakes.
+16 cupcakes.
+17 cupcakes.
+18 cupcakes.
+19 cupcakes.
+20 cupcakes.
+Oops, I didn't order any cupcakes. Tap one to take it back.
+Can I have 1 cookie, please?
+I asked for 1 cookie.
+Can I have 2 cookies, please?
+I asked for 2 cookies.
+Can I have 3 cookies, please?
+I asked for 3 cookies.
+Can I have 4 cookies, please?
+I asked for 4 cookies.
+Can I have 5 cookies, please?
+I asked for 5 cookies.
+Can I have 6 cookies, please?
+I asked for 6 cookies.
+Can I have 7 cookies, please?
+I asked for 7 cookies.
+Can I have 8 cookies, please?
+I asked for 8 cookies.
+Can I have 9 cookies, please?
+I asked for 9 cookies.
+Can I have 10 cookies, please?
+I asked for 10 cookies.
+Can I have 1 cookie?
+And 1 cookie, please!
+Can I have 2 cookies?
+And 2 cookies, please!
+Can I have 3 cookies?
+And 3 cookies, please!
+Can I have 4 cookies?
+And 4 cookies, please!
+Can I have 5 cookies?
+And 5 cookies, please!
+Can I have 6 cookies?
+And 6 cookies, please!
+Can I have 7 cookies?
+And 7 cookies, please!
+Can I have 8 cookies?
+And 8 cookies, please!
+Can I have 9 cookies?
+And 9 cookies, please!
+1 cookie.
+2 cookies.
+3 cookies.
+4 cookies.
+5 cookies.
+6 cookies.
+7 cookies.
+8 cookies.
+9 cookies.
+10 cookies.
+11 cookies.
+12 cookies.
+13 cookies.
+14 cookies.
+15 cookies.
+16 cookies.
+17 cookies.
+18 cookies.
+19 cookies.
+20 cookies.
+Oops, I didn't order any cookies. Tap one to take it back.
+Can I have 1 donut, please?
+I asked for 1 donut.
+Can I have 2 donuts, please?
+I asked for 2 donuts.
+Can I have 3 donuts, please?
+I asked for 3 donuts.
+Can I have 4 donuts, please?
+I asked for 4 donuts.
+Can I have 5 donuts, please?
+I asked for 5 donuts.
+Can I have 6 donuts, please?
+I asked for 6 donuts.
+Can I have 7 donuts, please?
+I asked for 7 donuts.
+Can I have 8 donuts, please?
+I asked for 8 donuts.
+Can I have 9 donuts, please?
+I asked for 9 donuts.
+Can I have 10 donuts, please?
+I asked for 10 donuts.
+Can I have 1 donut?
+And 1 donut, please!
+Can I have 2 donuts?
+And 2 donuts, please!
+Can I have 3 donuts?
+And 3 donuts, please!
+Can I have 4 donuts?
+And 4 donuts, please!
+Can I have 5 donuts?
+And 5 donuts, please!
+Can I have 6 donuts?
+And 6 donuts, please!
+Can I have 7 donuts?
+And 7 donuts, please!
+Can I have 8 donuts?
+And 8 donuts, please!
+Can I have 9 donuts?
+And 9 donuts, please!
+1 donut.
+2 donuts.
+3 donuts.
+4 donuts.
+5 donuts.
+6 donuts.
+7 donuts.
+8 donuts.
+9 donuts.
+10 donuts.
+11 donuts.
+12 donuts.
+13 donuts.
+14 donuts.
+15 donuts.
+16 donuts.
+17 donuts.
+18 donuts.
+19 donuts.
+20 donuts.
+Oops, I didn't order any donuts. Tap one to take it back.
+Can I have 1 croissant, please?
+I asked for 1 croissant.
+Can I have 2 croissants, please?
+I asked for 2 croissants.
+Can I have 3 croissants, please?
+I asked for 3 croissants.
+Can I have 4 croissants, please?
+I asked for 4 croissants.
+Can I have 5 croissants, please?
+I asked for 5 croissants.
+Can I have 6 croissants, please?
+I asked for 6 croissants.
+Can I have 7 croissants, please?
+I asked for 7 croissants.
+Can I have 8 croissants, please?
+I asked for 8 croissants.
+Can I have 9 croissants, please?
+I asked for 9 croissants.
+Can I have 10 croissants, please?
+I asked for 10 croissants.
+Can I have 1 croissant?
+And 1 croissant, please!
+Can I have 2 croissants?
+And 2 croissants, please!
+Can I have 3 croissants?
+And 3 croissants, please!
+Can I have 4 croissants?
+And 4 croissants, please!
+Can I have 5 croissants?
+And 5 croissants, please!
+Can I have 6 croissants?
+And 6 croissants, please!
+Can I have 7 croissants?
+And 7 croissants, please!
+Can I have 8 croissants?
+And 8 croissants, please!
+Can I have 9 croissants?
+And 9 croissants, please!
+1 croissant.
+2 croissants.
+3 croissants.
+4 croissants.
+5 croissants.
+6 croissants.
+7 croissants.
+8 croissants.
+9 croissants.
+10 croissants.
+11 croissants.
+12 croissants.
+13 croissants.
+14 croissants.
+15 croissants.
+16 croissants.
+17 croissants.
+18 croissants.
+19 croissants.
+20 croissants.
+Oops, I didn't order any croissants. Tap one to take it back.
+Can I have 1 pie, please?
+I asked for 1 pie.
+Can I have 2 pies, please?
+I asked for 2 pies.
+Can I have 3 pies, please?
+I asked for 3 pies.
+Can I have 4 pies, please?
+I asked for 4 pies.
+Can I have 5 pies, please?
+I asked for 5 pies.
+Can I have 6 pies, please?
+I asked for 6 pies.
+Can I have 7 pies, please?
+I asked for 7 pies.
+Can I have 8 pies, please?
+I asked for 8 pies.
+Can I have 9 pies, please?
+I asked for 9 pies.
+Can I have 10 pies, please?
+I asked for 10 pies.
+Can I have 1 pie?
+And 1 pie, please!
+Can I have 2 pies?
+And 2 pies, please!
+Can I have 3 pies?
+And 3 pies, please!
+Can I have 4 pies?
+And 4 pies, please!
+Can I have 5 pies?
+And 5 pies, please!
+Can I have 6 pies?
+And 6 pies, please!
+Can I have 7 pies?
+And 7 pies, please!
+Can I have 8 pies?
+And 8 pies, please!
+Can I have 9 pies?
+And 9 pies, please!
+1 pie.
+2 pies.
+3 pies.
+4 pies.
+5 pies.
+6 pies.
+7 pies.
+8 pies.
+9 pies.
+10 pies.
+11 pies.
+12 pies.
+13 pies.
+14 pies.
+15 pies.
+16 pies.
+17 pies.
+18 pies.
+19 pies.
+20 pies.
+Oops, I didn't order any pies. Tap one to take it back.
+You have 0.
+You have 1.
+You have 2.
+You have 3.
+You have 4.
+You have 5.
+You have 6.
+You have 7.
+You have 8.
+You have 9.
+You have 10.
+You have 11.
+You have 12.
+You have 13.
+You have 14.
+You have 15.
+You have 16.
+You have 17.
+You have 18.
+You have 19.
+You have 20.
+Let's count again!
+Order served!
+Bonus question! How many treats did you serve in all?
+Not quite. Count all the treats on the plate!
+1 plus 1 is 2!
+1 plus 2 is 3!
+1 plus 3 is 4!
+1 plus 4 is 5!
+1 plus 5 is 6!
+1 plus 6 is 7!
+1 plus 7 is 8!
+1 plus 8 is 9!
+1 plus 9 is 10!
+2 plus 1 is 3!
+2 plus 2 is 4!
+2 plus 3 is 5!
+2 plus 4 is 6!
+2 plus 5 is 7!
+2 plus 6 is 8!
+2 plus 7 is 9!
+2 plus 8 is 10!
+2 plus 9 is 11!
+3 plus 1 is 4!
+3 plus 2 is 5!
+3 plus 3 is 6!
+3 plus 4 is 7!
+3 plus 5 is 8!
+3 plus 6 is 9!
+3 plus 7 is 10!
+3 plus 8 is 11!
+3 plus 9 is 12!
+4 plus 1 is 5!
+4 plus 2 is 6!
+4 plus 3 is 7!
+4 plus 4 is 8!
+4 plus 5 is 9!
+4 plus 6 is 10!
+4 plus 7 is 11!
+4 plus 8 is 12!
+4 plus 9 is 13!
+5 plus 1 is 6!
+5 plus 2 is 7!
+5 plus 3 is 8!
+5 plus 4 is 9!
+5 plus 5 is 10!
+5 plus 6 is 11!
+5 plus 7 is 12!
+5 plus 8 is 13!
+5 plus 9 is 14!
+6 plus 1 is 7!
+6 plus 2 is 8!
+6 plus 3 is 9!
+6 plus 4 is 10!
+6 plus 5 is 11!
+6 plus 6 is 12!
+6 plus 7 is 13!
+6 plus 8 is 14!
+6 plus 9 is 15!
+7 plus 1 is 8!
+7 plus 2 is 9!
+7 plus 3 is 10!
+7 plus 4 is 11!
+7 plus 5 is 12!
+7 plus 6 is 13!
+7 plus 7 is 14!
+7 plus 8 is 15!
+7 plus 9 is 16!
+8 plus 1 is 9!
+8 plus 2 is 10!
+8 plus 3 is 11!
+8 plus 4 is 12!
+8 plus 5 is 13!
+8 plus 6 is 14!
+8 plus 7 is 15!
+8 plus 8 is 16!
+8 plus 9 is 17!
+9 plus 1 is 10!
+9 plus 2 is 11!
+9 plus 3 is 12!
+9 plus 4 is 13!
+9 plus 5 is 14!
+9 plus 6 is 15!
+9 plus 7 is 16!
+9 plus 8 is 17!
+9 plus 9 is 18!
+Spell ant.
+{A}, {N}, {T}.
+ant!
+Spell bee.
+{B}, {E}, {E}.
+bee!
+Spell bug.
+{B}, {U}, {G}.
+bug!
+Spell bat.
+{B}, {A}, {T}.
+bat!
+Spell box.
+{B}, {O}, {X}.
+box!
+Spell bus.
+{B}, {U}, {S}.
+bus!
+Spell cat.
+{C}, {A}, {T}.
+cat!
+Spell cow.
+{C}, {O}, {W}.
+cow!
+Spell cup.
+{C}, {U}, {P}.
+cup!
+Spell dog.
+{D}, {O}, {G}.
+dog!
+Spell egg.
+{E}, {G}, {G}.
+egg!
+Spell fox.
+{F}, {O}, {X}.
+fox!
+Spell hat.
+{H}, {A}, {T}.
+hat!
+Spell hen.
+{H}, {E}, {N}.
+hen!
+Spell key.
+{K}, {E}, {Y}.
+key!
+Spell map.
+{M}, {A}, {P}.
+map!
+Spell owl.
+{O}, {W}, {L}.
+owl!
+Spell pen.
+{P}, {E}, {N}.
+pen!
+Spell pig.
+{P}, {I}, {G}.
+pig!
+Spell rat.
+{R}, {A}, {T}.
+rat!
+Spell sun.
+{S}, {U}, {N}.
+sun!
+Spell web.
+{W}, {E}, {B}.
+web!
+Spell bed.
+{B}, {E}, {D}.
+bed!
+Spell fish.
+{F}, {I}, {S}, {H}.
+fish!
+Spell frog.
+{F}, {R}, {O}, {G}.
+frog!
+Spell duck.
+{D}, {U}, {C}, {K}.
+duck!
+Spell cake.
+{C}, {A}, {K}, {E}.
+cake!
+Spell star.
+{S}, {T}, {A}, {R}.
+star!
+Spell tree.
+{T}, {R}, {E}, {E}.
+tree!
+Spell moon.
+{M}, {O}, {O}, {N}.
+moon!
+Spell kite.
+{K}, {I}, {T}, {E}.
+kite!
+Spell bear.
+{B}, {E}, {A}, {R}.
+bear!
+Spell lion.
+{L}, {I}, {O}, {N}.
+lion!
+Spell bell.
+{B}, {E}, {L}, {L}.
+bell!
+Spell corn.
+{C}, {O}, {R}, {N}.
+corn!
+Spell ship.
+{S}, {H}, {I}, {P}.
+ship!
+Spell sock.
+{S}, {O}, {C}, {K}.
+sock!
+Spell drum.
+{D}, {R}, {U}, {M}.
+drum!
+Spell pear.
+{P}, {E}, {A}, {R}.
+pear!
+Spell ring.
+{R}, {I}, {N}, {G}.
+ring!
+Spell rose.
+{R}, {O}, {S}, {E}.
+rose!
+Spell crab.
+{C}, {R}, {A}, {B}.
+crab!
+Spell milk.
+{M}, {I}, {L}, {K}.
+milk!
+Spell snake.
+{S}, {N}, {A}, {K}, {E}.
+snake!
+Spell zebra.
+{Z}, {E}, {B}, {R}, {A}.
+zebra!
+Spell horse.
+{H}, {O}, {R}, {S}, {E}.
+horse!
+Spell pizza.
+{P}, {I}, {Z}, {Z}, {A}.
+pizza!
+Spell apple.
+{A}, {P}, {P}, {L}, {E}.
+apple!
+Spell whale.
+{W}, {H}, {A}, {L}, {E}.
+whale!
+Spell tiger.
+{T}, {I}, {G}, {E}, {R}.
+tiger!
+Spell mouse.
+{M}, {O}, {U}, {S}, {E}.
+mouse!
+Spell house.
+{H}, {O}, {U}, {S}, {E}.
+house!
+Spell train.
+{T}, {R}, {A}, {I}, {N}.
+train!
+Spell clock.
+{C}, {L}, {O}, {C}, {K}.
+clock!
+Spell sheep.
+{S}, {H}, {E}, {E}, {P}.
+sheep!
+Spell shark.
+{S}, {H}, {A}, {R}, {K}.
+shark!
+Spell candy.
+{C}, {A}, {N}, {D}, {Y}.
+candy!
+Spell bread.
+{B}, {R}, {E}, {A}, {D}.
+bread!
+Spell truck.
+{T}, {R}, {U}, {C}, {K}.
+truck!
+Spell robot.
+{R}, {O}, {B}, {O}, {T}.
+robot!
+{A}.
+{B}.
+{C}.
+{D}.
+{E}.
+{F}.
+{G}.
+{H}.
+{I}.
+{J}.
+{K}.
+{L}.
+{M}.
+{N}.
+{O}.
+{P}.
+{Q}.
+{R}.
+{S}.
+{T}.
+{U}.
+{V}.
+{W}.
+{X}.
+{Y}.
+{Z}.
+Not quite! Try again.
+Ooh, a lollipop!
+Ooh, a balloon!
+Ooh, a teddy bear!
+Ooh, a banana!
+Ooh, a crayon!
+Ooh, a toy rocket!
+Ooh, a toy dinosaur!
+Ooh, a ball!
+Ooh, an ice cream!
+Ooh, a toy robot!
+Ooh, a kite!
+Ooh, a book!
+Ooh, a yo-yo!
+Ooh, an apple!
+It costs 1 cent.
+That's exactly 1 cent!
+You need 1 cent more.
+It costs 2 cents.
+That's exactly 2 cents!
+You need 2 cents more.
+It costs 3 cents.
+That's exactly 3 cents!
+You need 3 cents more.
+It costs 4 cents.
+That's exactly 4 cents!
+You need 4 cents more.
+It costs 5 cents.
+That's exactly 5 cents!
+You need 5 cents more.
+It costs 6 cents.
+That's exactly 6 cents!
+You need 6 cents more.
+It costs 7 cents.
+That's exactly 7 cents!
+You need 7 cents more.
+It costs 8 cents.
+That's exactly 8 cents!
+You need 8 cents more.
+It costs 9 cents.
+That's exactly 9 cents!
+You need 9 cents more.
+It costs 10 cents.
+That's exactly 10 cents!
+You need 10 cents more.
+It costs 11 cents.
+That's exactly 11 cents!
+You need 11 cents more.
+It costs 12 cents.
+That's exactly 12 cents!
+You need 12 cents more.
+It costs 13 cents.
+That's exactly 13 cents!
+You need 13 cents more.
+It costs 14 cents.
+That's exactly 14 cents!
+You need 14 cents more.
+It costs 15 cents.
+That's exactly 15 cents!
+You need 15 cents more.
+It costs 16 cents.
+That's exactly 16 cents!
+You need 16 cents more.
+It costs 17 cents.
+That's exactly 17 cents!
+You need 17 cents more.
+It costs 18 cents.
+That's exactly 18 cents!
+You need 18 cents more.
+It costs 19 cents.
+That's exactly 19 cents!
+You need 19 cents more.
+It costs 20 cents.
+That's exactly 20 cents!
+You need 20 cents more.
+It costs 21 cents.
+That's exactly 21 cents!
+You need 21 cents more.
+It costs 22 cents.
+That's exactly 22 cents!
+You need 22 cents more.
+It costs 23 cents.
+That's exactly 23 cents!
+You need 23 cents more.
+It costs 24 cents.
+That's exactly 24 cents!
+You need 24 cents more.
+It costs 25 cents.
+That's exactly 25 cents!
+You need 25 cents more.
+It costs 26 cents.
+That's exactly 26 cents!
+You need 26 cents more.
+It costs 27 cents.
+That's exactly 27 cents!
+You need 27 cents more.
+It costs 28 cents.
+That's exactly 28 cents!
+You need 28 cents more.
+It costs 29 cents.
+That's exactly 29 cents!
+You need 29 cents more.
+It costs 30 cents.
+That's exactly 30 cents!
+You need 30 cents more.
+It costs 31 cents.
+That's exactly 31 cents!
+You need 31 cents more.
+It costs 32 cents.
+That's exactly 32 cents!
+You need 32 cents more.
+It costs 33 cents.
+That's exactly 33 cents!
+You need 33 cents more.
+It costs 34 cents.
+That's exactly 34 cents!
+You need 34 cents more.
+It costs 35 cents.
+That's exactly 35 cents!
+You need 35 cents more.
+It costs 36 cents.
+That's exactly 36 cents!
+You need 36 cents more.
+It costs 37 cents.
+That's exactly 37 cents!
+You need 37 cents more.
+It costs 38 cents.
+That's exactly 38 cents!
+You need 38 cents more.
+It costs 39 cents.
+That's exactly 39 cents!
+You need 39 cents more.
+It costs 40 cents.
+That's exactly 40 cents!
+You need 40 cents more.
+It costs 41 cents.
+That's exactly 41 cents!
+You need 41 cents more.
+It costs 42 cents.
+That's exactly 42 cents!
+You need 42 cents more.
+It costs 43 cents.
+That's exactly 43 cents!
+You need 43 cents more.
+It costs 44 cents.
+That's exactly 44 cents!
+You need 44 cents more.
+It costs 45 cents.
+That's exactly 45 cents!
+You need 45 cents more.
+It costs 46 cents.
+That's exactly 46 cents!
+You need 46 cents more.
+It costs 47 cents.
+That's exactly 47 cents!
+You need 47 cents more.
+It costs 48 cents.
+That's exactly 48 cents!
+You need 48 cents more.
+It costs 49 cents.
+That's exactly 49 cents!
+You need 49 cents more.
+It costs 50 cents.
+That's exactly 50 cents!
+You need 50 cents more.
+It costs 51 cents.
+That's exactly 51 cents!
+You need 51 cents more.
+It costs 52 cents.
+That's exactly 52 cents!
+You need 52 cents more.
+It costs 53 cents.
+That's exactly 53 cents!
+You need 53 cents more.
+It costs 54 cents.
+That's exactly 54 cents!
+You need 54 cents more.
+It costs 55 cents.
+That's exactly 55 cents!
+You need 55 cents more.
+It costs 56 cents.
+That's exactly 56 cents!
+You need 56 cents more.
+It costs 57 cents.
+That's exactly 57 cents!
+You need 57 cents more.
+It costs 58 cents.
+That's exactly 58 cents!
+You need 58 cents more.
+It costs 59 cents.
+That's exactly 59 cents!
+You need 59 cents more.
+It costs 60 cents.
+That's exactly 60 cents!
+You need 60 cents more.
+It costs 61 cents.
+That's exactly 61 cents!
+You need 61 cents more.
+It costs 62 cents.
+That's exactly 62 cents!
+You need 62 cents more.
+It costs 63 cents.
+That's exactly 63 cents!
+You need 63 cents more.
+It costs 64 cents.
+That's exactly 64 cents!
+You need 64 cents more.
+It costs 65 cents.
+That's exactly 65 cents!
+You need 65 cents more.
+It costs 66 cents.
+That's exactly 66 cents!
+You need 66 cents more.
+It costs 67 cents.
+That's exactly 67 cents!
+You need 67 cents more.
+It costs 68 cents.
+That's exactly 68 cents!
+You need 68 cents more.
+It costs 69 cents.
+That's exactly 69 cents!
+You need 69 cents more.
+It costs 70 cents.
+That's exactly 70 cents!
+You need 70 cents more.
+It costs 71 cents.
+That's exactly 71 cents!
+You need 71 cents more.
+It costs 72 cents.
+That's exactly 72 cents!
+You need 72 cents more.
+It costs 73 cents.
+That's exactly 73 cents!
+You need 73 cents more.
+It costs 74 cents.
+That's exactly 74 cents!
+You need 74 cents more.
+It costs 75 cents.
+That's exactly 75 cents!
+You need 75 cents more.
+It costs 76 cents.
+That's exactly 76 cents!
+You need 76 cents more.
+It costs 77 cents.
+That's exactly 77 cents!
+You need 77 cents more.
+It costs 78 cents.
+That's exactly 78 cents!
+You need 78 cents more.
+It costs 79 cents.
+That's exactly 79 cents!
+You need 79 cents more.
+It costs 80 cents.
+That's exactly 80 cents!
+You need 80 cents more.
+It costs 81 cents.
+That's exactly 81 cents!
+You need 81 cents more.
+It costs 82 cents.
+That's exactly 82 cents!
+You need 82 cents more.
+It costs 83 cents.
+That's exactly 83 cents!
+You need 83 cents more.
+It costs 84 cents.
+That's exactly 84 cents!
+You need 84 cents more.
+It costs 85 cents.
+That's exactly 85 cents!
+You need 85 cents more.
+It costs 86 cents.
+That's exactly 86 cents!
+You need 86 cents more.
+It costs 87 cents.
+That's exactly 87 cents!
+You need 87 cents more.
+It costs 88 cents.
+That's exactly 88 cents!
+You need 88 cents more.
+It costs 89 cents.
+That's exactly 89 cents!
+You need 89 cents more.
+It costs 90 cents.
+That's exactly 90 cents!
+You need 90 cents more.
+It costs 91 cents.
+That's exactly 91 cents!
+You need 91 cents more.
+It costs 92 cents.
+That's exactly 92 cents!
+You need 92 cents more.
+It costs 93 cents.
+That's exactly 93 cents!
+You need 93 cents more.
+It costs 94 cents.
+That's exactly 94 cents!
+You need 94 cents more.
+It costs 95 cents.
+That's exactly 95 cents!
+You need 95 cents more.
+It costs 96 cents.
+That's exactly 96 cents!
+You need 96 cents more.
+It costs 97 cents.
+That's exactly 97 cents!
+You need 97 cents more.
+It costs 98 cents.
+That's exactly 98 cents!
+You need 98 cents more.
+It costs 99 cents.
+That's exactly 99 cents!
+You need 99 cents more.
+You gave 0 cents.
+You gave 1 cent.
+You gave 2 cents.
+You gave 3 cents.
+You gave 4 cents.
+You gave 5 cents.
+You gave 6 cents.
+You gave 7 cents.
+You gave 8 cents.
+You gave 9 cents.
+You gave 10 cents.
+You gave 11 cents.
+You gave 12 cents.
+You gave 13 cents.
+You gave 14 cents.
+You gave 15 cents.
+You gave 16 cents.
+You gave 17 cents.
+You gave 18 cents.
+You gave 19 cents.
+You gave 20 cents.
+You gave 21 cents.
+You gave 22 cents.
+You gave 23 cents.
+You gave 24 cents.
+You gave 25 cents.
+You gave 26 cents.
+You gave 27 cents.
+You gave 28 cents.
+You gave 29 cents.
+You gave 30 cents.
+You gave 31 cents.
+You gave 32 cents.
+You gave 33 cents.
+You gave 34 cents.
+You gave 35 cents.
+You gave 36 cents.
+You gave 37 cents.
+You gave 38 cents.
+You gave 39 cents.
+You gave 40 cents.
+You gave 41 cents.
+You gave 42 cents.
+You gave 43 cents.
+You gave 44 cents.
+You gave 45 cents.
+You gave 46 cents.
+You gave 47 cents.
+You gave 48 cents.
+You gave 49 cents.
+You gave 50 cents.
+You gave 51 cents.
+You gave 52 cents.
+You gave 53 cents.
+You gave 54 cents.
+You gave 55 cents.
+You gave 56 cents.
+You gave 57 cents.
+You gave 58 cents.
+You gave 59 cents.
+You gave 60 cents.
+You gave 61 cents.
+You gave 62 cents.
+You gave 63 cents.
+You gave 64 cents.
+You gave 65 cents.
+You gave 66 cents.
+You gave 67 cents.
+You gave 68 cents.
+You gave 69 cents.
+You gave 70 cents.
+You gave 71 cents.
+You gave 72 cents.
+You gave 73 cents.
+You gave 74 cents.
+You gave 75 cents.
+You gave 76 cents.
+You gave 77 cents.
+You gave 78 cents.
+You gave 79 cents.
+You gave 80 cents.
+You gave 81 cents.
+You gave 82 cents.
+You gave 83 cents.
+You gave 84 cents.
+You gave 85 cents.
+You gave 86 cents.
+You gave 87 cents.
+You gave 88 cents.
+You gave 89 cents.
+You gave 90 cents.
+You gave 91 cents.
+You gave 92 cents.
+You gave 93 cents.
+You gave 94 cents.
+You gave 95 cents.
+You gave 96 cents.
+You gave 97 cents.
+You gave 98 cents.
+1 cent.
+5 cents.
+10 cents.
+25 cents.
+Tap the coins to pay.
+That's too much! Take some coins back.
+Zombie Splat!
+Round 1! Zombies are coming. Splat the zombie I ask for!
+Round 1! Here they come!
+Round 2! Here they come!
+Round 3! Here they come!
+Round 4! Here they come!
+Round 5! Here they come!
+Round 6! Here they come!
+Round 7! Here they come!
+Round 8! Here they come!
+Round 9! Here they come!
+Round 10! Here they come!
+Round 11! Here they come!
+Round 12! Here they come!
+Round 13! Here they come!
+Round 14! Here they come!
+Round 15! Here they come!
+Round 16! Here they come!
+Round 17! Here they come!
+Round 18! Here they come!
+Round 19! Here they come!
+Round 20! Here they come!
+Round 21! Here they come!
+Round 22! Here they come!
+Round 23! Here they come!
+Round 24! Here they come!
+Round 25! Here they come!
+Round 26! Here they come!
+Round 27! Here they come!
+Round 28! Here they come!
+Round 29! Here they come!
+Round 30! Here they come!
+Round 31! Here they come!
+Round 32! Here they come!
+Round 33! Here they come!
+Round 34! Here they come!
+Round 35! Here they come!
+Round 36! Here they come!
+Round 37! Here they come!
+Round 38! Here they come!
+Round 39! Here they come!
+Round 40! Here they come!
+Round clear! Awesome!
+You did it! Round clear!
+Zombies splatted! Round clear!
+Oh no! The zombies broke in! Let's try that round again.
+Splat!
+Nice shot!
+Gooey!
+Got it!
+Yes!
+Five in a row! Goo bomb ready!
+Goo bomb! Splat splat splat!
+Splat the letter {A}!
+That's {A}.
+Splat the letter {B}!
+That's {B}.
+Splat the letter {C}!
+That's {C}.
+Splat the letter {D}!
+That's {D}.
+Splat the letter {E}!
+That's {E}.
+Splat the letter {F}!
+That's {F}.
+Splat the letter {G}!
+That's {G}.
+Splat the letter {H}!
+That's {H}.
+Splat the letter {I}!
+That's {I}.
+Splat the letter {J}!
+That's {J}.
+Splat the letter {K}!
+That's {K}.
+Splat the letter {L}!
+That's {L}.
+Splat the letter {M}!
+That's {M}.
+Splat the letter {N}!
+That's {N}.
+Splat the letter {O}!
+That's {O}.
+Splat the letter {P}!
+That's {P}.
+Splat the letter {Q}!
+That's {Q}.
+Splat the letter {R}!
+That's {R}.
+Splat the letter {S}!
+That's {S}.
+Splat the letter {T}!
+That's {T}.
+Splat the letter {U}!
+That's {U}.
+Splat the letter {V}!
+That's {V}.
+Splat the letter {W}!
+That's {W}.
+Splat the letter {X}!
+That's {X}.
+Splat the letter {Y}!
+That's {Y}.
+Splat the letter {Z}!
+That's {Z}.
+Splat number 1!
+Splat number 2!
+Splat number 3!
+Splat number 4!
+Splat number 5!
+Splat number 6!
+Splat number 7!
+Splat number 8!
+Splat number 9!
+Splat number 10!
+Splat number 11!
+Splat number 12!
+Splat number 13!
+Splat number 14!
+Splat number 15!
+Splat number 16!
+Splat number 17!
+Splat number 18!
+Splat number 19!
+Splat number 20!
+What is 1 plus 1?
+What is 1 plus 2?
+What is 2 plus 1?
+What is 1 plus 3?
+What is 2 plus 2?
+What is 3 plus 1?
+What is 1 plus 4?
+What is 2 plus 3?
+What is 3 plus 2?
+What is 4 plus 1?
+What is 1 plus 5?
+What is 2 plus 4?
+What is 3 plus 3?
+What is 4 plus 2?
+What is 5 plus 1?
+What is 1 plus 6?
+What is 2 plus 5?
+What is 3 plus 4?
+What is 4 plus 3?
+What is 5 plus 2?
+What is 6 plus 1?
+What is 1 plus 7?
+What is 2 plus 6?
+What is 3 plus 5?
+What is 4 plus 4?
+What is 5 plus 3?
+What is 6 plus 2?
+What is 7 plus 1?
+What is 1 plus 8?
+What is 2 plus 7?
+What is 3 plus 6?
+What is 4 plus 5?
+What is 5 plus 4?
+What is 6 plus 3?
+What is 7 plus 2?
+What is 8 plus 1?
+What is 1 plus 9?
+What is 2 plus 8?
+What is 3 plus 7?
+What is 4 plus 6?
+What is 5 plus 5?
+What is 6 plus 4?
+What is 7 plus 3?
+What is 8 plus 2?
+What is 9 plus 1?
+What is 1 plus 10?
+What is 2 plus 9?
+What is 3 plus 8?
+What is 4 plus 7?
+What is 5 plus 6?
+What is 6 plus 5?
+What is 7 plus 4?
+What is 8 plus 3?
+What is 9 plus 2?
+What is 10 plus 1?
+What is 1 plus 11?
+What is 2 plus 10?
+What is 3 plus 9?
+What is 4 plus 8?
+What is 5 plus 7?
+What is 6 plus 6?
+What is 7 plus 5?
+What is 8 plus 4?
+What is 9 plus 3?
+What is 10 plus 2?
+What is 11 plus 1?
+What is 1 plus 12?
+What is 2 plus 11?
+What is 3 plus 10?
+What is 4 plus 9?
+What is 5 plus 8?
+What is 6 plus 7?
+What is 7 plus 6?
+What is 8 plus 5?
+What is 9 plus 4?
+What is 10 plus 3?
+What is 11 plus 2?
+What is 12 plus 1?
+What is 1 plus 13?
+What is 2 plus 12?
+What is 3 plus 11?
+What is 4 plus 10?
+What is 5 plus 9?
+What is 6 plus 8?
+What is 7 plus 7?
+What is 8 plus 6?
+What is 9 plus 5?
+What is 10 plus 4?
+What is 11 plus 3?
+What is 12 plus 2?
+What is 13 plus 1?
+What is 1 plus 14?
+What is 2 plus 13?
+What is 3 plus 12?
+What is 4 plus 11?
+What is 5 plus 10?
+What is 6 plus 9?
+What is 7 plus 8?
+What is 8 plus 7?
+What is 9 plus 6?
+What is 10 plus 5?
+What is 11 plus 4?
+What is 12 plus 3?
+What is 13 plus 2?
+What is 14 plus 1?
+What is 1 plus 15?
+What is 2 plus 14?
+What is 3 plus 13?
+What is 4 plus 12?
+What is 5 plus 11?
+What is 6 plus 10?
+What is 7 plus 9?
+What is 8 plus 8?
+What is 9 plus 7?
+What is 10 plus 6?
+What is 11 plus 5?
+What is 12 plus 4?
+What is 13 plus 3?
+What is 14 plus 2?
+What is 15 plus 1?
+What is 1 plus 16?
+What is 2 plus 15?
+What is 3 plus 14?
+What is 4 plus 13?
+What is 5 plus 12?
+What is 6 plus 11?
+What is 7 plus 10?
+What is 8 plus 9?
+What is 9 plus 8?
+What is 10 plus 7?
+What is 11 plus 6?
+What is 12 plus 5?
+What is 13 plus 4?
+What is 14 plus 3?
+What is 15 plus 2?
+What is 16 plus 1?
+What is 1 plus 17?
+What is 2 plus 16?
+What is 3 plus 15?
+What is 4 plus 14?
+What is 5 plus 13?
+What is 6 plus 12?
+What is 7 plus 11?
+What is 8 plus 10?
+What is 9 plus 9?
+What is 10 plus 8?
+What is 11 plus 7?
+What is 12 plus 6?
+What is 13 plus 5?
+What is 14 plus 4?
+What is 15 plus 3?
+What is 16 plus 2?
+What is 17 plus 1?
+What is 1 plus 18?
+What is 2 plus 17?
+What is 3 plus 16?
+What is 4 plus 15?
+What is 5 plus 14?
+What is 6 plus 13?
+What is 7 plus 12?
+What is 8 plus 11?
+What is 9 plus 10?
+What is 10 plus 9?
+What is 11 plus 8?
+What is 12 plus 7?
+What is 13 plus 6?
+What is 14 plus 5?
+What is 15 plus 4?
+What is 16 plus 3?
+What is 17 plus 2?
+What is 18 plus 1?
+What is 1 plus 19?
+What is 2 plus 18?
+What is 3 plus 17?
+What is 4 plus 16?
+What is 5 plus 15?
+What is 6 plus 14?
+What is 7 plus 13?
+What is 8 plus 12?
+What is 9 plus 11?
+What is 10 plus 10?
+What is 11 plus 9?
+What is 12 plus 8?
+What is 13 plus 7?
+What is 14 plus 6?
+What is 15 plus 5?
+What is 16 plus 4?
+What is 17 plus 3?
+What is 18 plus 2?
+What is 19 plus 1?
+What is 3 minus 1?
+What is 3 minus 2?
+What is 4 minus 1?
+What is 4 minus 2?
+What is 4 minus 3?
+What is 5 minus 1?
+What is 5 minus 2?
+What is 5 minus 3?
+What is 5 minus 4?
+What is 6 minus 1?
+What is 6 minus 2?
+What is 6 minus 3?
+What is 6 minus 4?
+What is 6 minus 5?
+What is 7 minus 1?
+What is 7 minus 2?
+What is 7 minus 3?
+What is 7 minus 4?
+What is 7 minus 5?
+What is 7 minus 6?
+What is 8 minus 1?
+What is 8 minus 2?
+What is 8 minus 3?
+What is 8 minus 4?
+What is 8 minus 5?
+What is 8 minus 6?
+What is 8 minus 7?
+What is 9 minus 1?
+What is 9 minus 2?
+What is 9 minus 3?
+What is 9 minus 4?
+What is 9 minus 5?
+What is 9 minus 6?
+What is 9 minus 7?
+What is 9 minus 8?
+What is 10 minus 1?
+What is 10 minus 2?
+What is 10 minus 3?
+What is 10 minus 4?
+What is 10 minus 5?
+What is 10 minus 6?
+What is 10 minus 7?
+What is 10 minus 8?
+What is 10 minus 9?
+What is 11 minus 1?
+What is 11 minus 2?
+What is 11 minus 3?
+What is 11 minus 4?
+What is 11 minus 5?
+What is 11 minus 6?
+What is 11 minus 7?
+What is 11 minus 8?
+What is 11 minus 9?
+What is 11 minus 10?
+What is 12 minus 1?
+What is 12 minus 2?
+What is 12 minus 3?
+What is 12 minus 4?
+What is 12 minus 5?
+What is 12 minus 6?
+What is 12 minus 7?
+What is 12 minus 8?
+What is 12 minus 9?
+What is 12 minus 10?
+What is 12 minus 11?
+What is 13 minus 1?
+What is 13 minus 2?
+What is 13 minus 3?
+What is 13 minus 4?
+What is 13 minus 5?
+What is 13 minus 6?
+What is 13 minus 7?
+What is 13 minus 8?
+What is 13 minus 9?
+What is 13 minus 10?
+What is 13 minus 11?
+What is 13 minus 12?
+What is 14 minus 1?
+What is 14 minus 2?
+What is 14 minus 3?
+What is 14 minus 4?
+What is 14 minus 5?
+What is 14 minus 6?
+What is 14 minus 7?
+What is 14 minus 8?
+What is 14 minus 9?
+What is 14 minus 10?
+What is 14 minus 11?
+What is 14 minus 12?
+What is 14 minus 13?
+What is 15 minus 1?
+What is 15 minus 2?
+What is 15 minus 3?
+What is 15 minus 4?
+What is 15 minus 5?
+What is 15 minus 6?
+What is 15 minus 7?
+What is 15 minus 8?
+What is 15 minus 9?
+What is 15 minus 10?
+What is 15 minus 11?
+What is 15 minus 12?
+What is 15 minus 13?
+What is 15 minus 14?
+What is 16 minus 1?
+What is 16 minus 2?
+What is 16 minus 3?
+What is 16 minus 4?
+What is 16 minus 5?
+What is 16 minus 6?
+What is 16 minus 7?
+What is 16 minus 8?
+What is 16 minus 9?
+What is 16 minus 10?
+What is 16 minus 11?
+What is 16 minus 12?
+What is 16 minus 13?
+What is 16 minus 14?
+What is 16 minus 15?
+What is 17 minus 1?
+What is 17 minus 2?
+What is 17 minus 3?
+What is 17 minus 4?
+What is 17 minus 5?
+What is 17 minus 6?
+What is 17 minus 7?
+What is 17 minus 8?
+What is 17 minus 9?
+What is 17 minus 10?
+What is 17 minus 11?
+What is 17 minus 12?
+What is 17 minus 13?
+What is 17 minus 14?
+What is 17 minus 15?
+What is 17 minus 16?
+What is 18 minus 1?
+What is 18 minus 2?
+What is 18 minus 3?
+What is 18 minus 4?
+What is 18 minus 5?
+What is 18 minus 6?
+What is 18 minus 7?
+What is 18 minus 8?
+What is 18 minus 9?
+What is 18 minus 10?
+What is 18 minus 11?
+What is 18 minus 12?
+What is 18 minus 13?
+What is 18 minus 14?
+What is 18 minus 15?
+What is 18 minus 16?
+What is 18 minus 17?
+What is 19 minus 1?
+What is 19 minus 2?
+What is 19 minus 3?
+What is 19 minus 4?
+What is 19 minus 5?
+What is 19 minus 6?
+What is 19 minus 7?
+What is 19 minus 8?
+What is 19 minus 9?
+What is 19 minus 10?
+What is 19 minus 11?
+What is 19 minus 12?
+What is 19 minus 13?
+What is 19 minus 14?
+What is 19 minus 15?
+What is 19 minus 16?
+What is 19 minus 17?
+What is 19 minus 18?
+What is 20 minus 1?
+What is 20 minus 2?
+What is 20 minus 3?
+What is 20 minus 4?
+What is 20 minus 5?
+What is 20 minus 6?
+What is 20 minus 7?
+What is 20 minus 8?
+What is 20 minus 9?
+What is 20 minus 10?
+What is 20 minus 11?
+What is 20 minus 12?
+What is 20 minus 13?
+What is 20 minus 14?
+What is 20 minus 15?
+What is 20 minus 16?
+What is 20 minus 17?
+What is 20 minus 18?
+What is 20 minus 19?
+What is 1 times 2?
+What is 2 times 2?
+What is 3 times 2?
+What is 4 times 2?
+What is 5 times 2?
+What is 6 times 2?
+What is 7 times 2?
+What is 8 times 2?
+What is 9 times 2?
+What is 10 times 2?
+What is 1 times 5?
+What is 2 times 5?
+What is 3 times 5?
+What is 4 times 5?
+What is 5 times 5?
+What is 6 times 5?
+What is 7 times 5?
+What is 8 times 5?
+What is 9 times 5?
+What is 10 times 5?
+What is 1 times 10?
+What is 2 times 10?
+What is 3 times 10?
+What is 4 times 10?
+What is 5 times 10?
+What is 6 times 10?
+What is 7 times 10?
+What is 8 times 10?
+What is 9 times 10?
+What is 10 times 10?
+That's 0.
+That's 1.
+That's 2.
+That's 3.
+That's 4.
+That's 5.
+That's 6.
+That's 7.
+That's 8.
+That's 9.
+That's 10.
+That's 11.
+That's 12.
+That's 13.
+That's 14.
+That's 15.
+That's 16.
+That's 17.
+That's 18.
+That's 19.
+That's 20.
+That's 21.
+That's 22.
+That's 23.
+That's 24.
+That's 25.
+That's 26.
+That's 27.
+That's 28.
+That's 29.
+That's 30.
+That's 31.
+That's 32.
+That's 33.
+That's 34.
+That's 35.
+That's 36.
+That's 37.
+That's 38.
+That's 39.
+That's 40.
+That's 41.
+That's 42.
+That's 43.
+That's 44.
+That's 45.
+That's 46.
+That's 47.
+That's 48.
+That's 49.
+That's 50.
+That's 51.
+That's 52.
+That's 53.
+That's 54.
+That's 55.
+That's 56.
+That's 57.
+That's 58.
+That's 59.
+That's 60.
+That's 61.
+That's 62.
+That's 63.
+That's 64.
+That's 65.
+That's 66.
+That's 67.
+That's 68.
+That's 69.
+That's 70.
+That's 71.
+That's 72.
+That's 73.
+That's 74.
+That's 75.
+That's 76.
+That's 77.
+That's 78.
+That's 79.
+That's 80.
+That's 81.
+That's 82.
+That's 83.
+That's 84.
+That's 85.
+That's 86.
+That's 87.
+That's 88.
+That's 89.
+That's 90.
+That's 91.
+That's 92.
+That's 93.
+That's 94.
+That's 95.
+That's 96.
+That's 97.
+That's 98.
+That's 99.
+That's 100.

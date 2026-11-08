@@ -1,6 +1,10 @@
 """Cut a kid's drawing out of a phone photo, ready to be a game character.
 
     python tools/cutout_drawing.py drawings/IMG_1234.jpg assets/zombies/mr-stinky.png
+    python tools/cutout_drawing.py photo.jpg out.png --crop 80,230,1390,940 --outline --smooth 7
+        (lined paper / pencil shading / fingers in the photo: crop to the drawing and cut along the dark outline;
+         add --color if a colored part goes missing, --pockets if paper stays stuck between body parts)
+    Always look at the result on a dark background before using it.
 
 What it does:
   1. Evens out the lighting, so the paper turns white and the colors pop.
@@ -17,7 +21,7 @@ from collections import deque
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
-OUT_HEIGHT = 860      # same height as the built-in zombies
+OUT_HEIGHT = 600      # tall enough for the biggest zombie on a sharp phone screen
 WORK_SIZE = 1600      # photos are shrunk to this before processing
 
 
@@ -88,8 +92,36 @@ def keep_big_blobs(mask, keep_ratio=0.04):
     return mask & keep_full
 
 
-def cutout(src, dst):
+def drop_paper_pockets(drawing, paper, min_frac=0.004):
+    """Remove big patches of bare paper trapped inside the drawing (e.g. between an arm and the head).
+    Small white parts like teeth and eye shines are kept."""
+    pockets = drawing & paper
+    sh = (max(1, drawing.shape[1] // 4), max(1, drawing.shape[0] // 4))
+    small = np.asarray(Image.fromarray(pockets.astype(np.uint8) * 255).resize(sh, Image.BILINEAR)) > 100
+    h, w = small.shape
+    labels = np.zeros((h, w), np.int32)
+    sizes = [0]
+    for y in range(h):
+        for x in range(w):
+            if small[y, x] and not labels[y, x]:
+                n = len(sizes); sizes.append(0)
+                q = deque([(y, x)]); labels[y, x] = n
+                while q:
+                    cy, cx = q.popleft(); sizes[n] += 1
+                    for ny, nx in ((cy + 1, cx), (cy - 1, cx), (cy, cx + 1), (cy, cx - 1)):
+                        if 0 <= ny < h and 0 <= nx < w and small[ny, nx] and not labels[ny, nx]:
+                            labels[ny, nx] = n; q.append((ny, nx))
+    limit = drawing.mean() * h * w * min_frac
+    big = np.isin(labels, [i for i, s in enumerate(sizes) if i and s >= limit])
+    big_full = np.asarray(Image.fromarray(big.astype(np.uint8) * 255).resize(
+        (drawing.shape[1], drawing.shape[0]), Image.NEAREST).filter(ImageFilter.MaxFilter(5))) > 0
+    return drawing & ~(big_full & np.asarray(Image.fromarray(pockets.astype(np.uint8) * 255).filter(ImageFilter.MaxFilter(5))) > 0)
+
+
+def cutout(src, dst, crop=None, outline=None, smooth=0, color=False, pockets=False):
     im = ImageOps.exif_transpose(Image.open(src)).convert('RGB')
+    if crop:
+        im = im.crop(crop)          # cut away fingers, binder holes, the table, etc. first
     im.thumbnail((WORK_SIZE, WORK_SIZE))
     rgb = np.asarray(im, np.float32)
 
@@ -97,12 +129,17 @@ def cutout(src, dst):
     light = np.maximum(paper_light(rgb), 40)
     norm = np.clip(rgb / light * 255 * 1.04, 0, 255)
 
-    # 2. paper-like = bright and not colorful
     v = norm.max(axis=2)
     s = (v - norm.min(axis=2)) / np.maximum(v, 1)
-    paper = (v > 190) & (s < 0.18)
+    if outline:
+        # outline mode (lined paper, pencil shading): only the dark marker outline stops the paper flood,
+        # so ruled lines and light shading outside the drawing are thrown away
+        barrier = v < outline
+    else:
+        # 2. paper-like = bright and not colorful
+        barrier = ~((v > 190) & (s < 0.18))
     # close tiny gaps in the outline so the paper flood can't leak inside the drawing
-    ink = Image.fromarray((~paper).astype(np.uint8) * 255).filter(ImageFilter.MaxFilter(5))
+    ink = Image.fromarray(barrier.astype(np.uint8) * 255).filter(ImageFilter.MaxFilter(5))
     fill = Image.fromarray(np.where(np.asarray(ink) > 0, 0, 255).astype(np.uint8)).copy()   # .copy(): writable
     w, h = fill.size
     border = [(x, 0) for x in range(0, w, 3)] + [(x, h - 1) for x in range(0, w, 3)] + \
@@ -112,8 +149,16 @@ def cutout(src, dst):
             ImageDraw.floodfill(fill, p, 128)
     outside = np.asarray(fill) == 128
     # grow the outside back over the gap-closing margin (plus 1px) so no white paper rim is left
-    outside = np.asarray(Image.fromarray(outside.astype(np.uint8) * 255).filter(ImageFilter.MaxFilter(7))) > 0
-    drawing = keep_big_blobs(~outside)
+    outside = np.asarray(Image.fromarray(outside.astype(np.uint8) * 255).filter(ImageFilter.MaxFilter(5 if outline else 7))) > 0
+    drawing = ~outside
+    if color:   # anything clearly colored in is part of the drawing, even where its outline has a gap
+        drawing |= (s > 0.3) & (v > 50)
+    if pockets:
+        drawing = drop_paper_pockets(drawing, (v > 190) & (s < 0.18))
+    if smooth:   # shave off thin pencil scribbles stuck to the outline (keeps anything thicker than `smooth` px)
+        m = Image.fromarray(drawing.astype(np.uint8) * 255)
+        drawing = np.asarray(m.filter(ImageFilter.MinFilter(smooth)).filter(ImageFilter.MaxFilter(smooth))) > 0
+    drawing = keep_big_blobs(drawing)
 
     # 3. crop, soften the edge, resize
     ys, xs = np.nonzero(drawing)
@@ -134,6 +179,15 @@ def cutout(src, dst):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3:
-        sys.exit(__doc__)
-    cutout(sys.argv[1], sys.argv[2])
+    import argparse
+    ap = argparse.ArgumentParser(description='Cut a drawing out of a photo.')
+    ap.add_argument('src'); ap.add_argument('dst')
+    ap.add_argument('--crop', help='x0,y0,x1,y1 in photo pixels: keep only this box (drop fingers, holes, table)')
+    ap.add_argument('--outline', type=int, nargs='?', const=90, help='lined paper or shading: only dark outline '
+                    '(darker than this, 0-255, default 90) counts as the edge of the drawing')
+    ap.add_argument('--smooth', type=int, default=0, help='remove thin scribbles thinner than this many pixels (try 7)')
+    ap.add_argument('--color', action='store_true', help='keep every clearly colored-in area (fixes gaps in the outline)')
+    ap.add_argument('--pockets', action='store_true', help='also remove big patches of paper trapped inside the drawing '
+                    '(skip this for drawings colored in very light colors)')
+    a = ap.parse_args()
+    cutout(a.src, a.dst, tuple(int(n) for n in a.crop.split(',')) if a.crop else None, a.outline, a.smooth, a.color, a.pockets)
