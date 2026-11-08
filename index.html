@@ -187,6 +187,11 @@ h1,h2,h3{margin:0;line-height:1.1}
 .wtile:disabled{opacity:.2}
 .slots.bad{animation:shake .45s}
 
+/* Arcade games (a canvas that fills the screen under the top bar) */
+.arcade{position:relative;height:calc(100vh - 124px);height:calc(100dvh - 124px);min-height:430px;max-height:1000px;border:3px solid var(--line);border-radius:22px;box-shadow:0 5px 0 var(--line);overflow:hidden;background:#120A26;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.arcade canvas{display:block}
+.arcade-msg{position:absolute;inset:0;display:grid;place-items:center;padding:24px;color:#fff;font-weight:800;font-size:1.3rem;text-align:center}
+
 /* Overlays */
 .toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--paper);color:var(--text);border:3px solid var(--line);border-radius:18px;box-shadow:0 5px 0 var(--line);padding:10px 18px;font-weight:800;font-size:1.1rem;z-index:50;width:max-content;max-width:calc(100% - 28px);text-align:center;animation:drop .25s ease-out}
 .modal-bg{position:fixed;inset:0;background:rgba(20,10,35,.55);display:grid;place-items:center;z-index:60;padding:20px}
@@ -513,13 +518,17 @@ function setMsg(t, good){ const m = $('#msg'); if (m){ m.textContent = t; m.clas
 
 /* ---------- Screens ---------- */
 function go(s){ SCREEN = s; render(); window.scrollTo(0,0); }
+let MOUNTED = null;   // an arcade game whose canvas is running right now
 function render(){
   gid = 0;
+  // Arcade games run until the screen changes: stop the one on screen before drawing anything new.
+  if (MOUNTED){ const m = MOUNTED; MOUNTED = null; try { m.unmount(); } catch(e){} }
   const game = gameById(SCREEN);
   if ((game || SCREEN === 'home') && !P()) { SCREEN = 'who'; return renderWho(); }
   if (game){
     if (!G || G.game !== game.id) { SCREEN = 'home'; return renderHome(); }
     app.innerHTML = topbar(game.name) + `<main class="game">${game.render()}</main>`;
+    if (game.mount){ MOUNTED = game; game.mount(app.querySelector('main.game')); }
     return;
   }
   ({who:renderWho, create:renderCreate, editp:renderEditP, home:renderHome, look:renderLook}[SCREEN] || renderWho)();
@@ -667,6 +676,9 @@ function pickItem(type, id){
    Helpers any game can use: big() (true for ages 6-8), P() (the current player),
    addStar(), cheer(), setMsg(), say(), nextRound(ms), pick(), rint(), shuffle(), esc().
    Home tiles appear in the same order the games are added.
+   Arcade games (their own file in games/, using window.SmartyStars) can also have:
+     mount(mainEl)  called after the game's HTML is on screen (start the canvas here)
+     unmount()      called when the child leaves the game (stop everything here)
    ===================================================================== */
 const GAMES = [];
 const addGame = g => GAMES.push(g);
@@ -1005,8 +1017,17 @@ app.addEventListener('keydown', e => {
   if (e.key === 'Enter' && e.target.id === 'nm'){ e.preventDefault(); if (SCREEN === 'create') ACT.createNext(); else if (SCREEN === 'editp') ACT.saveP(); }
 });
 
+/* ---------- For bigger games that live in their own file (games/*.js) ---------- */
+window.SmartyStars = {
+  addGame, say, addStar, save, pick, rint, shuffle, esc,
+  player: P,                                   // the current player {name, age, stars, ...}
+  soundOn: () => S.sound !== false,
+  startRound: round => { G = round; showRound(); }   // same as a game block setting G then calling showRound()
+};
+
 render();
 })();
 </script>
+<script src="games/zombie-splat.js" charset="utf-8"></script>
 </body>
 </html>
