@@ -14,7 +14,11 @@
 'use strict';
 const SS = window.SmartyStars;
 if (!SS) return;
-const PHASER_URL = 'https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js';
+const PHASER_URLS = [   // the same game engine file from three different sites, tried in order
+  'https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/phaser/3.80.1/phaser.min.js',
+  'https://unpkg.com/phaser@3.80.1/dist/phaser.min.js'
+];
 const INK = '#2B1B3D';
 const FONT = '"Baloo 2", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif';
 
@@ -327,6 +331,7 @@ function makeScene(){
       this.layout();
       this.showStart();
       if (/[?&]debug\b/.test(location.search)) window.ZS = this;   // for testing: open the page with ?debug
+      if (onSceneReady) onSceneReady();
     }
 
     /* Everything is placed from the screen size, so phones, tablets and laptops all work. */
@@ -694,50 +699,89 @@ function makeScene(){
   };
 }
 
-/* ---------- Starting and stopping (called by the app) ---------- */
-let game = null, ro = null, token = null, phaserLoading = null;
-function loadPhaser(){
-  if (window.Phaser) return Promise.resolve();
-  if (!phaserLoading) phaserLoading = new Promise((ok, fail) => {
+/* ---------- Starting and stopping (called by the app) ----------
+   Starting is careful because it has to work on every phone and network:
+   - the game engine is tried from three different download sites,
+   - the font gets at most 2 seconds (some Safari versions can wait forever),
+   - if the fast graphics mode (WebGL) breaks, it tries again in plain canvas mode,
+   - and if it still fails, the box says what went wrong instead of staying blank. */
+let game = null, ro = null, token = null, phaserLoading = null, onSceneReady = null;
+function loadScript(src, ms){
+  return new Promise((ok, fail) => {
     const s = document.createElement('script');
-    s.src = PHASER_URL; s.onload = ok;
-    s.onerror = () => { phaserLoading = null; fail(new Error('Phaser did not load')); };
+    const timer = setTimeout(() => { fail(new Error('too slow: ' + src.split('/')[2])); }, ms);
+    s.src = src;
+    s.onload = () => { clearTimeout(timer); if (window.Phaser) ok(); else fail(new Error('bad file from ' + src.split('/')[2])); };
+    s.onerror = () => { clearTimeout(timer); s.remove(); fail(new Error('blocked: ' + src.split('/')[2])); };
     document.head.appendChild(s);
   });
+}
+function loadPhaser(){
+  if (window.Phaser) return Promise.resolve();
+  if (!phaserLoading){
+    let chain = Promise.reject(new Error('none tried'));
+    PHASER_URLS.forEach(u => { chain = chain.catch(() => window.Phaser ? null : loadScript(u, 20000)); });
+    phaserLoading = chain.catch(err => { phaserLoading = null; throw new Error('The game engine would not download (' + err.message + ').'); });
+  }
   return phaserLoading;
 }
+function fontReady(ms){
+  if (!document.fonts || !document.fonts.load) return Promise.resolve();
+  return Promise.race([document.fonts.load('800 40px "Baloo 2"').catch(() => {}), new Promise(ok => setTimeout(ok, ms))]);
+}
+function stopGame(){
+  if (ro){ ro.disconnect(); ro = null; }
+  if (game){ try { game.destroy(true); } catch(e){} game = null; }
+}
 function mount(main){
-  const box = main.querySelector('#arcade'), my = token = {};
-  box.addEventListener('pointerdown', () => ac());   // phones only allow sound after a tap
-  loadPhaser()
-    .then(() => (document.fonts && document.fonts.load) ? document.fonts.load('800 40px "Baloo 2"').catch(() => {}) : null)
-    .then(() => {
-      if (token !== my) return;   // the child already left
-      const msg = box.querySelector('.arcade-msg'); if (msg) msg.remove();
-      const dpr = Math.min(2, window.devicePixelRatio || 1);
-      const size = () => [Math.max(200, Math.round(box.clientWidth * dpr)), Math.max(200, Math.round(box.clientHeight * dpr))];
-      const [w, h] = size();
+  const box = main.querySelector('#arcade'), msg = box.querySelector('.arcade-msg'), my = token = {};
+  const show = html => { if (token === my && msg){ msg.style.display = ''; msg.innerHTML = html; } };
+  const loading = step => show('<div>Loading the zombies...<div class="arcade-detail">' + step + '</div></div>');
+  const slow = setTimeout(() => loading('Still working on it. Slow internet? Give it a few more seconds.'), 10000);
+  let triedCanvas = false;
+  const onErr = e => fail((e && (e.error || e.reason)) || new Error((e && e.message) || 'unknown problem'));
+  const listen = on => ['error', 'unhandledrejection'].forEach(t => on ? window.addEventListener(t, onErr) : window.removeEventListener(t, onErr));
+  function fail(err){
+    if (token !== my) return;
+    listen(false); stopGame();
+    if (!triedCanvas && window.Phaser){ triedCanvas = true; return start(Phaser.CANVAS); }   // try the simpler drawing mode once
+    clearTimeout(slow);
+    show('<div>Uh oh, the zombies got stuck!<div class="arcade-detail">Tell a grown-up: ' + SS.esc(String((err && err.message) || err).slice(0, 180)) +
+      '</div><button class="btn" id="zsRetry" type="button" style="margin-top:16px">Try again</button></div>');
+    const b = box.querySelector('#zsRetry');
+    if (b) b.addEventListener('click', () => { if (token === my) mount(main); });
+  }
+  function start(type){
+    if (token !== my) return;
+    loading(type === Phaser.CANVAS ? 'trying simple graphics' : 'getting ready to play');
+    listen(true);
+    onSceneReady = () => { if (token !== my) return; clearTimeout(slow); listen(false); msg.style.display = 'none'; };
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const size = () => [Math.max(200, Math.round(box.clientWidth * dpr)), Math.max(200, Math.round(box.clientHeight * dpr))];
+    const [w, h] = size();
+    try {
       game = new Phaser.Game({
-        type: Phaser.AUTO, parent: box, backgroundColor: '#120A26', banner: false,
+        type, parent: box, backgroundColor: '#120A26', banner: false,
         scale: {mode: Phaser.Scale.NONE, width: w, height: h, zoom: 1 / dpr},
         audio: {noAudio: true},
         scene: [makeScene()]
       });
-      if (window.ResizeObserver){
-        ro = new ResizeObserver(() => { if (!game) return; const [nw, nh] = size(); if (nw !== game.scale.width || nh !== game.scale.height) game.scale.resize(nw, nh); });
-        ro.observe(box);
-      }
-    })
-    .catch(() => {
-      if (token !== my) return;
-      const msg = box.querySelector('.arcade-msg');
-      if (msg) msg.textContent = 'The zombies could not load. Check the internet, then tap the house and try again.';
-    });
+    } catch(e){ return fail(e); }
+    if (window.ResizeObserver){
+      ro = new ResizeObserver(() => { if (!game) return; const [nw, nh] = size(); if (nw !== game.scale.width || nh !== game.scale.height) game.scale.resize(nw, nh); });
+      ro.observe(box);
+    }
+  }
+  box.addEventListener('pointerdown', () => ac());   // phones only allow sound after a tap
+  loading('downloading the game');
+  loadPhaser()
+    .then(() => { if (token === my) loading('getting the letters ready'); return fontReady(2000); })
+    .then(() => start(Phaser.AUTO))
+    .catch(fail);
 }
 function unmount(){
-  token = null;
-  if (ro){ ro.disconnect(); ro = null; }
-  if (game){ game.destroy(true); game = null; }
+  token = null; onSceneReady = null;
+  stopGame();
   try { window.speechSynthesis && speechSynthesis.cancel(); } catch(e){}
 }
 
