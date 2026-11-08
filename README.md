@@ -9,6 +9,10 @@ Learning games for kids ages 4–8. **Play it here:** https://trickdea-star.gith
 - **Zombie Splat** (arcade): goofy zombies walk toward your fort holding signs. Splat the one the voice asks for
   (letters and numbers for ages 4–5, adding, taking away and times tables for ages 6–8).
   Rounds get faster, runners show up in round 2 and a big boss in round 3, and 5 in a row earns a Goo Bomb.
+  Two of the zombies (Creepy Crawler and Bone Hand) were drawn by the kids.
+- **Hoop Shot** (arcade): the question is on the backboard, and three basketballs show answers. Drag or tap the
+  right one to shoot. Ages 4–5 make 10 baskets; ages 6–8 play 60-second beat-the-buzzer rounds for a best score.
+  Three in a row puts the ball on fire, and each basket is then worth 3 points.
 
 Each kid gets a player (name and age). Ages 4–5 get easier levels, and ages 6–8 get harder ones.
 Right answers earn stars, and stars unlock avatar characters, colors, outfits and extras.
@@ -124,8 +128,24 @@ addGame({
 Useful helpers: `big()` is true for ages 6–8, and `P().age` is the exact age.
 `addStar()` gives a star, `cheer()` says something nice, `nextRound(ms)` moves to the next question after a pause, and `pick`, `rint` and `shuffle` handle random choices.
 
-A big arcade game goes in its own file in `games/` (see `games/zombie-splat.js`) and calls
-`SmartyStars.addGame({...})` with two extra steps: `mount` starts it and `unmount` stops it.
-Add a `<script src="games/your-game.js">` line at the bottom of `index.html`.
+A big arcade game goes in its own file in `games/` (see `games/hoop-shot.js`, the simpler of the two).
+`games/arcade-kit.js` does the hard parts for every arcade game:
+- loads Phaser safely, with three download sites, a plain-graphics fallback and an on-screen error
+- sound effects
+- drawing helpers
+- the age-based questions
+
+A game file builds a Phaser scene, calls `ArcadeKit.sceneReady()` at the end of `create()`, and registers itself:
+
+```js
+SmartyStars.addGame({ id:'hoop', name:'Hoop Shot', emoji:'...', blurb:'...', color:'#FF9F43',
+  newRound: () => SmartyStars.startRound({game:'hoop', prompt:'Hoop Shot!'}),
+  render: () => ArcadeKit.html('Loading...'),
+  mount: main => ArcadeKit.start(main, makeScene, 'basketballs'),
+  unmount: () => ArcadeKit.stop() });
+```
+
+Add a `<script src="games/your-game.js?v=1">` line at the bottom of `index.html`. Bump the `?v=` number whenever the
+file changes, so phones fetch the new copy.
 
 An easier route: open Claude Code in this folder and describe the game you want.

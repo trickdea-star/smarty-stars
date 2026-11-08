@@ -2138,3 +2138,260 @@ That's 97.
 That's 98.
 That's 99.
 That's 100.
+Hoop Shot!
+Ready? You have 60 seconds. Go!
+Make 10 baskets! Ready? Go!
+Swish!
+Nothing but net!
+Score!
+Great shot!
+You're on fire!
+You did it! 10 baskets!
+New best score!
+Shoot the letter {A}!
+Shoot the letter {B}!
+Shoot the letter {C}!
+Shoot the letter {D}!
+Shoot the letter {E}!
+Shoot the letter {F}!
+Shoot the letter {G}!
+Shoot the letter {H}!
+Shoot the letter {I}!
+Shoot the letter {J}!
+Shoot the letter {K}!
+Shoot the letter {L}!
+Shoot the letter {M}!
+Shoot the letter {N}!
+Shoot the letter {O}!
+Shoot the letter {P}!
+Shoot the letter {Q}!
+Shoot the letter {R}!
+Shoot the letter {S}!
+Shoot the letter {T}!
+Shoot the letter {U}!
+Shoot the letter {V}!
+Shoot the letter {W}!
+Shoot the letter {X}!
+Shoot the letter {Y}!
+Shoot the letter {Z}!
+Shoot number 1!
+Shoot number 2!
+Shoot number 3!
+Shoot number 4!
+Shoot number 5!
+Shoot number 6!
+Shoot number 7!
+Shoot number 8!
+Shoot number 9!
+Shoot number 10!
+Shoot number 11!
+Shoot number 12!
+Shoot number 13!
+Shoot number 14!
+Shoot number 15!
+Shoot number 16!
+Shoot number 17!
+Shoot number 18!
+Shoot number 19!
+Shoot number 20!
+Time's up! You scored 0 points!
+Time's up! You scored 1 points!
+Time's up! You scored 2 points!
+Time's up! You scored 3 points!
+Time's up! You scored 4 points!
+Time's up! You scored 5 points!
+Time's up! You scored 6 points!
+Time's up! You scored 7 points!
+Time's up! You scored 8 points!
+Time's up! You scored 9 points!
+Time's up! You scored 10 points!
+Time's up! You scored 11 points!
+Time's up! You scored 12 points!
+Time's up! You scored 13 points!
+Time's up! You scored 14 points!
+Time's up! You scored 15 points!
+Time's up! You scored 16 points!
+Time's up! You scored 17 points!
+Time's up! You scored 18 points!
+Time's up! You scored 19 points!
+Time's up! You scored 20 points!
+Time's up! You scored 21 points!
+Time's up! You scored 22 points!
+Time's up! You scored 23 points!
+Time's up! You scored 24 points!
+Time's up! You scored 25 points!
+Time's up! You scored 26 points!
+Time's up! You scored 27 points!
+Time's up! You scored 28 points!
+Time's up! You scored 29 points!
+Time's up! You scored 30 points!
+Time's up! You scored 31 points!
+Time's up! You scored 32 points!
+Time's up! You scored 33 points!
+Time's up! You scored 34 points!
+Time's up! You scored 35 points!
+Time's up! You scored 36 points!
+Time's up! You scored 37 points!
+Time's up! You scored 38 points!
+Time's up! You scored 39 points!
+Time's up! You scored 40 points!
+Time's up! You scored 41 points!
+Time's up! You scored 42 points!
+Time's up! You scored 43 points!
+Time's up! You scored 44 points!
+Time's up! You scored 45 points!
+Time's up! You scored 46 points!
+Time's up! You scored 47 points!
+Time's up! You scored 48 points!
+Time's up! You scored 49 points!
+Time's up! You scored 50 points!
+Time's up! You scored 51 points!
+Time's up! You scored 52 points!
+Time's up! You scored 53 points!
+Time's up! You scored 54 points!
+Time's up! You scored 55 points!
+Time's up! You scored 56 points!
+Time's up! You scored 57 points!
+Time's up! You scored 58 points!
+Time's up! You scored 59 points!
+Time's up! You scored 60 points!
+Time's up! You scored 61 points!
+Time's up! You scored 62 points!
+Time's up! You scored 63 points!
+Time's up! You scored 64 points!
+Time's up! You scored 65 points!
+Time's up! You scored 66 points!
+Time's up! You scored 67 points!
+Time's up! You scored 68 points!
+Time's up! You scored 69 points!
+Time's up! You scored 70 points!
+Time's up! You scored 71 points!
+Time's up! You scored 72 points!
+Time's up! You scored 73 points!
+Time's up! You scored 74 points!
+Time's up! You scored 75 points!
+Time's up! You scored 76 points!
+Time's up! You scored 77 points!
+Time's up! You scored 78 points!
+Time's up! You scored 79 points!
+Time's up! You scored 80 points!
+Time's up! You scored 81 points!
+Time's up! You scored 82 points!
+Time's up! You scored 83 points!
+Time's up! You scored 84 points!
+Time's up! You scored 85 points!
+Time's up! You scored 86 points!
+Time's up! You scored 87 points!
+Time's up! You scored 88 points!
+Time's up! You scored 89 points!
+Time's up! You scored 90 points!
+Time's up! You scored 91 points!
+Time's up! You scored 92 points!
+Time's up! You scored 93 points!
+Time's up! You scored 94 points!
+Time's up! You scored 95 points!
+Time's up! You scored 96 points!
+Time's up! You scored 97 points!
+Time's up! You scored 98 points!
+Time's up! You scored 99 points!
+Time's up! You scored 100 points!
+Time's up! You scored 101 points!
+Time's up! You scored 102 points!
+Time's up! You scored 103 points!
+Time's up! You scored 104 points!
+Time's up! You scored 105 points!
+Time's up! You scored 106 points!
+Time's up! You scored 107 points!
+Time's up! You scored 108 points!
+Time's up! You scored 109 points!
+Time's up! You scored 110 points!
+Time's up! You scored 111 points!
+Time's up! You scored 112 points!
+Time's up! You scored 113 points!
+Time's up! You scored 114 points!
+Time's up! You scored 115 points!
+Time's up! You scored 116 points!
+Time's up! You scored 117 points!
+Time's up! You scored 118 points!
+Time's up! You scored 119 points!
+Time's up! You scored 120 points!
+Time's up! You scored 121 points!
+Time's up! You scored 122 points!
+Time's up! You scored 123 points!
+Time's up! You scored 124 points!
+Time's up! You scored 125 points!
+Time's up! You scored 126 points!
+Time's up! You scored 127 points!
+Time's up! You scored 128 points!
+Time's up! You scored 129 points!
+Time's up! You scored 130 points!
+Time's up! You scored 131 points!
+Time's up! You scored 132 points!
+Time's up! You scored 133 points!
+Time's up! You scored 134 points!
+Time's up! You scored 135 points!
+Time's up! You scored 136 points!
+Time's up! You scored 137 points!
+Time's up! You scored 138 points!
+Time's up! You scored 139 points!
+Time's up! You scored 140 points!
+Time's up! You scored 141 points!
+Time's up! You scored 142 points!
+Time's up! You scored 143 points!
+Time's up! You scored 144 points!
+Time's up! You scored 145 points!
+Time's up! You scored 146 points!
+Time's up! You scored 147 points!
+Time's up! You scored 148 points!
+Time's up! You scored 149 points!
+Time's up! You scored 150 points!
+Time's up! You scored 151 points!
+Time's up! You scored 152 points!
+Time's up! You scored 153 points!
+Time's up! You scored 154 points!
+Time's up! You scored 155 points!
+Time's up! You scored 156 points!
+Time's up! You scored 157 points!
+Time's up! You scored 158 points!
+Time's up! You scored 159 points!
+Time's up! You scored 160 points!
+Time's up! You scored 161 points!
+Time's up! You scored 162 points!
+Time's up! You scored 163 points!
+Time's up! You scored 164 points!
+Time's up! You scored 165 points!
+Time's up! You scored 166 points!
+Time's up! You scored 167 points!
+Time's up! You scored 168 points!
+Time's up! You scored 169 points!
+Time's up! You scored 170 points!
+Time's up! You scored 171 points!
+Time's up! You scored 172 points!
+Time's up! You scored 173 points!
+Time's up! You scored 174 points!
+Time's up! You scored 175 points!
+Time's up! You scored 176 points!
+Time's up! You scored 177 points!
+Time's up! You scored 178 points!
+Time's up! You scored 179 points!
+Time's up! You scored 180 points!
+Time's up! You scored 181 points!
+Time's up! You scored 182 points!
+Time's up! You scored 183 points!
+Time's up! You scored 184 points!
+Time's up! You scored 185 points!
+Time's up! You scored 186 points!
+Time's up! You scored 187 points!
+Time's up! You scored 188 points!
+Time's up! You scored 189 points!
+Time's up! You scored 190 points!
+Time's up! You scored 191 points!
+Time's up! You scored 192 points!
+Time's up! You scored 193 points!
+Time's up! You scored 194 points!
+Time's up! You scored 195 points!
+Time's up! You scored 196 points!
+Time's up! You scored 197 points!
+Time's up! You scored 198 points!
+Time's up! You scored 199 points!
+Time's up! You scored 200 points!

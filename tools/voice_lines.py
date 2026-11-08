@@ -141,6 +141,20 @@ for t in (2, 5, 10):                        # times tables
 for n in range(0, 101):
     add("That's %d." % n)
 
+# ---- Hoop Shot (games/hoop-shot.js); math questions and "That's N." are shared with Zombie Splat
+add('Hoop Shot!')
+add('Ready? You have 60 seconds. Go!')
+add('Make 10 baskets! Ready? Go!')
+for line in ('Swish!', 'Nothing but net!', 'Score!', 'Great shot!', "You're on fire!",
+             'You did it! 10 baskets!', 'New best score!'):
+    add(line)
+for ch in ABC:
+    add('Shoot the letter %s!' % L(ch))
+for n in range(1, 21):
+    add('Shoot number %d!' % n)
+for n in range(0, 201):
+    add("Time's up! You scored %d points!" % n)
+
 seen, out = set(), []
 for r in rows:
     if r not in seen:
