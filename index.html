@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Smarty Stars</title>
+<meta name="description" content="Learning games for kids ages 4 to 8: letters, counting, spelling and money.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%AD%90%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -45,23 +47,24 @@ button.card:active:not(:disabled),.btn:active{transform:translateY(3px);box-shad
 h1,h2,h3{margin:0;line-height:1.1}
 
 /* Wordmark */
-.mark{display:flex;justify-content:center;flex-wrap:wrap;gap:2px;margin:14px 0 6px}
-.mark span{display:inline-grid;place-items:center;min-width:1.15em;height:1.3em;padding:0 .08em;font-size:clamp(2.1rem,9vw,3.4rem);font-weight:800;color:var(--on);border:3px solid var(--line);border-radius:14px;box-shadow:0 4px 0 var(--line);line-height:1}
-.mark span.sp{border:0;box-shadow:none;min-width:.35em;background:none}
-.mark span:nth-child(5n+1){background:var(--tomato);transform:rotate(-5deg)}
-.mark span:nth-child(5n+2){background:var(--sun);transform:rotate(3deg)}
-.mark span:nth-child(5n+3){background:var(--sky);transform:rotate(-2deg)}
-.mark span:nth-child(5n+4){background:var(--grass);transform:rotate(4deg)}
-.mark span:nth-child(5n){background:var(--pink);transform:rotate(-3deg)}
+.mark{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;margin:14px 0 6px}
+.mark .w{display:flex;gap:2px;flex-wrap:nowrap}
+.mark .L{display:inline-grid;place-items:center;min-width:1.15em;height:1.3em;padding:0 .08em;font-size:clamp(1.9rem,8vw,3.1rem);font-weight:800;color:var(--on);border:3px solid var(--line);border-radius:14px;box-shadow:0 4px 0 var(--line);line-height:1}
+.mark .c0{background:var(--tomato);transform:rotate(-5deg)}
+.mark .c1{background:var(--sun);transform:rotate(3deg)}
+.mark .c2{background:var(--sky);transform:rotate(-2deg)}
+.mark .c3{background:var(--grass);transform:rotate(4deg)}
+.mark .c4{background:var(--pink);transform:rotate(-3deg)}
 .sub{font-size:1.35rem;font-weight:700;text-align:center;margin:10px 0 18px}
 
 /* Players */
 .players{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px}
 .pcard{display:flex;flex-direction:column;align-items:center;padding:12px 8px 10px;position:relative;min-height:190px;justify-content:center}
 .pcard .av{width:110px;height:120px}
+.av svg{display:block;width:100%;height:100%}
 .pcard .nm{font-weight:800;font-size:1.35rem;overflow-wrap:anywhere;text-align:center}
 .pcard .st{font-weight:700;color:var(--soft)}
-.pcard.add{background:transparent;border-style:dashed;box-shadow:none;font-size:1.2rem;font-weight:800;gap:6px}
+.pcard.add{background:transparent;border-style:dashed;border-color:var(--soft);box-shadow:none;font-size:1.2rem;font-weight:800;gap:6px}
 .pcard.add .plus{font-size:3rem;line-height:1}
 .pcard .edit{position:absolute;top:8px;right:8px;width:40px;height:40px;border-radius:50%;background:var(--sun);border:3px solid var(--line);display:grid;place-items:center;font-size:1.1rem;color:var(--on)}
 .linkbtn{display:block;margin:22px auto 0;font-weight:700;color:var(--soft);text-decoration:underline;font-size:1.05rem;min-height:44px}
@@ -86,7 +89,6 @@ h1,h2,h3{margin:0;line-height:1.1}
 .tile .emo{font-size:2.8rem;line-height:1.1}
 .tile .tn{font-weight:800;font-size:1.3rem;line-height:1.1;margin-top:auto}
 .tile .ts{font-size:.98rem;font-weight:600;opacity:.8}
-.t-letter{background:var(--tomato)} .t-count{background:var(--sun)} .t-word{background:var(--sky)} .t-store{background:var(--grass)}
 .homebtns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
 .homebtns .btn{font-size:1.1rem;padding:6px 10px}
 
@@ -103,7 +105,7 @@ h1,h2,h3{margin:0;line-height:1.1}
 .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:10px}
 .item{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:6px 4px 6px;min-height:118px;overflow:hidden}
 .item .mini{width:74px;height:82px}
-.item .mini svg{width:74px;height:90px}
+.item .mini svg{display:block;width:74px;height:82px}
 .item .iname{font-size:.9rem;font-weight:700;line-height:1.1;text-align:center}
 .item.on{outline:4px solid var(--grape);outline-offset:2px}
 .item.on::after{content:"✓";position:absolute;top:4px;right:6px;width:24px;height:24px;border-radius:50%;background:var(--grape);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.9rem}
@@ -177,8 +179,8 @@ h1,h2,h3{margin:0;line-height:1.1}
 /* Word builder */
 .wb-pic{font-size:5rem;text-align:center;line-height:1.1}
 .slots{display:flex;gap:8px;justify-content:center}
-.slot{width:min(16vw,64px);height:min(19vw,76px);border-radius:16px;border:3px dashed var(--line);display:grid;place-items:center;font-size:2.4rem;font-weight:800;background:transparent;text-transform:uppercase}
-.slot.full{border-style:solid;background:var(--sky);color:var(--on);box-shadow:0 4px 0 var(--line)}
+.slot{width:min(16vw,64px);height:min(19vw,76px);border-radius:16px;border:3px dashed var(--soft);display:grid;place-items:center;font-size:2.4rem;font-weight:800;background:transparent;text-transform:uppercase}
+.slot.full{border-style:solid;border-color:var(--line);background:var(--sky);color:var(--on);box-shadow:0 4px 0 var(--line)}
 .slot .ghost{color:var(--ghost)}
 .wtiles{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .wtile{width:min(17vw,68px);height:min(17vw,68px);font-size:2.3rem;font-weight:800;background:var(--sun);color:var(--on);text-transform:uppercase}
@@ -275,25 +277,35 @@ const HAIR = [
   {id:'h5', name:'Blue', v:'#4FA8F7', cost:20},
   {id:'h6', name:'Pink', v:'#FF6FB5', cost:20}
 ];
+/* OUTFITS: each one draws its own body.
+   draw(k, st) returns SVG. The avatar canvas is 120 wide; the body sits at y 94-136.
+   st = the black outline style. k = a unique prefix for gradient ids ("url(#" + k + "rb)" is the rainbow).
+   Optional back(k, st) draws behind the character (like the superhero cape). */
+const SHIRT = 'M22 136 Q22 94 60 94 Q98 94 98 136Z';
+const shirt = (fill, st) => `<path d="${SHIRT}" fill="${fill}" ${st}/>`;
 const OUTFITS = [
-  {id:'redtee', name:'Red shirt', cost:0},
-  {id:'bluetee', name:'Blue shirt', cost:0},
-  {id:'stripes', name:'Stripes', cost:0},
-  {id:'overalls', name:'Overalls', cost:0},
-  {id:'rainbow', name:'Rainbow', cost:20},
-  {id:'tux', name:'Fancy suit', cost:35},
-  {id:'gown', name:'Sparkle dress', cost:35},
-  {id:'hero', name:'Superhero', cost:50}
+  {id:'redtee', name:'Red shirt', cost:0, draw:(k,st) => shirt('#FF5E5B', st)},
+  {id:'bluetee', name:'Blue shirt', cost:0, draw:(k,st) => shirt('#3E8EF7', st)},
+  {id:'stripes', name:'Stripes', cost:0, draw:(k,st) => `<path d="${SHIRT}" fill="#FFD23F"/><g clip-path="url(#${k}bd)" fill="#3E8EF7"><rect x="0" y="103" width="120" height="7"/><rect x="0" y="116" width="120" height="7"/><rect x="0" y="129" width="120" height="7"/></g><path d="${SHIRT}" fill="none" ${st}/>`},
+  {id:'overalls', name:'Overalls', cost:0, draw:(k,st) => shirt('#FF9F43', st) + `<path d="M42 136 L42 108 L78 108 L78 136Z" fill="#3E6CF7" ${st}/><path d="M46 108 L43 96 M74 108 L77 96" fill="none" ${st}/><circle cx="48" cy="114" r="2.6" fill="#FFD23F"/><circle cx="72" cy="114" r="2.6" fill="#FFD23F"/>`},
+  {id:'rainbow', name:'Rainbow', cost:20, draw:(k,st) => shirt(`url(#${k}rb)`, st)},
+  {id:'tux', name:'Fancy suit', cost:35, draw:(k,st) => shirt('#2F2B45', st) + `<path d="M50 95 L60 128 L70 95Z" fill="#FFFFFF" ${st}/><path d="M51 101 L60 105 L69 101 L69 110 L60 105 L51 110Z" fill="#FF5E5B" ${st}/>`},
+  {id:'gown', name:'Sparkle dress', cost:35, draw:(k,st) => `<path d="M14 136 Q28 96 60 94 Q92 96 106 136Z" fill="#FF8FC7" ${st}/><polygon points="${starPts(44,118,4,1.8)}" fill="#fff"/><polygon points="${starPts(64,127,4,1.8)}" fill="#fff"/><polygon points="${starPts(80,112,4,1.8)}" fill="#fff"/><polygon points="${starPts(56,106,3,1.4)}" fill="#fff"/>`},
+  {id:'hero', name:'Superhero', cost:50,
+    back:(k,st) => `<path d="M14 136 L32 96 L88 96 L106 136Z" fill="#E63946" ${st}/>`,
+    draw:(k,st) => shirt('#3E6CF7', st) + `<circle cx="60" cy="117" r="12" fill="#FFD23F" ${st}/><polygon points="${starPts(60,117,8,3.5)}" fill="#E63946"/>`}
 ];
+/* ACCESSORIES ("Extras"): drawn last, on top of everything. Same draw(k, st) idea as outfits.
+   The head is roughly a circle at x 60, y 60, radius 32; the top of the head is near y 26. */
 const ACCS = [
-  {id:'none', name:'Nothing', cost:0},
-  {id:'bow', name:'Bow', cost:0},
-  {id:'cap', name:'Cap', cost:0},
-  {id:'flower', name:'Flower', cost:0},
-  {id:'party', name:'Party hat', cost:15},
-  {id:'glasses', name:'Sunglasses', cost:25},
-  {id:'headphones', name:'Headphones', cost:35},
-  {id:'crown', name:'Crown', cost:60}
+  {id:'none', name:'Nothing', cost:0, draw:() => ''},
+  {id:'bow', name:'Bow', cost:0, draw:(k,st) => `<path d="M82 30 L69 21 L69 39Z M82 30 L95 21 L95 39Z" fill="#FF6FB5" ${st}/><circle cx="82" cy="30" r="4.5" fill="#FF6FB5" ${st}/>`},
+  {id:'cap', name:'Cap', cost:0, draw:(k,st) => `<path d="M27 46 Q27 17 60 17 Q93 17 93 46Z" fill="#3E8EF7" ${st}/><path d="M62 44 L106 44 Q108 52 99 52 L62 48Z" fill="#3E8EF7" ${st}/><circle cx="60" cy="17" r="3.5" fill="#FFD23F" ${st}/>`},
+  {id:'flower', name:'Flower', cost:0, draw:() => { let s=''; for(let i=0;i<5;i++){ const an=i*Math.PI*2/5; s+=`<circle cx="${(84+7*Math.cos(an)).toFixed(1)}" cy="${(30+7*Math.sin(an)).toFixed(1)}" r="5.5" fill="#fff" stroke="${INK}" stroke-width="2"/>`; } return s + `<circle cx="84" cy="30" r="4.5" fill="#FFD23F" stroke="${INK}" stroke-width="2"/>`; }},
+  {id:'party', name:'Party hat', cost:15, draw:(k,st) => `<path d="M48 32 L60 -8 L72 32Z" fill="#4CCB70" ${st}/><path d="M52 20 L66 18 M55 9 L63 8" stroke="#fff" stroke-width="3"/><circle cx="60" cy="-9" r="5" fill="#FFD23F" ${st}/>`},
+  {id:'glasses', name:'Sunglasses', cost:25, draw:(k,st) => `<rect x="36" y="48" width="23" height="16" rx="6" fill="${INK}" fill-opacity=".9" ${st}/><rect x="61" y="48" width="23" height="16" rx="6" fill="${INK}" fill-opacity=".9" ${st}/><path d="M59 54 L61 54" ${st}/><path d="M40 52 L46 52 M65 52 L71 52" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>`},
+  {id:'headphones', name:'Headphones', cost:35, draw:(k,st) => `<path d="M25 62 Q25 14 60 14 Q95 14 95 62" fill="none" stroke="${INK}" stroke-width="8" stroke-linecap="round"/><path d="M25 62 Q25 14 60 14 Q95 14 95 62" fill="none" stroke="#FF5E5B" stroke-width="3.5" stroke-linecap="round"/><rect x="16" y="50" width="15" height="24" rx="7" fill="#FF5E5B" ${st}/><rect x="89" y="50" width="15" height="24" rx="7" fill="#FF5E5B" ${st}/>`},
+  {id:'crown', name:'Crown', cost:60, draw:(k,st) => `<path d="M40 30 L38 8 L50 18 L60 3 L70 18 L82 8 L80 30Z" fill="url(#${k}gold)" ${st}/><circle cx="50" cy="24" r="2.8" fill="#3EC1D3"/><circle cx="60" cy="22" r="3.2" fill="#FF5E5B"/><circle cx="70" cy="24" r="2.8" fill="#4CCB70"/>`}
 ];
 const CATALOG = {char:CHARS, color:COLORS, skin:SKIN, hair:HAIR, outfit:OUTFITS, acc:ACCS};
 const DEFAULT_AV = {char:'puppy', color:'sun', skin:'s2', hair:'h1', outfit:'redtee', acc:'none'};
@@ -319,31 +331,19 @@ function avatarSVG(av){
 <linearGradient id="${k}gal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E1A6B"/><stop offset=".5" stop-color="#7B4AE2"/><stop offset="1" stop-color="#25B5E0"/></linearGradient>
 <linearGradient id="${k}rb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF5E5B"/><stop offset=".25" stop-color="#FFD23F"/><stop offset=".5" stop-color="#4CCB70"/><stop offset=".75" stop-color="#3EC1D3"/><stop offset="1" stop-color="#8E5CF7"/></linearGradient>
 <clipPath id="${k}bd"><path d="M22 136 Q22 94 60 94 Q98 94 98 136Z"/></clipPath></defs>`;
-  // cape and back hair
-  if (av.outfit === 'hero') o += `<path d="M14 136 L32 96 L88 96 L106 136Z" fill="#E63946" ${st}/>`;
+  const outfit = findItem('outfit', av.outfit) || OUTFITS[0];
+  const acc = findItem('acc', av.acc) || ACCS[0];
+  // things behind the character (capes, long hair)
+  if (outfit.back) o += outfit.back(k, st);
   if (c.human && c.hair === 'long') o += `<path d="M28 58 Q28 26 60 26 Q92 26 92 58 L96 104 L24 104Z" fill="${hairC}" ${st}/>`;
   if (c.human && c.hair === 'pigtails') o += `<circle cx="24" cy="54" r="12" fill="${hairC}" ${st}/><circle cx="96" cy="54" r="12" fill="${hairC}" ${st}/>`;
-  o += bodySVG(av.outfit, k, st);
+  o += outfit.draw(k, st);
   o += backSVG(c, main, st);
   o += headSVG(c, main, st);
   o += faceSVG(c, st);
   o += topSVG(c, st, hairC, k);
-  o += accSVG(av.acc, st, k);
+  o += acc.draw(k, st);
   return `<svg viewBox="0 -18 120 154" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${o}</svg>`;
-}
-function bodySVG(of, k, st){
-  const P = 'M22 136 Q22 94 60 94 Q98 94 98 136Z';
-  const base = f => `<path d="${P}" fill="${f}" ${st}/>`;
-  switch(of){
-    case 'bluetee': return base('#3E8EF7');
-    case 'stripes': return `<path d="${P}" fill="#FFD23F"/><g clip-path="url(#${k}bd)" fill="#3E8EF7"><rect x="0" y="103" width="120" height="7"/><rect x="0" y="116" width="120" height="7"/><rect x="0" y="129" width="120" height="7"/></g><path d="${P}" fill="none" ${st}/>`;
-    case 'overalls': return base('#FF9F43') + `<path d="M42 136 L42 108 L78 108 L78 136Z" fill="#3E6CF7" ${st}/><path d="M46 108 L43 96 M74 108 L77 96" fill="none" ${st}/><circle cx="48" cy="114" r="2.6" fill="#FFD23F"/><circle cx="72" cy="114" r="2.6" fill="#FFD23F"/>`;
-    case 'rainbow': return base(`url(#${k}rb)`);
-    case 'tux': return base('#2F2B45') + `<path d="M50 95 L60 128 L70 95Z" fill="#FFFFFF" ${st}/><path d="M51 101 L60 105 L69 101 L69 110 L60 105 L51 110Z" fill="#FF5E5B" ${st}/>`;
-    case 'gown': return `<path d="M14 136 Q28 96 60 94 Q92 96 106 136Z" fill="#FF8FC7" ${st}/><polygon points="${starPts(44,118,4,1.8)}" fill="#fff"/><polygon points="${starPts(64,127,4,1.8)}" fill="#fff"/><polygon points="${starPts(80,112,4,1.8)}" fill="#fff"/><polygon points="${starPts(56,106,3,1.4)}" fill="#fff"/>`;
-    case 'hero': return base('#3E6CF7') + `<circle cx="60" cy="117" r="12" fill="#FFD23F" ${st}/><polygon points="${starPts(60,117,8,3.5)}" fill="#E63946"/>`;
-    default: return base('#FF5E5B');
-  }
 }
 function backSVG(c, main, st){
   let s = '';
@@ -411,21 +411,12 @@ function topSVG(c, st, hairC, k){
   if (c.crown) s += `<path d="M42 26 L40 6 L50 16 L60 2 L70 16 L80 6 L78 26Z" fill="url(#${k}gold)" ${st}/><circle cx="60" cy="19" r="3.5" fill="#FF5E5B"/>`;
   return s;
 }
-function accSVG(a, st, k){
-  switch(a){
-    case 'bow': return `<path d="M82 30 L69 21 L69 39Z M82 30 L95 21 L95 39Z" fill="#FF6FB5" ${st}/><circle cx="82" cy="30" r="4.5" fill="#FF6FB5" ${st}/>`;
-    case 'cap': return `<path d="M27 46 Q27 17 60 17 Q93 17 93 46Z" fill="#3E8EF7" ${st}/><path d="M62 44 L106 44 Q108 52 99 52 L62 48Z" fill="#3E8EF7" ${st}/><circle cx="60" cy="17" r="3.5" fill="#FFD23F" ${st}/>`;
-    case 'flower': { let s=''; for(let i=0;i<5;i++){ const an=i*Math.PI*2/5; s+=`<circle cx="${(84+7*Math.cos(an)).toFixed(1)}" cy="${(30+7*Math.sin(an)).toFixed(1)}" r="5.5" fill="#fff" stroke="${INK}" stroke-width="2"/>`; } return s + `<circle cx="84" cy="30" r="4.5" fill="#FFD23F" stroke="${INK}" stroke-width="2"/>`; }
-    case 'party': return `<path d="M48 32 L60 -8 L72 32Z" fill="#4CCB70" ${st}/><path d="M52 20 L66 18 M55 9 L63 8" stroke="#fff" stroke-width="3"/><circle cx="60" cy="-9" r="5" fill="#FFD23F" ${st}/>`;
-    case 'glasses': return `<rect x="36" y="48" width="23" height="16" rx="6" fill="${INK}" fill-opacity=".9" ${st}/><rect x="61" y="48" width="23" height="16" rx="6" fill="${INK}" fill-opacity=".9" ${st}/><path d="M59 54 L61 54" ${st}/><path d="M40 52 L46 52 M65 52 L71 52" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>`;
-    case 'headphones': return `<path d="M25 62 Q25 14 60 14 Q95 14 95 62" fill="none" stroke="${INK}" stroke-width="8" stroke-linecap="round"/><path d="M25 62 Q25 14 60 14 Q95 14 95 62" fill="none" stroke="#FF5E5B" stroke-width="3.5" stroke-linecap="round"/><rect x="16" y="50" width="15" height="24" rx="7" fill="#FF5E5B" ${st}/><rect x="89" y="50" width="15" height="24" rx="7" fill="#FF5E5B" ${st}/>`;
-    case 'crown': return `<path d="M40 30 L38 8 L50 18 L60 3 L70 18 L82 8 L80 30Z" fill="url(#${k}gold)" ${st}/><circle cx="50" cy="24" r="2.8" fill="#3EC1D3"/><circle cx="60" cy="22" r="3.2" fill="#FF5E5B"/><circle cx="70" cy="24" r="2.8" fill="#4CCB70"/>`;
-    default: return '';
-  }
-}
 
-/* ---------- Game content ---------- */
-const PICS = [['apple','🍎'],['ant','🐜'],['ball','⚽'],['bear','🐻'],['bee','🐝'],['bus','🚌'],['cat','🐱'],['cake','🎂'],['car','🚗'],['cow','🐮'],['dog','🐶'],['duck','🦆'],['drum','🥁'],['egg','🥚'],['fish','🐟'],['frog','🐸'],['fox','🦊'],['goat','🐐'],['grapes','🍇'],['hat','🎩'],['horse','🐴'],['house','🏠'],['ice cream','🍦'],['kite','🪁'],['key','🔑'],['lion','🦁'],['leaf','🍃'],['moon','🌙'],['mouse','🐭'],['nose','👃'],['owl','🦉'],['octopus','🐙'],['pig','🐷'],['pizza','🍕'],['queen','👸'],['rabbit','🐰'],['rainbow','🌈'],['sun','☀️'],['snake','🐍'],['star','⭐'],['tree','🌳'],['turtle','🐢'],['tiger','🐯'],['umbrella','☂️'],['van','🚐'],['violin','🎻'],['whale','🐳'],['watch','⌚'],['box','📦'],['yo-yo','🪀'],['zebra','🦓'],['bell','🔔'],['corn','🌽'],['ship','🚢'],['sock','🧦'],['web','🕸️'],['hen','🐔'],['map','🗺️'],['bug','🐛'],['train','🚂'],['clock','🕐'],['ring','💍'],['rose','🌹'],['pear','🍐'],['crab','🦀'],['milk','🥛'],['shark','🦈'],['robot','🤖'],['banana','🍌'],['lemon','🍋'],['jet','✈️'],['nut','🥜']];
+/* ---------- Game content ----------
+   PICS = Letter Monster pictures, as ['word', 'emoji'].
+   Little kids can't read the labels, so use the word a 4-year-old would say for the picture
+   (🐰 is "bunny", not "rabbit"). Avoid pictures with two common names. */
+const PICS = [['apple','🍎'],['ant','🐜'],['ball','⚽'],['bear','🐻'],['bee','🐝'],['bus','🚌'],['cat','🐱'],['cake','🎂'],['car','🚗'],['cow','🐮'],['dog','🐶'],['duck','🦆'],['drum','🥁'],['egg','🥚'],['fish','🐟'],['frog','🐸'],['fox','🦊'],['goat','🐐'],['grapes','🍇'],['hat','🎩'],['horse','🐴'],['house','🏠'],['ice cream','🍦'],['kite','🪁'],['key','🔑'],['lion','🦁'],['leaf','🍃'],['moon','🌙'],['mouse','🐭'],['nose','👃'],['owl','🦉'],['octopus','🐙'],['pig','🐷'],['pizza','🍕'],['princess','👸'],['bunny','🐰'],['rainbow','🌈'],['sun','☀️'],['snake','🐍'],['star','⭐'],['tree','🌳'],['turtle','🐢'],['tiger','🐯'],['umbrella','☂️'],['volcano','🌋'],['violin','🎻'],['whale','🐳'],['watch','⌚'],['box','📦'],['yo-yo','🪀'],['zebra','🦓'],['bell','🔔'],['corn','🌽'],['ship','🚢'],['sock','🧦'],['web','🕸️'],['chicken','🐔'],['map','🗺️'],['caterpillar','🐛'],['train','🚂'],['clock','🕐'],['ring','💍'],['rose','🌹'],['pear','🍐'],['crab','🦀'],['milk','🥛'],['shark','🦈'],['robot','🤖'],['banana','🍌'],['lemon','🍋'],['airplane','✈️'],['juice','🧃'],['peanut','🥜']];
 const letters = w => w.replace(/[^a-z]/g,'');
 const WORDS = {
   3:[['ant','🐜'],['bee','🐝'],['bug','🐛'],['bat','🦇'],['box','📦'],['bus','🚌'],['cat','🐱'],['cow','🐮'],['cup','🥤'],['dog','🐶'],['egg','🥚'],['fox','🦊'],['hat','🎩'],['hen','🐔'],['key','🔑'],['map','🗺️'],['owl','🦉'],['pen','🖊️'],['pig','🐷'],['rat','🐀'],['sun','☀️'],['web','🕸️'],['bed','🛏️']],
@@ -458,44 +449,23 @@ const MONSTER = `<svg viewBox="0 0 160 150" xmlns="http://www.w3.org/2000/svg" a
 <g class="mouth"><ellipse cx="80" cy="106" rx="34" ry="21" fill="#3A0F4F" stroke="${INK}" stroke-width="4"/><path d="M57 92 L63 103 L69 90Z M91 90 L97 103 L103 92Z" fill="#fff" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><ellipse cx="80" cy="117" rx="15" ry="7" fill="#FF7FA8"/></g>
 </svg>`;
 
-/* ---------- State & saving ---------- */
+/* ---------- State & saving ----------
+   Everything is saved in this browser's localStorage (one save per device/browser). */
 const LS = 'smarty-stars-v1';
 let S = {players:[], sound:true, updated:0};
 try { const r = localStorage.getItem(LS); if (r) { const d = JSON.parse(r); if (d && Array.isArray(d.players)) S = Object.assign(S, d); } } catch(e){}
 let cur = null, SCREEN = 'who', G = null, ED = null, NEW = null, EDP = null, EDITMODE = false;
-let dbRef = null, dbTimer = null;
 const P = () => S.players.find(p => p.id === cur);
-const big = () => (P() ? P().age : 4) >= 6;
+const big = () => (P() ? P().age : 4) >= 6;   // ages 6-8 get the harder levels
 function save(){
   S.updated = Date.now();
   try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){}
-  if (dbRef){ clearTimeout(dbTimer); dbTimer = setTimeout(() => { dbRef.set(JSON.parse(JSON.stringify(S))).catch(()=>{}); }, 800); }
-}
-async function initDb(){
-  try {
-    if (!window.claude || !window.claude.use) return;
-    const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')]);
-    if (!db || !user) return;
-    const id = await user.id(); if (!id) return;
-    const ref = db.collection('data/users/' + id).doc('smarty-stars');
-    const snap = await ref.get();
-    if (snap.exists){
-      const d = snap.data();
-      if (d && Array.isArray(d.players) && (d.updated||0) > (S.updated||0)){
-        S = Object.assign({players:[], sound:true}, JSON.parse(JSON.stringify(d)));
-        try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){}
-        if (SCREEN === 'who') render();
-      }
-    }
-    dbRef = ref;
-    if ((!snap.exists || (snap.data().updated||0) < (S.updated||0)) && S.players.length) save();
-  } catch(e){}
 }
 
 /* ---------- Speech, feedback ---------- */
 function say(text){
   if (S.sound === false) return;
-  try { const ss = window.speechSynthesis; if (!ss) return; ss.cancel(); const u = new SpeechSynthesisUtterance(text); u.rate = .92; u.pitch = 1.15; ss.speak(u); } catch(e){}
+  try { const ss = window.speechSynthesis; if (!ss) return; ss.cancel(); const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = .92; u.pitch = 1.15; ss.speak(u); } catch(e){}
 }
 function toast(text){
   document.querySelectorAll('.toast').forEach(t => t.remove());
@@ -545,12 +515,20 @@ function setMsg(t, good){ const m = $('#msg'); if (m){ m.textContent = t; m.clas
 function go(s){ SCREEN = s; render(); window.scrollTo(0,0); }
 function render(){
   gid = 0;
-  const f = {who:renderWho, create:renderCreate, editp:renderEditP, home:renderHome, look:renderLook, letter:renderLetter, count:renderCount, store:renderStore, word:renderWord}[SCREEN] || renderWho;
-  if (SCREEN !== 'who' && SCREEN !== 'create' && SCREEN !== 'editp' && SCREEN !== 'look' && !P()) { SCREEN = 'who'; return renderWho(); }
-  f();
+  const game = gameById(SCREEN);
+  if ((game || SCREEN === 'home') && !P()) { SCREEN = 'who'; return renderWho(); }
+  if (game){
+    if (!G || G.game !== game.id) { SCREEN = 'home'; return renderHome(); }
+    app.innerHTML = topbar(game.name) + `<main class="game">${game.render()}</main>`;
+    return;
+  }
+  ({who:renderWho, create:renderCreate, editp:renderEditP, home:renderHome, look:renderLook}[SCREEN] || renderWho)();
 }
 function wordmark(){
-  return `<h1 class="mark" aria-label="Smarty Stars">${'Smarty Stars'.split('').map(ch => ch === ' ' ? '<span class="sp" aria-hidden="true"></span>' : `<span aria-hidden="true">${ch}</span>`).join('')}</h1>`;
+  // Each word stays on one line; the title only wraps between words.
+  let n = 0;
+  const word = w => `<span class="w" aria-hidden="true">${w.split('').map(ch => `<span class="L c${n++ % 5}">${ch}</span>`).join('')}</span>`;
+  return `<h1 class="mark" aria-label="Smarty Stars">${word('Smarty')}${word('Stars')}</h1>`;
 }
 function renderWho(){
   const ps = S.players;
@@ -592,10 +570,7 @@ function renderHome(){
   const p = P();
   app.innerHTML = `<div class="hello"><div class="av">${avatarSVG(p.avatar)}</div><div><h2>Hi, ${esc(p.name)}!</h2><div class="st">⭐ ${p.stars} stars</div></div></div>
   <div class="tiles">
-    <button class="tile card t-letter" data-act="game" data-g="letter"><span class="emo" aria-hidden="true">👾</span><span class="tn">Letter Monster</span><span class="ts">Feed it the right letter</span></button>
-    <button class="tile card t-count" data-act="game" data-g="count"><span class="emo" aria-hidden="true">🧁</span><span class="tn">Counting Bakery</span><span class="ts">Fill the orders</span></button>
-    <button class="tile card t-word" data-act="game" data-g="word"><span class="emo" aria-hidden="true">🔤</span><span class="tn">Word Builder</span><span class="ts">Spell the picture</span></button>
-    <button class="tile card t-store" data-act="game" data-g="store"><span class="emo" aria-hidden="true">🪙</span><span class="tn">Toy Store</span><span class="ts">Pay with coins</span></button>
+    ${GAMES.map(g => `<button class="tile card" style="background:${g.color}" data-act="game" data-g="${g.id}"><span class="emo" aria-hidden="true">${g.emoji}</span><span class="tn">${g.name}</span><span class="ts">${g.blurb}</span></button>`).join('')}
   </div>
   <div class="homebtns">
     <button class="btn" data-act="look">🎨 My look &amp; prizes</button>
@@ -678,22 +653,57 @@ function pickItem(type, id){
   }
 }
 
-/* ---------- Letter Monster ---------- */
+/* =====================================================================
+   GAMES
+   Each game is one block below that ends with addGame({...}):
+     id        short name, also used as the screen name (e.g. 'letter')
+     name      title on the home tile and the top bar
+     emoji     big picture on the home tile
+     blurb     small words under the name on the tile
+     color     tile color, e.g. 'var(--sun)' or '#FF9F43'
+     newRound  makes a new question: sets G = {game:id, prompt:'...', ...} then calls showRound()
+     render    returns the HTML for the game area (the top bar is added for you)
+     actions   click handlers: a button with data-act="xyz" calls actions.xyz(data, button)
+   Helpers any game can use: big() (true for ages 6-8), P() (the current player),
+   addStar(), cheer(), setMsg(), say(), nextRound(ms), pick(), rint(), shuffle(), esc().
+   Home tiles appear in the same order the games are added.
+   ===================================================================== */
+const GAMES = [];
+const addGame = g => GAMES.push(g);
+const gameById = id => GAMES.find(g => g.id === id);
+function startGame(id){
+  const g = gameById(id); if (!g) return;
+  SCREEN = id; G = null; window.scrollTo(0,0);
+  g.newRound();
+}
+function showRound(){ render(); say(G.prompt); }
+// After a right answer, start the next question after a short pause,
+// but only if the child is still on that same question (not back home or in another game).
+function nextRound(ms){
+  const round = G;
+  setTimeout(() => { if (G === round && SCREEN === round.game) gameById(round.game).newRound(); }, ms);
+}
+
+/* ---------- GAME: Letter Monster ---------- */
 function lmNew(){
   const b = big();
   const ends = b && Math.random() < .3;
   const key = w => { const l = letters(w); return ends ? l.slice(-1) : l[0]; };
-  const target = pick(PICS);
+  // Only use pictures whose letter matches the sound kids hear: "ends with" skips
+  // silent-e and sh/ch/ow/ey endings (cake, fish, cow, key); "starts with" skips sh/ch/th (ship).
+  const fair = w => { const l = letters(w); return ends ? !/([^e]e|h|w|y)$/.test(l) : !/^(sh|ch|th)/.test(l); };
+  const pool = PICS.filter(p => fair(p[0]));
+  const target = pick(pool);
   const L = key(target[0]);
   const used = new Set([L]);
-  const others = shuffle(PICS).filter(p => { const kk = key(p[0]); if (used.has(kk)) return false; used.add(kk); return true; }).slice(0, b ? 3 : 2);
+  const others = shuffle(pool).filter(p => { const kk = key(p[0]); if (used.has(kk)) return false; used.add(kk); return true; }).slice(0, b ? 3 : 2);
   G = {game:'letter', target, L, ends, opts: shuffle([target].concat(others)), gone:[], done:false};
   G.prompt = `Feed me something that ${ends?'ends':'starts'} with ${L.toUpperCase()}!`;
-  render(); say(G.prompt);
+  showRound();
 }
 function renderLetter(){
   const b = big();
-  app.innerHTML = topbar('Letter Monster') + `<main class="game">
+  return `
     <div class="lm-stage">
       <div class="monster" id="monster">${MONSTER}</div>
       <button class="bubble" data-act="hear" aria-label="Hear it again">
@@ -705,7 +715,7 @@ function renderLetter(){
     <div class="msg" id="msg" aria-live="polite"></div>
     <div class="opts opts-${G.opts.length}">
       ${G.opts.map((o,i) => `<button class="opt card" data-act="lmPick" data-i="${i}" aria-label="${esc(o[0])}" ${G.gone.includes(i)?'disabled':''}><span class="emo">${o[1]}</span>${b?`<span class="lbl">${esc(o[0])}</span>`:''}</button>`).join('')}
-    </div></main>`;
+    </div>`;
 }
 function lmPick(i, el){
   if (G.done) return;
@@ -715,7 +725,7 @@ function lmPick(i, el){
     el.classList.add('eaten'); replay($('#monster'),'chomp');
     const c = cheer(`${o[0]} ${G.ends?'ends':'starts'} with ${G.L.toUpperCase()}!`);
     setMsg(c + ' Yum!', true); addStar();
-    setTimeout(lmNew, 1700);
+    nextRound(1700);
   } else {
     replay(el,'shake'); G.gone.push(i); el.disabled = true;
     const l = letters(o[0]); const k = G.ends ? l.slice(-1) : l[0];
@@ -723,8 +733,13 @@ function lmPick(i, el){
     say(`That’s ${o[0]}. ${o[0]} ${G.ends?'ends':'starts'} with ${k.toUpperCase()}. Try again!`);
   }
 }
+addGame({
+  id:'letter', name:'Letter Monster', emoji:'👾', blurb:'Feed it the right letter', color:'var(--tomato)',
+  newRound: lmNew, render: renderLetter,
+  actions: { lmPick: (d, el) => lmPick(+d.i, el) }
+});
 
-/* ---------- Counting Bakery ---------- */
+/* ---------- GAME: Counting Bakery ---------- */
 function cbNew(){
   const p = P(), b = big();
   const types = shuffle(TREATS);
@@ -740,39 +755,40 @@ function cbNew(){
   }
   G = {game:'count', order, tray, plate:[], cust:pick(CUSTOMERS), stage:'serve', done:false};
   G.prompt = 'Can I have ' + order.map(o => o.n + ' ' + (o.n===1?o.t.one:o.t.many)).join(' and ') + ', please?';
-  render(); say(G.prompt);
+  showRound();
 }
 function renderCount(){
   const p = P();
   const orderHTML = G.order.map(o => `<b>${o.n}</b> ${o.n===1?o.t.one:o.t.many} <span class="emo">${o.t.e}</span>${p.age<=4?`<br><span class="dots" aria-hidden="true">${'●'.repeat(o.n)}</span>`:''}`).join(' and ');
+  const bonus = G.stage === 'total';
   let lower;
-  if (G.stage === 'total'){
-    const total = G.order.reduce((a,o) => a + o.n, 0);
+  if (bonus){
     lower = `<div class="prompt card"><div class="say">Bonus! How many treats did you serve in all?</div></div>
-      <div class="nums">${G.choices.map(n => `<button class="num card" data-act="cbTotal" data-n="${n}">${n}</button>`).join('')}</div>`;
-    void total;
+      <div class="nums">${G.choices.map(n => `<button class="num card" data-act="cbTotal" data-n="${n}" ${G.wrong.includes(n)?'disabled':''}>${n}</button>`).join('')}</div>`;
   } else {
     lower = `<div class="tray">${G.tray.map(t => `<button class="tray-btn card" data-act="cbAdd" data-t="${t.id}" aria-label="Add a ${t.one}"><span class="emo">${t.e}</span><span class="lbl">Add ${t.one}</span></button>`).join('')}</div>
       <div style="text-align:center"><button class="btn go" data-act="cbServe" ${G.done?'disabled':''}>Serve the order!</button></div>`;
   }
-  app.innerHTML = topbar('Counting Bakery') + `<main class="game">
-    <div class="prompt card"><div class="who emo" aria-hidden="true">${G.cust}</div><div class="say">${G.stage==='total' ? 'Thank you!' : 'Can I have ' + orderHTML + ', please?'}</div>
+  // During the bonus question the plate is just for counting, so its treats aren't buttons.
+  const plateItem = (id,i) => bonus ? `<span class="pl-item emo">${TREATS.find(t=>t.id===id).e}</span>`
+    : `<button class="pl-item emo" data-act="cbRemove" data-i="${i}" aria-label="Take back">${TREATS.find(t=>t.id===id).e}</button>`;
+  return `
+    <div class="prompt card"><div class="who emo" aria-hidden="true">${G.cust}</div><div class="say">${bonus ? 'Thank you!' : 'Can I have ' + orderHTML + ', please?'}</div>
       <button class="hear" data-act="hear" aria-label="Hear it again">🔊</button></div>
-    <div class="plate" aria-label="Plate">${G.plate.length ? G.plate.map((id,i) => `<button class="pl-item emo" data-act="cbRemove" data-i="${i}" aria-label="Take back">${TREATS.find(t=>t.id===id).e}</button>`).join('') : '<span class="plate-empty">Tap a treat to put it on the plate</span>'}</div>
+    <div class="plate" aria-label="Plate">${G.plate.length ? G.plate.map(plateItem).join('') : '<span class="plate-empty">Tap a treat to put it on the plate</span>'}</div>
     <div class="msg" id="msg" aria-live="polite"></div>
-    ${lower}
-  </main>`;
+    ${lower}`;
 }
 function cbAdd(id){
-  if (G.done || G.plate.length >= 20) return;
+  if (G.done || G.stage !== 'serve' || G.plate.length >= 20) return;
   G.plate.push(id); render();
   const t = TREATS.find(x => x.id === id);
   const n = G.plate.filter(x => x === id).length;
   say(n + ' ' + (n===1?t.one:t.many));
 }
-function cbRemove(i){ if (G.done) return; G.plate.splice(i,1); render(); }
+function cbRemove(i){ if (G.done || G.stage !== 'serve') return; G.plate.splice(i,1); render(); }
 function cbServe(){
-  if (G.done) return;
+  if (G.done || G.stage !== 'serve') return;
   const counts = {}; G.plate.forEach(id => counts[id] = (counts[id]||0) + 1);
   const ok = G.order.every(o => counts[o.t.id] === o.n) && G.plate.every(id => G.order.some(o => o.t.id === id));
   if (ok){
@@ -780,12 +796,14 @@ function cbServe(){
     if (big()){
       const total = G.order.reduce((a,o) => a + o.n, 0);
       const set = new Set([total]); while (set.size < 4){ const v = total + rint(-3,3); if (v > 0) set.add(v); }
-      G.choices = shuffle([...set]); G.stage = 'total'; G.done = false;
-      render(); setMsg(pick(CHEERS) + ' Order served!', true);
-      say(pick(CHEERS) + ' Bonus question! How many treats did you serve in all?');
+      G.choices = shuffle([...set]); G.wrong = []; G.stage = 'total'; G.done = false;
+      G.prompt = 'Bonus question! How many treats did you serve in all?';   // what the 🔊 button repeats now
+      const c = pick(CHEERS);
+      render(); setMsg(c + ' Order served!', true);
+      say(c + ' ' + G.prompt);
     } else {
       const c = cheer('Order served!'); setMsg(c + ' Order served!', true);
-      setTimeout(cbNew, 1600);
+      nextRound(1600);
     }
   } else {
     const wrongType = G.plate.find(id => !G.order.some(o => o.t.id === id));
@@ -806,56 +824,24 @@ function cbTotal(n, el){
     G.done = true; addStar();
     const c = cheer(G.order[0].n + ' plus ' + G.order[1].n + ' is ' + total + '!');
     setMsg(`${c} ${G.order[0].n} + ${G.order[1].n} = ${total}`, true);
-    setTimeout(cbNew, 1900);
+    nextRound(1900);
   } else {
-    replay(el,'shake'); el.disabled = true;
+    replay(el,'shake'); el.disabled = true; G.wrong.push(n);
     setMsg('Not quite. Count all the treats on the plate!'); say('Not quite. Count all the treats on the plate!');
   }
 }
-
-/* ---------- Toy Store ---------- */
-function stNew(){
-  const a = P().age;
-  let price, coins;
-  if (a <= 4){ price = rint(1,5); coins = [1]; }
-  else if (a === 5){ price = rint(3,15); coins = [1,5]; }
-  else if (a === 6){ price = rint(10,50); coins = [1,5,10]; }
-  else { price = rint(15,99); coins = [1,5,10,25]; }
-  const item = pick(SHOP);
-  G = {game:'store', item, price, coins, counter:[], done:false};
-  G.prompt = `The ${item[0]} costs ${price} ${price===1?'cent':'cents'}. Tap the coins to pay.`;
-  render(); say(G.prompt);
-}
-function coinHTML(v, act, i){
-  const c = COINS[v];
-  return `<button class="coin" style="--d:${c.d}px;background:${c.bg}" data-act="${act}" ${act==='stAdd'?`data-v="${v}"`:`data-i="${i}"`} aria-label="${act==='stAdd'?'Add a':'Take back'} ${c.name}, ${v} ${v===1?'cent':'cents'}">${v}¢</button>`;
-}
-function renderStore(){
-  app.innerHTML = topbar('Toy Store') + `<main class="game">
-    <div class="shop-item card"><span class="emo" aria-hidden="true">${G.item[1]}</span><span class="tag">${G.price}¢</span><button class="hear" data-act="hear" aria-label="Hear it again">🔊</button></div>
-    <div class="counter-label">Your coins on the counter</div>
-    <div class="counter card">${G.counter.length ? G.counter.map((v,i) => coinHTML(v,'stRemove',i)).join('') : '<span class="plate-empty">Tap coins below to pay</span>'}</div>
-    <div class="msg" id="msg" aria-live="polite"></div>
-    <div class="coins">${G.coins.map(v => `<div class="coin-wrap">${coinHTML(v,'stAdd')}<span>${COINS[v].name}</span></div>`).join('')}</div>
-    <div style="text-align:center"><button class="btn go" data-act="stPay" ${G.done?'disabled':''}>Pay</button></div>
-  </main>`;
-}
-function stAdd(v){ if (G.done || G.counter.length >= 24) return; G.counter.push(v); render(); say(v + (v===1?' cent':' cents')); }
-function stRemove(i){ if (G.done) return; G.counter.splice(i,1); render(); }
-function stPay(){
-  if (G.done) return;
-  const sum = G.counter.reduce((a,b) => a + b, 0);
-  if (sum === G.price){
-    G.done = true; addStar();
-    const c = cheer(`That’s exactly ${G.price} cents!`); setMsg(`${c} The ${G.item[0]} is yours!`, true);
-    setTimeout(stNew, 1800);
-  } else {
-    const t = sum < G.price ? `You gave ${sum}¢. You need ${G.price - sum}¢ more.` : `You gave ${sum}¢. That’s too much! Take some coins back.`;
-    setMsg(t); say(t.replace(/¢/g,' cents')); replay($('.counter'),'shake');
+addGame({
+  id:'count', name:'Counting Bakery', emoji:'🧁', blurb:'Fill the orders', color:'var(--sun)',
+  newRound: cbNew, render: renderCount,
+  actions: {
+    cbAdd: d => cbAdd(d.t),
+    cbRemove: d => cbRemove(+d.i),
+    cbServe: () => cbServe(),
+    cbTotal: (d, el) => cbTotal(+d.n, el)
   }
-}
+});
 
-/* ---------- Word Builder ---------- */
+/* ---------- GAME: Word Builder ---------- */
 function wbNew(){
   const a = P().age;
   let len, extras;
@@ -867,11 +853,11 @@ function wbNew(){
   const chars = w[0].split('').concat(shuffle(abc).slice(0, extras));
   G = {game:'word', word:w[0], emoji:w[1], tiles: shuffle(chars).map((ch,i) => ({ch, i, used:false})), slots:[], done:false, hint: a <= 5};
   G.prompt = `Spell ${w[0]}.`;
-  render(); say(G.prompt);
+  showRound();
 }
 function renderWord(){
   const w = G.word;
-  app.innerHTML = topbar('Word Builder') + `<main class="game">
+  return `
     <div class="prompt card"><div class="say">Spell the picture!</div><button class="hear" data-act="hear" aria-label="Hear the word">🔊</button></div>
     <div class="wb-pic emo" aria-label="${esc(w)}">${G.emoji}</div>
     <div class="slots" id="slots">${w.split('').map((ch,i) => {
@@ -879,8 +865,7 @@ function renderWord(){
       return t ? `<button class="slot full" data-act="wbSlot" data-s="${i}" aria-label="Remove ${t.ch}">${t.ch}</button>` : `<div class="slot">${G.hint ? `<span class="ghost">${ch}</span>` : ''}</div>`;
     }).join('')}</div>
     <div class="msg" id="msg" aria-live="polite"></div>
-    <div class="wtiles">${G.tiles.map(t => `<button class="wtile card" data-act="wbTile" data-i="${t.i}" ${t.used?'disabled':''}>${t.ch}</button>`).join('')}</div>
-  </main>`;
+    <div class="wtiles">${G.tiles.map(t => `<button class="wtile card" data-act="wbTile" data-i="${t.i}" ${t.used?'disabled':''}>${t.ch}</button>`).join('')}</div>`;
 }
 function wbTile(i){
   if (G.done) return;
@@ -891,11 +876,12 @@ function wbTile(i){
     if (made === G.word){
       G.done = true; addStar();
       const c = cheer(G.word.split('').join(', ') + '. ' + G.word + '!'); setMsg(c, true);
-      setTimeout(wbNew, 2000);
+      nextRound(2000);
     } else {
       setMsg('Not quite! Try again.'); say('Not quite! Try again.');
       replay($('#slots'),'bad');
-      setTimeout(() => { if (G && G.game === 'word' && !G.done){ G.tiles.forEach(x => x.used = false); G.slots = []; render(); } }, 900);
+      const round = G;
+      setTimeout(() => { if (G === round && SCREEN === 'word' && !G.done){ G.tiles.forEach(x => x.used = false); G.slots = []; render(); } }, 900);
     }
   }
 }
@@ -905,6 +891,64 @@ function wbSlot(s){
   removed.forEach(i => { const t = G.tiles.find(x => x.i === i); if (t) t.used = false; });
   render();
 }
+addGame({
+  id:'word', name:'Word Builder', emoji:'🔤', blurb:'Spell the picture', color:'var(--sky)',
+  newRound: wbNew, render: renderWord,
+  actions: {
+    wbTile: d => wbTile(+d.i),
+    wbSlot: d => wbSlot(+d.s)
+  }
+});
+
+/* ---------- GAME: Toy Store ---------- */
+function stNew(){
+  const a = P().age;
+  let price, coins;
+  if (a <= 4){ price = rint(1,5); coins = [1]; }
+  else if (a === 5){ price = rint(3,15); coins = [1,5]; }
+  else if (a === 6){ price = rint(10,50); coins = [1,5,10]; }
+  else { price = rint(15,99); coins = [1,5,10,25]; }
+  const item = pick(SHOP);
+  G = {game:'store', item, price, coins, counter:[], done:false};
+  G.prompt = `The ${item[0]} costs ${price} ${price===1?'cent':'cents'}. Tap the coins to pay.`;
+  showRound();
+}
+function coinHTML(v, act, i){
+  const c = COINS[v];
+  return `<button class="coin" style="--d:${c.d}px;background:${c.bg}" data-act="${act}" ${act==='stAdd'?`data-v="${v}"`:`data-i="${i}"`} aria-label="${act==='stAdd'?'Add a':'Take back'} ${c.name}, ${v} ${v===1?'cent':'cents'}">${v}¢</button>`;
+}
+function renderStore(){
+  return `
+    <div class="shop-item card"><span class="emo" aria-hidden="true">${G.item[1]}</span><span class="tag">${G.price}¢</span><button class="hear" data-act="hear" aria-label="Hear it again">🔊</button></div>
+    <div class="counter-label">Your coins on the counter</div>
+    <div class="counter card">${G.counter.length ? G.counter.map((v,i) => coinHTML(v,'stRemove',i)).join('') : '<span class="plate-empty">Tap coins below to pay</span>'}</div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+    <div class="coins">${G.coins.map(v => `<div class="coin-wrap">${coinHTML(v,'stAdd')}<span>${COINS[v].name}</span></div>`).join('')}</div>
+    <div style="text-align:center"><button class="btn go" data-act="stPay" ${G.done?'disabled':''}>Pay</button></div>`;
+}
+function stAdd(v){ if (G.done || G.counter.length >= 24) return; G.counter.push(v); render(); say(v + (v===1?' cent':' cents')); }
+function stRemove(i){ if (G.done) return; G.counter.splice(i,1); render(); }
+function stPay(){
+  if (G.done) return;
+  const sum = G.counter.reduce((a,b) => a + b, 0);
+  if (sum === G.price){
+    G.done = true; addStar();
+    const c = cheer(`That’s exactly ${G.price} cents!`); setMsg(`${c} The ${G.item[0]} is yours!`, true);
+    nextRound(1800);
+  } else {
+    const t = sum < G.price ? `You gave ${sum}¢. You need ${G.price - sum}¢ more.` : `You gave ${sum}¢. That’s too much! Take some coins back.`;
+    setMsg(t); say(t.replace(/¢/g,' cents')); replay($('.counter'),'shake');
+  }
+}
+addGame({
+  id:'store', name:'Toy Store', emoji:'🪙', blurb:'Pay with coins', color:'var(--grass)',
+  newRound: stNew, render: renderStore,
+  actions: {
+    stAdd: d => stAdd(+d.v),
+    stRemove: d => stRemove(+d.i),
+    stPay: () => stPay()
+  }
+});
 
 /* ---------- Actions ---------- */
 function readName(obj){ const el = $('#nm'); if (el) obj.name = el.value.trim(); }
@@ -947,29 +991,21 @@ const ACT = {
     const b = $('#soundBtn'); if (b) b.textContent = SCREEN === 'home' ? (S.sound ? '🔊 Sound on' : '🔇 Sound off') : (S.sound ? '🔊' : '🔇');
     if (S.sound) say('Sound on!');
   },
-  game: d => ({letter:lmNew, count:cbNew, store:stNew, word:wbNew})[d.g](),
-  hear: () => G && say(G.prompt),
-  lmPick: (d, el) => lmPick(+d.i, el),
-  cbAdd: d => cbAdd(d.t),
-  cbRemove: d => cbRemove(+d.i),
-  cbServe: () => cbServe(),
-  cbTotal: (d, el) => cbTotal(+d.n, el),
-  stAdd: d => stAdd(+d.v),
-  stRemove: d => stRemove(+d.i),
-  stPay: () => stPay(),
-  wbTile: d => wbTile(+d.i),
-  wbSlot: d => wbSlot(+d.s)
+  game: d => startGame(d.g),
+  hear: () => G && say(G.prompt)
 };
+// A click on anything with data-act="name" runs ACT.name, or the current game's actions.name.
 app.addEventListener('click', e => {
   const t = e.target.closest('[data-act]'); if (!t || t.disabled) return;
-  const f = ACT[t.dataset.act]; if (f) f(t.dataset, t);
+  const game = gameById(SCREEN);
+  const f = ACT[t.dataset.act] || (game && game.actions && game.actions[t.dataset.act]);
+  if (f) f(t.dataset, t);
 });
 app.addEventListener('keydown', e => {
   if (e.key === 'Enter' && e.target.id === 'nm'){ e.preventDefault(); if (SCREEN === 'create') ACT.createNext(); else if (SCREEN === 'editp') ACT.saveP(); }
 });
 
 render();
-initDb();
 })();
 </script>
 </body>
