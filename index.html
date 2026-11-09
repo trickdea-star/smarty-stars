@@ -475,7 +475,7 @@ function save(){
    A NEW SPOKEN LINE NEEDS RECORDING: add it to tools/voice_lines.py, re-run it and the recorder
    (see README), and bump VOICE_BUILD. Each sentence is looked up on its own, so keep dynamic parts
    (numbers, names) in their own short sentence. */
-const VOICE_BUILD = '1';
+const VOICE_BUILD = '2';
 if (window.Narrator) Narrator.load('voice/index.json?v=' + VOICE_BUILD);
 function say(text){
   if (S.sound === false || !window.Narrator) return;
