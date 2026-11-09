@@ -129,17 +129,31 @@ for ch in ABC:
     add("That's %s." % L(ch))
 for n in range(1, 21):
     add('Splat number %d!' % n)
-for s in range(2, 21):                      # adding within 20
-    for a in range(1, s):
-        add('What is %d plus %d?' % (a, s - a))
-for a in range(3, 21):                      # taking away within 20
-    for b in range(1, a):
-        add('What is %d minus %d?' % (a, b))
-for t in (2, 5, 10):                        # times tables
-    for n in range(1, 11):
-        add('What is %d times %d?' % (n, t))
-for n in range(0, 101):
+
+# ---- Practice questions shared by the arcade games (games/arcade-kit.js question(), keep in step with it):
+# a practice number n (1-12, and 20 for + and -) with a partner k = 1..12, in both orders.
+COLOR_NAMES = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'brown', 'black', 'white']
+for n in list(range(1, 13)) + [20]:
+    for k in range(1, 13):
+        add('What is %d plus %d?' % (n, k)); add('What is %d plus %d?' % (k, n))
+        add('What is %d minus %d?' % (n + k, n)); add('What is %d minus %d?' % (n + k, k))
+        if n <= 12:
+            add('What is %d times %d?' % (n, k)); add('What is %d times %d?' % (k, n))
+            add('What is %d divided by %d?' % (n * k, n))
+for n in range(0, 151):                     # wrong answers: "That's 56."
     add("That's %d." % n)
+for c in COLOR_NAMES:
+    add('Splat the color %s!' % c)
+    add('Shoot the color %s!' % c)
+    add("That's %s." % c)
+# the "pick what to practice" screen
+add('What do you want to practice?')
+for line in ('Adding!', 'Taking away!', 'Times!', 'Dividing!', 'Mix it up!', 'Letters!', 'Colors!', 'Numbers!',
+             'All the numbers!'):
+    add(line)
+for w in ('ones', 'twos', 'threes', 'fours', 'fives', 'sixes', 'sevens', 'eights', 'nines', 'tens', 'elevens',
+          'twelves', 'twenties'):
+    add('The %s!' % w)
 
 # ---- Hoop Shot (games/hoop-shot.js); math questions and "That's N." are shared with Zombie Splat
 add('Hoop Shot!')

@@ -34,12 +34,13 @@ const SFX = {
 
 /* ---------- Answer balls ---------- */
 const ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-function choices(q){   // the right answer plus two different wrong ones, shuffled
-  const out = [q.sign], isNum = /^\d+$/.test(q.sign);
+function choices(q){   // the right answer plus two different wrong ones of the same kind, shuffled
+  const out = [q.sign];
   for (let guard = 0; out.length < 3 && guard < 60; guard++){
     let c;
-    if (isNum){ const n = +q.sign + SS.pick([-3, -2, -1, 1, 2, 3]); if (n < 1 || n > 100) continue; c = '' + n; }
-    else c = SS.pick(ABC);
+    if (q.kind === 'color') c = SS.pick(K.COLORS).id;
+    else if (q.kind === 'letter') c = SS.pick(ABC);
+    else { const n = +q.sign + SS.pick([-3, -2, -1, 1, 2, 3]); if (n < 1 || n > 150) continue; c = '' + n; }   // numbers: close to the answer
     if (out.indexOf(c) < 0) out.push(c);
   }
   return SS.shuffle(out);
@@ -127,6 +128,7 @@ function makeScene(){
       this.age = this.p ? this.p.age : 6;
       this.timed = timed(this.age);
       makeTextures(this);
+      K.colorTextures(this);
       this.bgN = 0; this.balls = []; this.state = 'start'; this.points = 0; this.baskets = 0; this.streak = 0; this.fire = false;
       this.bg = this.add.image(0, 0, 'hsShadow').setOrigin(0).setDepth(0);
       this.board = this.add.image(0, 0, 'hsBoard').setDepth(10);
@@ -191,7 +193,11 @@ function makeScene(){
       this.state = 'start';
       const p = this.p, best = this.timed ? (p && p.hoopBest ? 'Your best: ' + p.hoopBest + ' points' : 'Shoot the ball with the right answer!')
         : 'Make ' + GOAL + ' baskets!';
-      this.showPanel('HOOP SHOT', best, 'START', () => { this.hidePanel(); K.sound.ac(); this.startRound(); });
+      this.pickPractice(best);
+    }
+    pickPractice(sub){   // the "pick what to practice" screen (games/arcade-kit.js), then a new round
+      K.showOptions({game:'hoop', title:'HOOP SHOT', color:'#FFD23F', sub, age:this.age,
+        onPlay: opts => { this.opts = opts; K.sound.ac(); this.startRound(); }});
     }
     showPanel(title, sub, btn, cb){
       this.hidePanel();
@@ -262,12 +268,14 @@ function makeScene(){
         if (this.p){ this.p.hoopBest = Math.max(this.p.hoopBest || 0, this.points); SS.save(); }
         sub = 'You scored ' + this.points + ' points!' + (best ? ' New best!' : '  Best: ' + (this.p ? this.p.hoopBest : this.points));
         line = "Time's up! You scored " + this.points + ' points!' + (best ? ' New best score!' : '');
-        this.time.delayedCall(900, () => this.showPanel("TIME'S UP!", sub + '  +2 stars', 'PLAY AGAIN', () => { this.hidePanel(); this.startRound(); }));
+        this.bigText("TIME'S UP!", '#FF6B5E', this.H * .55);
+        this.time.delayedCall(2600, () => { if (this.state === 'over') this.pickPractice("Time's up! " + sub + '  +2 stars'); });
       } else {
         SFX.fanfare(); SFX.cheer(); this.confettiFx.explode(60, this.W / 2, this.H * .2);
         if (this.p){ this.p.hoopRounds = (this.p.hoopRounds || 0) + 1; SS.save(); }
         line = 'You did it! 10 baskets!';
-        this.time.delayedCall(900, () => this.showPanel('YOU DID IT!', GOAL + ' baskets!  +2 stars', 'PLAY AGAIN', () => { this.hidePanel(); this.startRound(); }));
+        this.bigText('YOU DID IT!', '#FFD23F', this.H * .55);
+        this.time.delayedCall(2600, () => { if (this.state === 'over') this.pickPractice('You did it! ' + GOAL + ' baskets!  +2 stars'); });
       }
       SS.say(line);
     }
@@ -275,11 +283,12 @@ function makeScene(){
     /* ---------- Questions and balls ---------- */
     newQuestion(cheer){
       if (this.state !== 'play') return;
-      this.q = K.question(this.age);
+      this.q = K.question(this.age, this.opts);
       this.asked = this.time.now; this.hinted = false;
       const q = this.q;
-      this.boardLabel.setText(q.math ? 'WHAT IS' : /[A-Za-z]/.test(q.sign) ? 'SHOOT THE LETTER' : 'SHOOT NUMBER');
-      this.boardText.setText(q.show);
+      this.boardLabel.setText({math:'WHAT IS', letter:'SHOOT THE LETTER', number:'SHOOT NUMBER', color:'SHOOT THE COLOR'}[q.kind] || 'SHOOT');
+      // color words are written in their own color, with a dark outline so yellow and white still show up
+      this.boardText.setText(q.show).setColor(q.color || INK).setStroke(INK, q.color ? Math.round(parseInt(this.boardText.style.fontSize, 10) * .1) : 0);
       this.tweens.add({targets:[this.boardText], scale:{from:.6, to:1}, duration:260, ease:'Back.Out'});
       this.clearBalls(false);
       choices(q).forEach((sign, i) => this.addBall(sign, i));
@@ -291,9 +300,11 @@ function makeScene(){
       const c = this.add.container(0, 0).setDepth(30);
       const shadow = this.add.image(0, 0, 'hsShadow');
       const img = this.add.image(0, 0, 'hsBall');
-      const label = this.add.text(0, 0, sign, {fontFamily:FONT, fontStyle:'800', fontSize:'20px', color:'#FFFFFF', stroke:INK, strokeThickness:6}).setOrigin(.5);
-      c.add([shadow, img, label]);
-      const b = {c, shadow, img, label, sign, slot:i, state:'rolling', phase:Math.random() * 6};
+      const color = this.q.kind === 'color';   // color balls show a colored dot instead of writing
+      const label = this.add.text(0, 0, color ? '' : sign, {fontFamily:FONT, fontStyle:'800', fontSize:'20px', color:'#FFFFFF', stroke:INK, strokeThickness:6}).setOrigin(.5);
+      const swatch = this.add.image(0, 0, color ? 'sw-' + sign : 'sw-red').setVisible(color);
+      c.add([shadow, img, label, swatch]);
+      const b = {c, shadow, img, label, swatch, sign, slot:i, state:'rolling', phase:Math.random() * 6};
       this.sizeBall(b);
       c.setPosition(this.W + this.ballR * 2, this.rackY);
       this.tweens.add({targets:c, x:this.rackX[i], duration:420 + i * 110, ease:'Quad.Out', onComplete:() => { if (b.state === 'rolling') b.state = 'idle'; }});
@@ -305,6 +316,7 @@ function makeScene(){
       b.img.setDisplaySize(r * 2, r * 2);
       b.shadow.setDisplaySize(r * 1.8, r * .45).setPosition(0, r * .95);
       b.label.setFontSize(Math.round(r * (b.sign.length > 2 ? .72 : .9))).setStroke(INK, Math.max(2, Math.round(r * .12)));
+      b.swatch.setDisplaySize(r * 1.15, r * 1.15);
       if (b.state === 'idle') b.c.setPosition(this.rackX[b.slot], this.rackY);
     }
     clearBalls(all){

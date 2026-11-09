@@ -1629,414 +1629,629 @@ Splat number 18!
 Splat number 19!
 Splat number 20!
 What is 1 plus 1?
+What is 2 minus 1?
+What is 1 times 1?
+What is 1 divided by 1?
 What is 1 plus 2?
 What is 2 plus 1?
-What is 1 plus 3?
-What is 2 plus 2?
-What is 3 plus 1?
-What is 1 plus 4?
-What is 2 plus 3?
-What is 3 plus 2?
-What is 4 plus 1?
-What is 1 plus 5?
-What is 2 plus 4?
-What is 3 plus 3?
-What is 4 plus 2?
-What is 5 plus 1?
-What is 1 plus 6?
-What is 2 plus 5?
-What is 3 plus 4?
-What is 4 plus 3?
-What is 5 plus 2?
-What is 6 plus 1?
-What is 1 plus 7?
-What is 2 plus 6?
-What is 3 plus 5?
-What is 4 plus 4?
-What is 5 plus 3?
-What is 6 plus 2?
-What is 7 plus 1?
-What is 1 plus 8?
-What is 2 plus 7?
-What is 3 plus 6?
-What is 4 plus 5?
-What is 5 plus 4?
-What is 6 plus 3?
-What is 7 plus 2?
-What is 8 plus 1?
-What is 1 plus 9?
-What is 2 plus 8?
-What is 3 plus 7?
-What is 4 plus 6?
-What is 5 plus 5?
-What is 6 plus 4?
-What is 7 plus 3?
-What is 8 plus 2?
-What is 9 plus 1?
-What is 1 plus 10?
-What is 2 plus 9?
-What is 3 plus 8?
-What is 4 plus 7?
-What is 5 plus 6?
-What is 6 plus 5?
-What is 7 plus 4?
-What is 8 plus 3?
-What is 9 plus 2?
-What is 10 plus 1?
-What is 1 plus 11?
-What is 2 plus 10?
-What is 3 plus 9?
-What is 4 plus 8?
-What is 5 plus 7?
-What is 6 plus 6?
-What is 7 plus 5?
-What is 8 plus 4?
-What is 9 plus 3?
-What is 10 plus 2?
-What is 11 plus 1?
-What is 1 plus 12?
-What is 2 plus 11?
-What is 3 plus 10?
-What is 4 plus 9?
-What is 5 plus 8?
-What is 6 plus 7?
-What is 7 plus 6?
-What is 8 plus 5?
-What is 9 plus 4?
-What is 10 plus 3?
-What is 11 plus 2?
-What is 12 plus 1?
-What is 1 plus 13?
-What is 2 plus 12?
-What is 3 plus 11?
-What is 4 plus 10?
-What is 5 plus 9?
-What is 6 plus 8?
-What is 7 plus 7?
-What is 8 plus 6?
-What is 9 plus 5?
-What is 10 plus 4?
-What is 11 plus 3?
-What is 12 plus 2?
-What is 13 plus 1?
-What is 1 plus 14?
-What is 2 plus 13?
-What is 3 plus 12?
-What is 4 plus 11?
-What is 5 plus 10?
-What is 6 plus 9?
-What is 7 plus 8?
-What is 8 plus 7?
-What is 9 plus 6?
-What is 10 plus 5?
-What is 11 plus 4?
-What is 12 plus 3?
-What is 13 plus 2?
-What is 14 plus 1?
-What is 1 plus 15?
-What is 2 plus 14?
-What is 3 plus 13?
-What is 4 plus 12?
-What is 5 plus 11?
-What is 6 plus 10?
-What is 7 plus 9?
-What is 8 plus 8?
-What is 9 plus 7?
-What is 10 plus 6?
-What is 11 plus 5?
-What is 12 plus 4?
-What is 13 plus 3?
-What is 14 plus 2?
-What is 15 plus 1?
-What is 1 plus 16?
-What is 2 plus 15?
-What is 3 plus 14?
-What is 4 plus 13?
-What is 5 plus 12?
-What is 6 plus 11?
-What is 7 plus 10?
-What is 8 plus 9?
-What is 9 plus 8?
-What is 10 plus 7?
-What is 11 plus 6?
-What is 12 plus 5?
-What is 13 plus 4?
-What is 14 plus 3?
-What is 15 plus 2?
-What is 16 plus 1?
-What is 1 plus 17?
-What is 2 plus 16?
-What is 3 plus 15?
-What is 4 plus 14?
-What is 5 plus 13?
-What is 6 plus 12?
-What is 7 plus 11?
-What is 8 plus 10?
-What is 9 plus 9?
-What is 10 plus 8?
-What is 11 plus 7?
-What is 12 plus 6?
-What is 13 plus 5?
-What is 14 plus 4?
-What is 15 plus 3?
-What is 16 plus 2?
-What is 17 plus 1?
-What is 1 plus 18?
-What is 2 plus 17?
-What is 3 plus 16?
-What is 4 plus 15?
-What is 5 plus 14?
-What is 6 plus 13?
-What is 7 plus 12?
-What is 8 plus 11?
-What is 9 plus 10?
-What is 10 plus 9?
-What is 11 plus 8?
-What is 12 plus 7?
-What is 13 plus 6?
-What is 14 plus 5?
-What is 15 plus 4?
-What is 16 plus 3?
-What is 17 plus 2?
-What is 18 plus 1?
-What is 1 plus 19?
-What is 2 plus 18?
-What is 3 plus 17?
-What is 4 plus 16?
-What is 5 plus 15?
-What is 6 plus 14?
-What is 7 plus 13?
-What is 8 plus 12?
-What is 9 plus 11?
-What is 10 plus 10?
-What is 11 plus 9?
-What is 12 plus 8?
-What is 13 plus 7?
-What is 14 plus 6?
-What is 15 plus 5?
-What is 16 plus 4?
-What is 17 plus 3?
-What is 18 plus 2?
-What is 19 plus 1?
 What is 3 minus 1?
 What is 3 minus 2?
+What is 1 times 2?
+What is 2 times 1?
+What is 2 divided by 1?
+What is 1 plus 3?
+What is 3 plus 1?
 What is 4 minus 1?
-What is 4 minus 2?
 What is 4 minus 3?
+What is 1 times 3?
+What is 3 times 1?
+What is 3 divided by 1?
+What is 1 plus 4?
+What is 4 plus 1?
 What is 5 minus 1?
+What is 5 minus 4?
+What is 1 times 4?
+What is 4 times 1?
+What is 4 divided by 1?
+What is 1 plus 5?
+What is 5 plus 1?
+What is 6 minus 1?
+What is 6 minus 5?
+What is 1 times 5?
+What is 5 times 1?
+What is 5 divided by 1?
+What is 1 plus 6?
+What is 6 plus 1?
+What is 7 minus 1?
+What is 7 minus 6?
+What is 1 times 6?
+What is 6 times 1?
+What is 6 divided by 1?
+What is 1 plus 7?
+What is 7 plus 1?
+What is 8 minus 1?
+What is 8 minus 7?
+What is 1 times 7?
+What is 7 times 1?
+What is 7 divided by 1?
+What is 1 plus 8?
+What is 8 plus 1?
+What is 9 minus 1?
+What is 9 minus 8?
+What is 1 times 8?
+What is 8 times 1?
+What is 8 divided by 1?
+What is 1 plus 9?
+What is 9 plus 1?
+What is 10 minus 1?
+What is 10 minus 9?
+What is 1 times 9?
+What is 9 times 1?
+What is 9 divided by 1?
+What is 1 plus 10?
+What is 10 plus 1?
+What is 11 minus 1?
+What is 11 minus 10?
+What is 1 times 10?
+What is 10 times 1?
+What is 10 divided by 1?
+What is 1 plus 11?
+What is 11 plus 1?
+What is 12 minus 1?
+What is 12 minus 11?
+What is 1 times 11?
+What is 11 times 1?
+What is 11 divided by 1?
+What is 1 plus 12?
+What is 12 plus 1?
+What is 13 minus 1?
+What is 13 minus 12?
+What is 1 times 12?
+What is 12 times 1?
+What is 12 divided by 1?
+What is 2 divided by 2?
+What is 2 plus 2?
+What is 4 minus 2?
+What is 2 times 2?
+What is 4 divided by 2?
+What is 2 plus 3?
+What is 3 plus 2?
 What is 5 minus 2?
 What is 5 minus 3?
-What is 5 minus 4?
-What is 6 minus 1?
+What is 2 times 3?
+What is 3 times 2?
+What is 6 divided by 2?
+What is 2 plus 4?
+What is 4 plus 2?
 What is 6 minus 2?
-What is 6 minus 3?
 What is 6 minus 4?
-What is 6 minus 5?
-What is 7 minus 1?
+What is 2 times 4?
+What is 4 times 2?
+What is 8 divided by 2?
+What is 2 plus 5?
+What is 5 plus 2?
 What is 7 minus 2?
+What is 7 minus 5?
+What is 2 times 5?
+What is 5 times 2?
+What is 10 divided by 2?
+What is 2 plus 6?
+What is 6 plus 2?
+What is 8 minus 2?
+What is 8 minus 6?
+What is 2 times 6?
+What is 6 times 2?
+What is 12 divided by 2?
+What is 2 plus 7?
+What is 7 plus 2?
+What is 9 minus 2?
+What is 9 minus 7?
+What is 2 times 7?
+What is 7 times 2?
+What is 14 divided by 2?
+What is 2 plus 8?
+What is 8 plus 2?
+What is 10 minus 2?
+What is 10 minus 8?
+What is 2 times 8?
+What is 8 times 2?
+What is 16 divided by 2?
+What is 2 plus 9?
+What is 9 plus 2?
+What is 11 minus 2?
+What is 11 minus 9?
+What is 2 times 9?
+What is 9 times 2?
+What is 18 divided by 2?
+What is 2 plus 10?
+What is 10 plus 2?
+What is 12 minus 2?
+What is 12 minus 10?
+What is 2 times 10?
+What is 10 times 2?
+What is 20 divided by 2?
+What is 2 plus 11?
+What is 11 plus 2?
+What is 13 minus 2?
+What is 13 minus 11?
+What is 2 times 11?
+What is 11 times 2?
+What is 22 divided by 2?
+What is 2 plus 12?
+What is 12 plus 2?
+What is 14 minus 2?
+What is 14 minus 12?
+What is 2 times 12?
+What is 12 times 2?
+What is 24 divided by 2?
+What is 3 divided by 3?
+What is 6 divided by 3?
+What is 3 plus 3?
+What is 6 minus 3?
+What is 3 times 3?
+What is 9 divided by 3?
+What is 3 plus 4?
+What is 4 plus 3?
 What is 7 minus 3?
 What is 7 minus 4?
-What is 7 minus 5?
-What is 7 minus 6?
-What is 8 minus 1?
-What is 8 minus 2?
+What is 3 times 4?
+What is 4 times 3?
+What is 12 divided by 3?
+What is 3 plus 5?
+What is 5 plus 3?
 What is 8 minus 3?
-What is 8 minus 4?
 What is 8 minus 5?
-What is 8 minus 6?
-What is 8 minus 7?
-What is 9 minus 1?
-What is 9 minus 2?
+What is 3 times 5?
+What is 5 times 3?
+What is 15 divided by 3?
+What is 3 plus 6?
+What is 6 plus 3?
 What is 9 minus 3?
+What is 9 minus 6?
+What is 3 times 6?
+What is 6 times 3?
+What is 18 divided by 3?
+What is 3 plus 7?
+What is 7 plus 3?
+What is 10 minus 3?
+What is 10 minus 7?
+What is 3 times 7?
+What is 7 times 3?
+What is 21 divided by 3?
+What is 3 plus 8?
+What is 8 plus 3?
+What is 11 minus 3?
+What is 11 minus 8?
+What is 3 times 8?
+What is 8 times 3?
+What is 24 divided by 3?
+What is 3 plus 9?
+What is 9 plus 3?
+What is 12 minus 3?
+What is 12 minus 9?
+What is 3 times 9?
+What is 9 times 3?
+What is 27 divided by 3?
+What is 3 plus 10?
+What is 10 plus 3?
+What is 13 minus 3?
+What is 13 minus 10?
+What is 3 times 10?
+What is 10 times 3?
+What is 30 divided by 3?
+What is 3 plus 11?
+What is 11 plus 3?
+What is 14 minus 3?
+What is 14 minus 11?
+What is 3 times 11?
+What is 11 times 3?
+What is 33 divided by 3?
+What is 3 plus 12?
+What is 12 plus 3?
+What is 15 minus 3?
+What is 15 minus 12?
+What is 3 times 12?
+What is 12 times 3?
+What is 36 divided by 3?
+What is 4 divided by 4?
+What is 8 divided by 4?
+What is 12 divided by 4?
+What is 4 plus 4?
+What is 8 minus 4?
+What is 4 times 4?
+What is 16 divided by 4?
+What is 4 plus 5?
+What is 5 plus 4?
 What is 9 minus 4?
 What is 9 minus 5?
-What is 9 minus 6?
-What is 9 minus 7?
-What is 9 minus 8?
-What is 10 minus 1?
-What is 10 minus 2?
-What is 10 minus 3?
+What is 4 times 5?
+What is 5 times 4?
+What is 20 divided by 4?
+What is 4 plus 6?
+What is 6 plus 4?
 What is 10 minus 4?
-What is 10 minus 5?
 What is 10 minus 6?
-What is 10 minus 7?
-What is 10 minus 8?
-What is 10 minus 9?
-What is 11 minus 1?
-What is 11 minus 2?
-What is 11 minus 3?
+What is 4 times 6?
+What is 6 times 4?
+What is 24 divided by 4?
+What is 4 plus 7?
+What is 7 plus 4?
 What is 11 minus 4?
+What is 11 minus 7?
+What is 4 times 7?
+What is 7 times 4?
+What is 28 divided by 4?
+What is 4 plus 8?
+What is 8 plus 4?
+What is 12 minus 4?
+What is 12 minus 8?
+What is 4 times 8?
+What is 8 times 4?
+What is 32 divided by 4?
+What is 4 plus 9?
+What is 9 plus 4?
+What is 13 minus 4?
+What is 13 minus 9?
+What is 4 times 9?
+What is 9 times 4?
+What is 36 divided by 4?
+What is 4 plus 10?
+What is 10 plus 4?
+What is 14 minus 4?
+What is 14 minus 10?
+What is 4 times 10?
+What is 10 times 4?
+What is 40 divided by 4?
+What is 4 plus 11?
+What is 11 plus 4?
+What is 15 minus 4?
+What is 15 minus 11?
+What is 4 times 11?
+What is 11 times 4?
+What is 44 divided by 4?
+What is 4 plus 12?
+What is 12 plus 4?
+What is 16 minus 4?
+What is 16 minus 12?
+What is 4 times 12?
+What is 12 times 4?
+What is 48 divided by 4?
+What is 5 divided by 5?
+What is 10 divided by 5?
+What is 15 divided by 5?
+What is 20 divided by 5?
+What is 5 plus 5?
+What is 10 minus 5?
+What is 5 times 5?
+What is 25 divided by 5?
+What is 5 plus 6?
+What is 6 plus 5?
 What is 11 minus 5?
 What is 11 minus 6?
-What is 11 minus 7?
-What is 11 minus 8?
-What is 11 minus 9?
-What is 11 minus 10?
-What is 12 minus 1?
-What is 12 minus 2?
-What is 12 minus 3?
-What is 12 minus 4?
+What is 5 times 6?
+What is 6 times 5?
+What is 30 divided by 5?
+What is 5 plus 7?
+What is 7 plus 5?
 What is 12 minus 5?
-What is 12 minus 6?
 What is 12 minus 7?
-What is 12 minus 8?
-What is 12 minus 9?
-What is 12 minus 10?
-What is 12 minus 11?
-What is 13 minus 1?
-What is 13 minus 2?
-What is 13 minus 3?
-What is 13 minus 4?
+What is 5 times 7?
+What is 7 times 5?
+What is 35 divided by 5?
+What is 5 plus 8?
+What is 8 plus 5?
 What is 13 minus 5?
+What is 13 minus 8?
+What is 5 times 8?
+What is 8 times 5?
+What is 40 divided by 5?
+What is 5 plus 9?
+What is 9 plus 5?
+What is 14 minus 5?
+What is 14 minus 9?
+What is 5 times 9?
+What is 9 times 5?
+What is 45 divided by 5?
+What is 5 plus 10?
+What is 10 plus 5?
+What is 15 minus 5?
+What is 15 minus 10?
+What is 5 times 10?
+What is 10 times 5?
+What is 50 divided by 5?
+What is 5 plus 11?
+What is 11 plus 5?
+What is 16 minus 5?
+What is 16 minus 11?
+What is 5 times 11?
+What is 11 times 5?
+What is 55 divided by 5?
+What is 5 plus 12?
+What is 12 plus 5?
+What is 17 minus 5?
+What is 17 minus 12?
+What is 5 times 12?
+What is 12 times 5?
+What is 60 divided by 5?
+What is 6 divided by 6?
+What is 12 divided by 6?
+What is 18 divided by 6?
+What is 24 divided by 6?
+What is 30 divided by 6?
+What is 6 plus 6?
+What is 12 minus 6?
+What is 6 times 6?
+What is 36 divided by 6?
+What is 6 plus 7?
+What is 7 plus 6?
 What is 13 minus 6?
 What is 13 minus 7?
-What is 13 minus 8?
-What is 13 minus 9?
-What is 13 minus 10?
-What is 13 minus 11?
-What is 13 minus 12?
-What is 14 minus 1?
-What is 14 minus 2?
-What is 14 minus 3?
-What is 14 minus 4?
-What is 14 minus 5?
+What is 6 times 7?
+What is 7 times 6?
+What is 42 divided by 6?
+What is 6 plus 8?
+What is 8 plus 6?
 What is 14 minus 6?
-What is 14 minus 7?
 What is 14 minus 8?
-What is 14 minus 9?
-What is 14 minus 10?
-What is 14 minus 11?
-What is 14 minus 12?
-What is 14 minus 13?
-What is 15 minus 1?
-What is 15 minus 2?
-What is 15 minus 3?
-What is 15 minus 4?
-What is 15 minus 5?
+What is 6 times 8?
+What is 8 times 6?
+What is 48 divided by 6?
+What is 6 plus 9?
+What is 9 plus 6?
 What is 15 minus 6?
+What is 15 minus 9?
+What is 6 times 9?
+What is 9 times 6?
+What is 54 divided by 6?
+What is 6 plus 10?
+What is 10 plus 6?
+What is 16 minus 6?
+What is 16 minus 10?
+What is 6 times 10?
+What is 10 times 6?
+What is 60 divided by 6?
+What is 6 plus 11?
+What is 11 plus 6?
+What is 17 minus 6?
+What is 17 minus 11?
+What is 6 times 11?
+What is 11 times 6?
+What is 66 divided by 6?
+What is 6 plus 12?
+What is 12 plus 6?
+What is 18 minus 6?
+What is 18 minus 12?
+What is 6 times 12?
+What is 12 times 6?
+What is 72 divided by 6?
+What is 7 divided by 7?
+What is 14 divided by 7?
+What is 21 divided by 7?
+What is 28 divided by 7?
+What is 35 divided by 7?
+What is 42 divided by 7?
+What is 7 plus 7?
+What is 14 minus 7?
+What is 7 times 7?
+What is 49 divided by 7?
+What is 7 plus 8?
+What is 8 plus 7?
 What is 15 minus 7?
 What is 15 minus 8?
-What is 15 minus 9?
-What is 15 minus 10?
-What is 15 minus 11?
-What is 15 minus 12?
-What is 15 minus 13?
-What is 15 minus 14?
-What is 16 minus 1?
-What is 16 minus 2?
-What is 16 minus 3?
-What is 16 minus 4?
-What is 16 minus 5?
-What is 16 minus 6?
+What is 7 times 8?
+What is 8 times 7?
+What is 56 divided by 7?
+What is 7 plus 9?
+What is 9 plus 7?
 What is 16 minus 7?
-What is 16 minus 8?
 What is 16 minus 9?
-What is 16 minus 10?
-What is 16 minus 11?
-What is 16 minus 12?
-What is 16 minus 13?
-What is 16 minus 14?
-What is 16 minus 15?
-What is 17 minus 1?
-What is 17 minus 2?
-What is 17 minus 3?
-What is 17 minus 4?
-What is 17 minus 5?
-What is 17 minus 6?
+What is 7 times 9?
+What is 9 times 7?
+What is 63 divided by 7?
+What is 7 plus 10?
+What is 10 plus 7?
 What is 17 minus 7?
+What is 17 minus 10?
+What is 7 times 10?
+What is 10 times 7?
+What is 70 divided by 7?
+What is 7 plus 11?
+What is 11 plus 7?
+What is 18 minus 7?
+What is 18 minus 11?
+What is 7 times 11?
+What is 11 times 7?
+What is 77 divided by 7?
+What is 7 plus 12?
+What is 12 plus 7?
+What is 19 minus 7?
+What is 19 minus 12?
+What is 7 times 12?
+What is 12 times 7?
+What is 84 divided by 7?
+What is 8 divided by 8?
+What is 16 divided by 8?
+What is 24 divided by 8?
+What is 32 divided by 8?
+What is 40 divided by 8?
+What is 48 divided by 8?
+What is 56 divided by 8?
+What is 8 plus 8?
+What is 16 minus 8?
+What is 8 times 8?
+What is 64 divided by 8?
+What is 8 plus 9?
+What is 9 plus 8?
 What is 17 minus 8?
 What is 17 minus 9?
-What is 17 minus 10?
-What is 17 minus 11?
-What is 17 minus 12?
-What is 17 minus 13?
-What is 17 minus 14?
-What is 17 minus 15?
-What is 17 minus 16?
-What is 18 minus 1?
-What is 18 minus 2?
-What is 18 minus 3?
-What is 18 minus 4?
-What is 18 minus 5?
-What is 18 minus 6?
-What is 18 minus 7?
+What is 8 times 9?
+What is 9 times 8?
+What is 72 divided by 8?
+What is 8 plus 10?
+What is 10 plus 8?
 What is 18 minus 8?
-What is 18 minus 9?
 What is 18 minus 10?
-What is 18 minus 11?
-What is 18 minus 12?
-What is 18 minus 13?
-What is 18 minus 14?
-What is 18 minus 15?
-What is 18 minus 16?
-What is 18 minus 17?
-What is 19 minus 1?
-What is 19 minus 2?
-What is 19 minus 3?
-What is 19 minus 4?
-What is 19 minus 5?
-What is 19 minus 6?
-What is 19 minus 7?
+What is 8 times 10?
+What is 10 times 8?
+What is 80 divided by 8?
+What is 8 plus 11?
+What is 11 plus 8?
 What is 19 minus 8?
+What is 19 minus 11?
+What is 8 times 11?
+What is 11 times 8?
+What is 88 divided by 8?
+What is 8 plus 12?
+What is 12 plus 8?
+What is 20 minus 8?
+What is 20 minus 12?
+What is 8 times 12?
+What is 12 times 8?
+What is 96 divided by 8?
+What is 9 divided by 9?
+What is 18 divided by 9?
+What is 27 divided by 9?
+What is 36 divided by 9?
+What is 45 divided by 9?
+What is 54 divided by 9?
+What is 63 divided by 9?
+What is 72 divided by 9?
+What is 9 plus 9?
+What is 18 minus 9?
+What is 9 times 9?
+What is 81 divided by 9?
+What is 9 plus 10?
+What is 10 plus 9?
 What is 19 minus 9?
 What is 19 minus 10?
-What is 19 minus 11?
-What is 19 minus 12?
-What is 19 minus 13?
-What is 19 minus 14?
-What is 19 minus 15?
-What is 19 minus 16?
-What is 19 minus 17?
-What is 19 minus 18?
-What is 20 minus 1?
-What is 20 minus 2?
-What is 20 minus 3?
-What is 20 minus 4?
-What is 20 minus 5?
-What is 20 minus 6?
-What is 20 minus 7?
-What is 20 minus 8?
-What is 20 minus 9?
-What is 20 minus 10?
-What is 20 minus 11?
-What is 20 minus 12?
-What is 20 minus 13?
-What is 20 minus 14?
-What is 20 minus 15?
-What is 20 minus 16?
-What is 20 minus 17?
-What is 20 minus 18?
-What is 20 minus 19?
-What is 1 times 2?
-What is 2 times 2?
-What is 3 times 2?
-What is 4 times 2?
-What is 5 times 2?
-What is 6 times 2?
-What is 7 times 2?
-What is 8 times 2?
-What is 9 times 2?
-What is 10 times 2?
-What is 1 times 5?
-What is 2 times 5?
-What is 3 times 5?
-What is 4 times 5?
-What is 5 times 5?
-What is 6 times 5?
-What is 7 times 5?
-What is 8 times 5?
-What is 9 times 5?
-What is 10 times 5?
-What is 1 times 10?
-What is 2 times 10?
-What is 3 times 10?
-What is 4 times 10?
-What is 5 times 10?
-What is 6 times 10?
-What is 7 times 10?
-What is 8 times 10?
 What is 9 times 10?
+What is 10 times 9?
+What is 90 divided by 9?
+What is 9 plus 11?
+What is 11 plus 9?
+What is 20 minus 9?
+What is 20 minus 11?
+What is 9 times 11?
+What is 11 times 9?
+What is 99 divided by 9?
+What is 9 plus 12?
+What is 12 plus 9?
+What is 21 minus 9?
+What is 21 minus 12?
+What is 9 times 12?
+What is 12 times 9?
+What is 108 divided by 9?
+What is 10 divided by 10?
+What is 20 divided by 10?
+What is 30 divided by 10?
+What is 40 divided by 10?
+What is 50 divided by 10?
+What is 60 divided by 10?
+What is 70 divided by 10?
+What is 80 divided by 10?
+What is 90 divided by 10?
+What is 10 plus 10?
+What is 20 minus 10?
 What is 10 times 10?
+What is 100 divided by 10?
+What is 10 plus 11?
+What is 11 plus 10?
+What is 21 minus 10?
+What is 21 minus 11?
+What is 10 times 11?
+What is 11 times 10?
+What is 110 divided by 10?
+What is 10 plus 12?
+What is 12 plus 10?
+What is 22 minus 10?
+What is 22 minus 12?
+What is 10 times 12?
+What is 12 times 10?
+What is 120 divided by 10?
+What is 11 divided by 11?
+What is 22 divided by 11?
+What is 33 divided by 11?
+What is 44 divided by 11?
+What is 55 divided by 11?
+What is 66 divided by 11?
+What is 77 divided by 11?
+What is 88 divided by 11?
+What is 99 divided by 11?
+What is 110 divided by 11?
+What is 11 plus 11?
+What is 22 minus 11?
+What is 11 times 11?
+What is 121 divided by 11?
+What is 11 plus 12?
+What is 12 plus 11?
+What is 23 minus 11?
+What is 23 minus 12?
+What is 11 times 12?
+What is 12 times 11?
+What is 132 divided by 11?
+What is 12 divided by 12?
+What is 24 divided by 12?
+What is 36 divided by 12?
+What is 48 divided by 12?
+What is 60 divided by 12?
+What is 72 divided by 12?
+What is 84 divided by 12?
+What is 96 divided by 12?
+What is 108 divided by 12?
+What is 120 divided by 12?
+What is 132 divided by 12?
+What is 12 plus 12?
+What is 24 minus 12?
+What is 12 times 12?
+What is 144 divided by 12?
+What is 20 plus 1?
+What is 1 plus 20?
+What is 21 minus 20?
+What is 21 minus 1?
+What is 20 plus 2?
+What is 2 plus 20?
+What is 22 minus 20?
+What is 22 minus 2?
+What is 20 plus 3?
+What is 3 plus 20?
+What is 23 minus 20?
+What is 23 minus 3?
+What is 20 plus 4?
+What is 4 plus 20?
+What is 24 minus 20?
+What is 24 minus 4?
+What is 20 plus 5?
+What is 5 plus 20?
+What is 25 minus 20?
+What is 25 minus 5?
+What is 20 plus 6?
+What is 6 plus 20?
+What is 26 minus 20?
+What is 26 minus 6?
+What is 20 plus 7?
+What is 7 plus 20?
+What is 27 minus 20?
+What is 27 minus 7?
+What is 20 plus 8?
+What is 8 plus 20?
+What is 28 minus 20?
+What is 28 minus 8?
+What is 20 plus 9?
+What is 9 plus 20?
+What is 29 minus 20?
+What is 29 minus 9?
+What is 20 plus 10?
+What is 10 plus 20?
+What is 30 minus 20?
+What is 30 minus 10?
+What is 20 plus 11?
+What is 11 plus 20?
+What is 31 minus 20?
+What is 31 minus 11?
+What is 20 plus 12?
+What is 12 plus 20?
+What is 32 minus 20?
+What is 32 minus 12?
 That's 0.
 That's 1.
 That's 2.
@@ -2138,6 +2353,109 @@ That's 97.
 That's 98.
 That's 99.
 That's 100.
+That's 101.
+That's 102.
+That's 103.
+That's 104.
+That's 105.
+That's 106.
+That's 107.
+That's 108.
+That's 109.
+That's 110.
+That's 111.
+That's 112.
+That's 113.
+That's 114.
+That's 115.
+That's 116.
+That's 117.
+That's 118.
+That's 119.
+That's 120.
+That's 121.
+That's 122.
+That's 123.
+That's 124.
+That's 125.
+That's 126.
+That's 127.
+That's 128.
+That's 129.
+That's 130.
+That's 131.
+That's 132.
+That's 133.
+That's 134.
+That's 135.
+That's 136.
+That's 137.
+That's 138.
+That's 139.
+That's 140.
+That's 141.
+That's 142.
+That's 143.
+That's 144.
+That's 145.
+That's 146.
+That's 147.
+That's 148.
+That's 149.
+That's 150.
+Splat the color red!
+Shoot the color red!
+That's red.
+Splat the color orange!
+Shoot the color orange!
+That's orange.
+Splat the color yellow!
+Shoot the color yellow!
+That's yellow.
+Splat the color green!
+Shoot the color green!
+That's green.
+Splat the color blue!
+Shoot the color blue!
+That's blue.
+Splat the color purple!
+Shoot the color purple!
+That's purple.
+Splat the color pink!
+Shoot the color pink!
+That's pink.
+Splat the color brown!
+Shoot the color brown!
+That's brown.
+Splat the color black!
+Shoot the color black!
+That's black.
+Splat the color white!
+Shoot the color white!
+That's white.
+What do you want to practice?
+Adding!
+Taking away!
+Times!
+Dividing!
+Mix it up!
+Letters!
+Colors!
+Numbers!
+All the numbers!
+The ones!
+The twos!
+The threes!
+The fours!
+The fives!
+The sixes!
+The sevens!
+The eights!
+The nines!
+The tens!
+The elevens!
+The twelves!
+The twenties!
 Hoop Shot!
 Ready? You have 60 seconds. Go!
 Make 10 baskets! Ready? Go!

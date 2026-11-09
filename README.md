@@ -1,6 +1,6 @@
 # Smarty Stars ⭐
 
-Learning games for kids ages 4–8. **Play it here:** https://trickdea-star.github.io/smarty-stars/
+Learning games for kids ages 3–8. **Play it here:** https://trickdea-star.github.io/smarty-stars/
 
 - **Letter Monster**: feed the monster a picture that starts (or, for older kids, ends) with a letter.
 - **Counting Bakery**: fill treat orders. Older kids get an addition bonus question.
@@ -14,7 +14,13 @@ Learning games for kids ages 4–8. **Play it here:** https://trickdea-star.gith
   right one to shoot. Ages 4–5 make 10 baskets; ages 6–8 play 60-second beat-the-buzzer rounds for a best score.
   Three in a row puts the ball on fire, and each basket is then worth 3 points.
 
-Each kid gets a player (name and age). Ages 4–5 get easier levels, and ages 6–8 get harder ones.
+**Pick what to practice.** Both arcade games open with a choice screen, and each kid's last choice is remembered:
+- **Ages 3–5:** ABC, Colors, Numbers, or Mix.
+- **Ages 6–8:** Adding, Taking away, Times, Dividing, or Mix.
+  Then pick **All** numbers, or 1 or 2 numbers from 1–12 (plus 20 for adding and taking away) to practice that
+  fact family. For example, 7 gives 7 × 1 … 7 × 12, 56 ÷ 7, 15 − 7 and 7 + 9.
+
+Each kid gets a player (name and age). Ages 3–5 get easier levels, and ages 6–8 get harder ones.
 Right answers earn stars, and stars unlock avatar characters, colors, outfits and extras.
 Prompts are read out loud, so kids who can't read yet can still play.
 

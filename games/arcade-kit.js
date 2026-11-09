@@ -7,7 +7,7 @@
    - html(text): the HTML a game's render() returns.
    - sound.tone / sound.noise: little sound effects made with Web Audio (no sound files).
    - draw.*: canvas drawing helpers for making textures in code (see games/zombie-splat.js).
-   - question(age): the age-based question every arcade game asks.
+   - question(age, opts) / showOptions(): what to practice - see the section below.
    Plain ASCII on purpose (special characters are \u codes).
    ===================================================================== */
 (function(){
@@ -22,22 +22,123 @@ const PHASER_URLS = [   // the same game engine file from three different sites,
   'https://unpkg.com/phaser@3.80.1/dist/phaser.min.js'
 ];
 
-/* ---------- Questions ----------
-   question(age) -> {sign, show, say, math}: sign = the short answer a zombie holds or a ball shows,
-   show = what the banner shows, say = what the voice reads. Ages 4-5: letters and numbers; 6-8: + - x. */
+/* ---------- What to practice ----------
+   Each arcade game opens with a "pick what to practice" screen (showOptions below). The choice is saved
+   per player and per game, and question(age, opts) follows it:
+     ages 3-5: 'abc' (letters), 'colors', 'numbers', or 'young-mix' (all three)
+     ages 6-8: 'add', 'sub', 'mul', 'div' or 'mix', plus nums: the 1 or 2 numbers to practice
+               (e.g. [7] = the sevens: 7 x 1 ... 7 x 12, 56 / 7, 15 - 7, 7 + 9), or [] for all of them.
+   question() returns {kind, sign, show, say, math, color}: sign = the short answer a zombie holds or a ball
+   shows (for colors, the color's name - games draw a colored dot), show = the banner text, say = what the
+   voice reads. If you add a question type, add its sentences to tools/voice_lines.py too. */
 const ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-function question(age){
-  const add = max => { const s = SS.rint(2, max), a = SS.rint(1, s - 1); return {sign:'' + s, show:a + ' + ' + (s - a), say:a + ' plus ' + (s - a), math:true}; };
-  const sub = max => { const a = SS.rint(3, max), b = SS.rint(1, a - 1); return {sign:'' + (a - b), show:a + ' \u2212 ' + b, say:a + ' minus ' + b, math:true}; };
-  const times = () => { const t = SS.pick([2, 5, 10]), n = SS.rint(1, 10); return {sign:'' + (t * n), show:n + ' \u00D7 ' + t, say:n + ' times ' + t, math:true}; };
-  const letter = lower => { const L = SS.pick(ABC); return {sign:L, show:lower ? L.toLowerCase() : L, say:'the letter ' + L}; };
-  const number = max => { const n = SS.rint(1, max); return {sign:'' + n, show:'' + n, say:'number ' + n}; };
-  if (age <= 4) return Math.random() < .6 ? letter(false) : number(10);
-  if (age === 5) return Math.random() < .6 ? letter(true) : number(20);   // banner shows "b", zombie holds "B"
-  if (age === 6) return add(10);
-  if (age === 7) return Math.random() < .5 ? add(20) : sub(20);
-  const r = Math.random();
-  return r < .3 ? add(20) : r < .6 ? sub(20) : times();
+const COLORS = [
+  {id:'red', hex:'#E63946'}, {id:'orange', hex:'#FF8C1A'}, {id:'yellow', hex:'#FFD23F'}, {id:'green', hex:'#3BB273'},
+  {id:'blue', hex:'#3E8EF7'}, {id:'purple', hex:'#8E5CF7'}, {id:'pink', hex:'#FF6FB5'}, {id:'brown', hex:'#8B5A2B'},
+  {id:'black', hex:'#222222'}, {id:'white', hex:'#FFFFFF'}
+];
+const YOUNG_MODES = [
+  {id:'abc', label:'ABC', icon:'\uD83D\uDD24', say:'Letters!'},
+  {id:'colors', label:'Colors', icon:'\uD83C\uDFA8', say:'Colors!'},
+  {id:'numbers', label:'Numbers', icon:'\uD83D\uDD22', say:'Numbers!'},
+  {id:'young-mix', label:'Mix', icon:'\uD83D\uDD00', say:'Mix it up!'}
+];
+const MATH_MODES = [
+  {id:'add', label:'Adding', icon:'\u2795', say:'Adding!'},
+  {id:'sub', label:'Taking away', icon:'\u2796', say:'Taking away!'},
+  {id:'mul', label:'Times', icon:'\u2716\uFE0F', say:'Times!'},
+  {id:'div', label:'Dividing', icon:'\u2797', say:'Dividing!'},
+  {id:'mix', label:'Mix', icon:'\uD83D\uDD00', say:'Mix it up!'}
+];
+const NUM_WORDS = {1:'ones', 2:'twos', 3:'threes', 4:'fours', 5:'fives', 6:'sixes', 7:'sevens', 8:'eights',
+  9:'nines', 10:'tens', 11:'elevens', 12:'twelves', 20:'twenties'};
+const ONE_TO_12 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const young = age => age <= 5;
+const numbersFor = mode => mode === 'add' || mode === 'sub' || mode === 'mix' ? ONE_TO_12.concat([20]) : ONE_TO_12;   // 20s only for + and -
+function defaultOpts(age){ return {mode: young(age) ? 'young-mix' : age >= 8 ? 'mix' : 'add', nums: []}; }
+function cleanOpts(age, o){
+  const modes = young(age) ? YOUNG_MODES : MATH_MODES, d = defaultOpts(age);
+  if (!o || !modes.some(m => m.id === o.mode)) return d;
+  const ok = numbersFor(o.mode);
+  return {mode: o.mode, nums: (o.nums || []).filter(n => ok.indexOf(n) >= 0).slice(-2)};
+}
+function question(age, opts){
+  opts = cleanOpts(age, opts);
+  const letter = lower => { const L = SS.pick(ABC); return {kind:'letter', sign:L, show:lower ? L.toLowerCase() : L, say:'the letter ' + L}; };
+  const number = max => { const n = SS.rint(1, max); return {kind:'number', sign:'' + n, show:'' + n, say:'number ' + n}; };
+  const color = () => { const c = SS.pick(COLORS); return {kind:'color', sign:c.id, show:c.id.toUpperCase(), say:'the color ' + c.id, color:c.hex}; };
+  if (young(age)){
+    const m = opts.mode === 'young-mix' ? SS.pick(['abc', 'colors', 'numbers']) : opts.mode;
+    if (m === 'abc') return letter(age === 5);            // age 5: banner shows "b", the answer is "B"
+    if (m === 'colors') return color();
+    return number(age <= 4 ? 10 : 20);
+  }
+  let op = opts.mode === 'mix' ? SS.pick(['add', 'sub', 'mul', 'div']) : opts.mode;
+  const n = SS.pick(opts.nums.length ? opts.nums : numbersFor(opts.mode)), k = SS.rint(1, 12);
+  if (n === 20 && (op === 'mul' || op === 'div')) op = SS.pick(['add', 'sub']);
+  const flip = Math.random() < .5;
+  const q = (sign, a, sym, b, word) => ({kind:'math', math:true, sign:'' + sign, show:a + ' ' + sym + ' ' + b, say:a + ' ' + word + ' ' + b});
+  if (op === 'add') return flip ? q(n + k, n, '+', k, 'plus') : q(n + k, k, '+', n, 'plus');
+  if (op === 'sub') return flip ? q(k, n + k, '\u2212', n, 'minus') : q(n, n + k, '\u2212', k, 'minus');
+  if (op === 'mul') return flip ? q(n * k, n, '\u00D7', k, 'times') : q(n * k, k, '\u00D7', n, 'times');
+  return q(k, n * k, '\u00F7', n, 'divided by');
+}
+
+/* The start screen: big buttons to pick what to practice, then Play.
+   cfg = {game, title, color, sub, age, onPlay(opts)}; it covers the game box until Play is tapped. */
+let optsEl = null;
+function hideOptions(){ if (optsEl){ optsEl.remove(); optsEl = null; } }
+function showOptions(cfg){
+  hideOptions();
+  if (!curBox) return;
+  const p = SS.player(), age = cfg.age;
+  let o = cleanOpts(age, p && p.arcade && p.arcade[cfg.game]);
+  const el = document.createElement('div');
+  el.className = 'arcade-opts';
+  const draw = () => {
+    const modes = young(age) ? YOUNG_MODES : MATH_MODES;
+    const nums = young(age) ? null : numbersFor(o.mode);
+    el.innerHTML = '<div class="ao-card"><div class="ao-title" style="color:' + cfg.color + '">' + SS.esc(cfg.title) + '</div>' +
+      (cfg.sub ? '<div class="ao-sub">' + SS.esc(cfg.sub) + '</div>' : '') +
+      '<div class="ao-label">Pick what to practice</div><div class="ao-modes">' +
+      modes.map(m => '<button type="button" class="ao-btn' + (m.id === o.mode ? ' on' : '') + '" data-o="mode" data-v="' + m.id + '" aria-pressed="' + (m.id === o.mode) + '">' +
+        '<span class="emo">' + m.icon + '</span>' + m.label + '</button>').join('') + '</div>' +
+      (nums ? '<div class="ao-label">Which numbers? <span class="ao-small">All, or pick 1 or 2</span></div><div class="ao-nums">' +
+        '<button type="button" class="ao-num ao-all' + (o.nums.length ? '' : ' on') + '" data-o="all">All</button>' +
+        nums.map(n => '<button type="button" class="ao-num' + (o.nums.indexOf(n) >= 0 ? ' on' : '') + '" data-o="num" data-v="' + n + '" aria-pressed="' + (o.nums.indexOf(n) >= 0) + '">' + n + '</button>').join('') +
+        '</div>' : '') +
+      '<button type="button" class="btn go ao-play" data-o="play">Play! \u25B6</button></div>';
+  };
+  el.addEventListener('click', e => {
+    const b = e.target.closest('[data-o]'); if (!b) return;
+    ac();   // a tap: phones allow sound from here on
+    const what = b.dataset.o;
+    if (what === 'mode'){
+      o.mode = b.dataset.v; o = cleanOpts(age, o);
+      const m = (young(age) ? YOUNG_MODES : MATH_MODES).find(x => x.id === o.mode); SS.say(m.say);
+    } else if (what === 'all'){ o.nums = []; SS.say('All the numbers!'); }
+    else if (what === 'num'){
+      const n = +b.dataset.v, i = o.nums.indexOf(n);
+      if (i >= 0) o.nums.splice(i, 1); else { o.nums.push(n); if (o.nums.length > 2) o.nums.shift(); }   // keep the 2 newest
+      if (i < 0) SS.say('The ' + NUM_WORDS[n] + '!');
+    } else if (what === 'play'){
+      if (p){ p.arcade = p.arcade || {}; p.arcade[cfg.game] = {mode:o.mode, nums:o.nums.slice()}; SS.save(); }
+      hideOptions(); cfg.onPlay({mode:o.mode, nums:o.nums.slice()});
+      return;
+    }
+    draw();
+  });
+  draw();
+  curBox.appendChild(el); optsEl = el;
+  SS.say('What do you want to practice?');
+}
+/* A colored dot texture per color ('sw-red', ...), for color questions on signs and balls. */
+function colorTextures(scene){
+  COLORS.forEach(c => tex(scene, 'sw-' + c.id, 100, 100, x => {
+    oval(x, 50, 50, 45, 45, '#FFFFFF', 7);          // white ring, so orange shows on an orange ball and brown on a sign
+    oval(x, 50, 50, 33, 33, c.hex, 4);
+    oval(x, 40, 38, 9, 5, 'rgba(255,255,255,.55)', 0, -.6);
+  }));
 }
 
 /* ---------- Sound effects (made with Web Audio, no sound files) ---------- */
@@ -107,7 +208,7 @@ function tex(scene, key, w, h, draw, k){
    - the font gets at most 2 seconds (some Safari versions can wait forever),
    - if the fast graphics mode (WebGL) breaks, it tries again in plain canvas mode,
    - and if it still fails, the box says what went wrong instead of staying blank. */
-let game = null, ro = null, token = null, phaserLoading = null, onSceneReady = null;
+let game = null, ro = null, token = null, phaserLoading = null, onSceneReady = null, curBox = null;
 function loadScript(src, ms){
   return new Promise((ok, fail) => {
     const s = document.createElement('script');
@@ -138,6 +239,7 @@ function stopGame(){
 function start(main, makeScene, thing){
   thing = thing || 'game';
   const box = main.querySelector('#arcade'), msg = box.querySelector('.arcade-msg'), my = token = {};
+  curBox = box; hideOptions();
   const show = html => { if (token === my && msg){ msg.style.display = ''; msg.innerHTML = html; } };
   const loading = step => show('<div>Loading the ' + thing + '...<div class="arcade-detail">' + step + '</div></div>');
   const slow = setTimeout(() => loading('Still working on it. Slow internet? Give it a few more seconds.'), 10000);
@@ -147,14 +249,14 @@ function start(main, makeScene, thing){
   function fail(err){
     if (token !== my) return;
     listen(false); stopGame();
-    if (!triedCanvas && window.Phaser){ triedCanvas = true; return start(Phaser.CANVAS); }   // try the simpler drawing mode once
+    if (!triedCanvas && window.Phaser){ triedCanvas = true; return boot(Phaser.CANVAS); }   // try the simpler drawing mode once
     clearTimeout(slow);
     show('<div>Uh oh, the ' + thing + ' got stuck!<div class="arcade-detail">Tell a grown-up: ' + SS.esc(String((err && err.message) || err).slice(0, 180)) +
       '</div><button class="btn" id="zsRetry" type="button" style="margin-top:16px">Try again</button></div>');
     const b = box.querySelector('#zsRetry');
     if (b) b.addEventListener('click', () => { if (token === my) start(main, makeScene, thing); });
   }
-  function start(type){
+  function boot(type){   // (named boot, not start: the Try again button must call the outer start)
     if (token !== my) return;
     loading(type === Phaser.CANVAS ? 'trying simple graphics' : 'getting ready to play');
     listen(true);
@@ -179,17 +281,18 @@ function start(main, makeScene, thing){
   loading('downloading the game');
   loadPhaser()
     .then(() => { if (token === my) loading('getting the letters ready'); return fontReady(2000); })
-    .then(() => start(Phaser.AUTO))
+    .then(() => boot(Phaser.AUTO))
     .catch(fail);
 }
 function stop(){
-  token = null; onSceneReady = null;
+  token = null; onSceneReady = null; hideOptions(); curBox = null;
   stopGame();
   SS.hush();
 }
 
 window.ArcadeKit = {
-  INK, FONT, question, start, stop,
+  INK, FONT, COLORS, question, start, stop, showOptions, hideOptions, colorTextures,
+  isYoung: young,
   sceneReady: () => { if (onSceneReady) onSceneReady(); },
   html: text => '<div class="arcade" id="arcade"><div class="arcade-msg">' + SS.esc(text || 'Loading...') + '</div></div>',
   sound: {ac, tone, noise},

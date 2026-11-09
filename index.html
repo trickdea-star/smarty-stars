@@ -192,6 +192,22 @@ h1,h2,h3{margin:0;line-height:1.1}
 .arcade canvas{display:block}
 .arcade-msg{position:absolute;inset:0;z-index:2;display:grid;place-items:center;padding:24px;background:#120A26;color:#fff;font-weight:800;font-size:1.3rem;text-align:center}
 .arcade-detail{margin-top:10px;font-size:1rem;font-weight:600;opacity:.75;overflow-wrap:anywhere}
+/* "Pick what to practice" screen at the start of each arcade game (games/arcade-kit.js) */
+.arcade-opts{position:absolute;inset:0;z-index:3;overflow-y:auto;display:flex;justify-content:center;padding:14px 12px 22px;background:rgba(10,5,24,.66);color:#fff;-webkit-overflow-scrolling:touch;touch-action:pan-y}
+.ao-card{width:100%;max-width:520px;margin:auto 0;text-align:center}
+.ao-title{font-weight:800;font-size:clamp(2rem,10vw,3.2rem);line-height:1;-webkit-text-stroke:2px #2B1B3D;text-shadow:0 4px 0 #2B1B3D}
+.ao-sub{font-weight:800;font-size:1.1rem;margin:8px 0 4px}
+.ao-label{font-weight:800;font-size:1.2rem;margin:14px 0 8px}
+.ao-small{display:block;font-size:.9rem;font-weight:600;opacity:.8}
+.ao-modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:10px}
+.ao-btn{min-height:76px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:6px 4px;border:3px solid #2B1B3D;border-radius:18px;background:#fff;color:#2B1B3D;font-weight:800;font-size:1rem;line-height:1.1;box-shadow:0 4px 0 #2B1B3D}
+.ao-btn .emo{font-size:1.7rem;line-height:1.1}
+.ao-nums{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.ao-num{width:52px;height:52px;border:3px solid #2B1B3D;border-radius:50%;background:#fff;color:#2B1B3D;font-weight:800;font-size:1.35rem;box-shadow:0 3px 0 #2B1B3D}
+.ao-num.ao-all{width:auto;padding:0 18px;border-radius:999px}
+.ao-btn.on,.ao-num.on{background:#FFD23F;outline:4px solid #9B6BF7;outline-offset:1px}
+.ao-btn:active,.ao-num:active{transform:translateY(3px);box-shadow:0 1px 0 #2B1B3D}
+.ao-play{margin-top:18px;min-width:190px;font-size:1.5rem}
 
 /* Overlays */
 .toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--paper);color:var(--text);border:3px solid var(--line);border-radius:18px;box-shadow:0 5px 0 var(--line);padding:10px 18px;font-weight:800;font-size:1.1rem;z-index:50;width:max-content;max-width:calc(100% - 28px);text-align:center;animation:drop .25s ease-out}
@@ -475,7 +491,7 @@ function save(){
    A NEW SPOKEN LINE NEEDS RECORDING: add it to tools/voice_lines.py, re-run it and the recorder
    (see README), and bump VOICE_BUILD. Each sentence is looked up on its own, so keep dynamic parts
    (numbers, names) in their own short sentence. */
-const VOICE_BUILD = '2';
+const VOICE_BUILD = '3';
 if (window.Narrator) Narrator.load('voice/index.json?v=' + VOICE_BUILD);
 function say(text){
   if (S.sound === false || !window.Narrator) return;
@@ -561,7 +577,7 @@ function renderWho(){
   ${ps.length ? `<button class="linkbtn" data-act="editPlayers">${EDITMODE ? 'Done editing' : 'Grown-ups: edit players'}</button>` : ''}`;
 }
 function ageButtons(sel){
-  return `<div class="ages" role="group" aria-label="Age">${[4,5,6,7,8].map(a => `<button class="age ${sel===a?'on':''}" data-act="age" data-a="${a}" aria-pressed="${sel===a}">${a}</button>`).join('')}</div>`;
+  return `<div class="ages" role="group" aria-label="Age">${[3,4,5,6,7,8].map(a => `<button class="age ${sel===a?'on':''}" data-act="age" data-a="${a}" aria-pressed="${sel===a}">${a}</button>`).join('')}</div>`;
 }
 function renderCreate(){
   app.innerHTML = `<div class="bar"><button class="iconbtn" data-act="who" aria-label="Back">⬅️</button><div class="bar-title">New player</div></div>
@@ -570,7 +586,7 @@ function renderCreate(){
     <input id="nm" class="input" maxlength="16" autocomplete="off" value="${esc(NEW.name)}" placeholder="Name">
     <div class="label">How old are you?</div>
     ${ageButtons(NEW.age)}
-    <p class="muted">Ages 4 and 5 get the easier games. Ages 6 to 8 get harder ones.</p>
+    <p class="muted">Ages 3 to 5 get the easier games (letters, colors, numbers). Ages 6 to 8 get math.</p>
     <button class="btn go" data-act="createNext">Next: make my look</button>
   </div>`;
 }
@@ -1044,8 +1060,8 @@ render();
 })();
 </script>
 <!-- Bump ?v= whenever a game file changes, so phones fetch the new copy instead of an old cached one. -->
-<script src="games/arcade-kit.js?v=1" charset="utf-8"></script>
-<script src="games/zombie-splat.js?v=5" charset="utf-8"></script>
-<script src="games/hoop-shot.js?v=1" charset="utf-8"></script>
+<script src="games/arcade-kit.js?v=3" charset="utf-8"></script>
+<script src="games/zombie-splat.js?v=6" charset="utf-8"></script>
+<script src="games/hoop-shot.js?v=2" charset="utf-8"></script>
 </body>
 </html>

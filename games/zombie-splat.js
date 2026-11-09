@@ -38,10 +38,10 @@ const KINDS = {
 };
 const weightOf = z => z.weight || KINDS[z.kind].weight;
 
-/* ---------- Questions come from K.question(age) in games/arcade-kit.js ---------- */
+/* ---------- Questions come from K.question(age, opts) in games/arcade-kit.js (picked on the start screen) ---------- */
 function settings(age, round){
-  age = Math.max(4, Math.min(8, age || 6));
-  const walk = {4:24, 5:21, 6:18, 7:16, 8:14}[age];      // seconds from the graveyard to the fence in round 1
+  age = Math.max(3, Math.min(8, age || 6));
+  const walk = {3:27, 4:24, 5:21, 6:18, 7:16, 8:14}[age];      // seconds from the graveyard to the fence in round 1
   return {
     walkSecs: Math.max(6, walk * Math.pow(0.92, round - 1)),
     onScreen: Math.min(5, (age <= 4 ? 2 : age <= 6 ? 3 : 4) + Math.floor((round - 1) / 3)),
@@ -234,6 +234,7 @@ function makeScene(){
       this.p = SS.player();
       this.age = this.p ? this.p.age : 6;
       makeTextures(this);
+      K.colorTextures(this);
       this.roster = ZOMBIES.map((z, i) => Object.assign({}, z, {key: z.art.charAt(0) === '@' ? 'z' + z.art.slice(1) : 'zfile' + i}))
         .filter(z => KINDS[z.kind] && this.textures.exists(z.key));
       this.zombies = []; this.round = 0; this.state = 'start'; this.bgN = 0;
@@ -316,7 +317,8 @@ function makeScene(){
       this.state = 'start';
       for (let i = 0; i < 3; i++) this.spawn(true);
       const best = this.p && this.p.zombieBest ? 'Your best: Round ' + this.p.zombieBest : 'Splat the zombie the voice asks for!';
-      this.showPanel('ZOMBIE SPLAT', best, 'START', () => { this.hidePanel(); ac(); this.startRound(1); });
+      K.showOptions({game:'zombie', title:'ZOMBIE SPLAT', color:'#9BFF6A', sub:best, age:this.age,
+        onPlay: opts => { this.opts = opts; ac(); this.startRound(1); }});
     }
     showPanel(title, sub, btn, cb){
       this.hidePanel();
@@ -405,8 +407,8 @@ function makeScene(){
     /* ---------- Zombies ---------- */
     uniqueQuestion(skip){
       const used = new Set(this.zombies.filter(z => z.alive && z !== skip).map(z => z.q.sign));
-      for (let i = 0; i < 40; i++){ const q = K.question(this.age); if (!used.has(q.sign)) return q; }
-      return K.question(this.age);
+      for (let i = 0; i < 40; i++){ const q = K.question(this.age, this.opts); if (!used.has(q.sign)) return q; }
+      return K.question(this.age, this.opts);
     }
     spawn(decor){
       const round = decor ? 1 : this.round;
@@ -428,12 +430,14 @@ function makeScene(){
       c.add([shadow, body]);
       const stick = this.add.image(0, 0, 'stick').setOrigin(.5, 1);
       const sign = this.add.image(0, 0, 'sign');
-      const label = this.add.text(0, 0, q.sign, {fontFamily:FONT, fontStyle:'800', fontSize:'20px', color:INK}).setOrigin(.5);
-      const sc = this.add.container(0, 0, [stick, sign, label]).setVisible(!decor);
-      const z = {def, kind:def.kind, K, q, c, sc, shadow, stick, body, sign, label, lane, alive:!decor, decor:!!decor,
+      const label = this.add.text(0, 0, '', {fontFamily:FONT, fontStyle:'800', fontSize:'20px', color:INK}).setOrigin(.5);
+      const swatch = this.add.image(0, 0, 'sw-red').setVisible(false);   // a colored dot, for color questions
+      const sc = this.add.container(0, 0, [stick, sign, label, swatch]).setVisible(!decor);
+      const z = {def, kind:def.kind, K, q, c, sc, shadow, stick, body, sign, label, swatch, lane, alive:!decor, decor:!!decor,
         state:decor ? 'idle' : 'walk', t:decor ? .2 + Math.random() * .5 : 0, hits:K.hits, emerge:decor ? 1 : 0,
         phase:Math.random() * 6, punch:1, shake:0};
       this.sizeZombie(z);
+      this.setSign(z);
       this.zombies.push(z);
       if (!decor){ SFX.rise(); this.placeZombie(z, this.time.now); this.dirtFx.explode(10, z.c.x, z.c.y); }
       return z;
@@ -451,6 +455,13 @@ function makeScene(){
       z.stick.setDisplaySize(this.zh * .05, stickH + signH * .4).setPosition(0, this.zh * .02);
       z.sign.setDisplaySize(signW, signH).setPosition(0, -stickH - signH * .5);
       z.label.setFontSize(Math.round(signH * .64)).setPosition(0, -stickH - signH * .5);
+      z.swatch.setDisplaySize(signH * .78, signH * .78).setPosition(0, -stickH - signH * .5);
+    }
+    setSign(z){   // what the sign shows: the answer, or a colored dot for color questions
+      const col = z.q.kind === 'color';
+      z.label.setText(col ? '' : z.q.sign);
+      z.swatch.setVisible(col);
+      if (col) z.swatch.setTexture('sw-' + z.q.sign);
     }
     placeZombie(z, time){
       if (z.state === 'dying') return;
@@ -504,8 +515,9 @@ function makeScene(){
     showPrompt(fresh){
       if (!this.target) return;
       const q = this.target.q;
-      this.bannerLabel.setText(q.math ? 'WHAT IS' : (/[A-Za-z]/.test(q.sign) ? 'SPLAT THE LETTER' : 'SPLAT NUMBER'));
-      this.bannerText.setText(q.show);
+      this.bannerLabel.setText({math:'WHAT IS', letter:'SPLAT THE LETTER', number:'SPLAT NUMBER', color:'SPLAT THE COLOR'}[q.kind] || 'SPLAT');
+      // color words are written in their own color, with a dark outline so yellow and white still show up
+      this.bannerText.setText(q.show).setColor(q.color || INK).setStroke(INK, q.color ? Math.round(parseInt(this.bannerText.style.fontSize, 10) * .1) : 0);
       this.banner.setVisible(true);
       if (fresh) this.tweens.add({targets:this.banner, scale:{from:.85, to:1}, duration:260, ease:'Back.Out'});
       SS.say((this.cheer ? this.cheer + ' ' : '') + this.promptLine());
@@ -547,7 +559,7 @@ function makeScene(){
       if (z.hits > 0){   // a boss takes two splats: it stumbles back with a new sign
         z.body.setTint(0x9CF57A); z.sign.clearTint();
         z.t = Math.max(0, z.t - .22); z.state = 'walk'; z.shake = .4;
-        z.q = this.uniqueQuestion(z); z.label.setText(z.q.sign);
+        z.q = this.uniqueQuestion(z); this.setSign(z);
         this.popText('OOF!', x, y - this.u * 16, '#FFD23F');
       } else this.killZombie(z);
       this.target = null; this.nextTargetAt = this.time.now + 450;
